@@ -18,6 +18,7 @@
           $(document).ready(function(){
             $('#slider').nivoSlider();
             $("#nav_menu_main").load("menu.html");
+            $("#nav_menu_small").load("menu.html");
             $('s.menu.dropdown ul li').click(function(){
               $(this).find('ul').toggle();
             });
@@ -31,12 +32,12 @@
           <div class="sixteen columns logo">
             <h3><a href="/">Ingo Scholtes</a></h3>
             <div class="menu full">
-            {module_contentholder,name="menu"}
+                <ul id="nav_menu_main"></ul>
             </div>
             <div class="menu dropdown">
               <ul>
                   <li><a href="#">Menu</a>
-                  {module_contentholder,name="menu"}
+                    <ul id="nav_menu_small"></ul>
                   </li>
               </ul>
             </div>
