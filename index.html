@@ -17,8 +17,9 @@
         <script type="text/javascript">
           $(document).ready(function(){
             $('#slider').nivoSlider();
-            $("#nav_menu_main").load("menu.html");
-            $("#nav_menu_small").load("menu.html");
+            $("#nav_menu_main").load("content/menu.html");
+            $("#nav_menu_small").load("content/menu.html");
+            $("#sidebar").load("content/news.html");
             $('s.menu.dropdown ul li').click(function(){
               $(this).find('ul').toggle();
             });
@@ -94,8 +95,7 @@
             <p>On this website, you can find information about my <a href="research.html">research</a>, <a href="publications.html">publications</a> and <a href="service.html">academic activities</a>. If you are interested in my work as an amateur photographer, feel free to visit my photography site at <a href="http://www.ingoscholtes.photo">ingoscholtes.photo</a>.</p>
             </article>
           </section>
-          <aside class="six columns offset-by-one">
-          {module_contentholder,name="news"}
+          <aside id="sidebar" class="six columns offset-by-one">
           </aside>
       </div>
       <footer class="container">
