@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ingo Scholtes | Insights</title>
+        <meta name="description" content="Homepage of Prof. Dr. rer. nat. Ingo Scholtes, Head of the Data Analytics Group at the Department of Informatics at the University of Z&uuml;rich." />
+        <link href="stylesheets/nivo-slider.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="stylesheets/slider-themes/default/default.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="stylesheets/base.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/skeleton.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+        <script src="scripts/menu.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('#slider').nivoSlider();
+            $("#nav_menu_main").load("content/menu.html");
+            $("#nav_menu_small").load("content/menu.html");
+            $("#research").load("content/research.html");
+            $('s.menu.dropdown ul li').click(function(){
+              $(this).find('ul').toggle();
+            });
+          });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    </head>
+    <body>
+        <header class="page">
+        <div class="container">
+          <div class="sixteen columns logo">
+            <h3><a href="/">Ingo Scholtes</a></h3>
+            <div class="menu full">
+                <ul id="nav_menu_main"></ul>
+            </div>
+            <div class="menu dropdown">
+              <ul>
+                  <li><a href="#">Menu</a>
+                    <ul id="nav_menu_small"></ul>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </header>
+        <div class="container" id="container">
+        <section class="eleven columns">
+        <article>
+        <h2>Research Insights</h2>
+        <p><strong>Coming soon. Please stay tuned!</strong></p>        
+        </article>
+        </section>
+        <aside id="research" class="four columns offset-by-one">
+        </aside>
+      </div>
+<footer class="container">
+    <div class="sixteen columns">
+      <p>Copyright &copy; 2012-2019&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

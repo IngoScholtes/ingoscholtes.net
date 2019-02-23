@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ingo Scholtes | Research Portfolio</title>
+        <meta name="description" content="Homepage of Prof. Dr. rer. nat. Ingo Scholtes, Head of the Data Analytics Group at the Department of Informatics at the University of Z&uuml;rich." />
+        <link href="stylesheets/nivo-slider.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="stylesheets/slider-themes/default/default.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="stylesheets/base.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/skeleton.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+        <script src="scripts/menu.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('#slider').nivoSlider();
+            $("#nav_menu_main").load("content/menu.html");
+            $("#nav_menu_small").load("content/menu.html");
+            $("#research").load("content/research.html");
+            $('s.menu.dropdown ul li').click(function(){
+              $(this).find('ul').toggle();
+            });
+          });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    </head>
+    <body>
+        <header class="page">
+        <div class="container">
+          <div class="sixteen columns logo">
+            <h3><a href="/">Ingo Scholtes</a></h3>
+            <div class="menu full">
+                <ul id="nav_menu_main"></ul>
+            </div>
+            <div class="menu dropdown">
+              <ul>
+                  <li><a href="#">Menu</a>
+                    <ul id="nav_menu_small"></ul>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </header>
+        <div class="container" id="container">
+        <section class="eleven columns">
+        <article>
+        
+        <h2>Research Portfolio</h2>
+
+       	  	<p>My research addresses foundations of algorithmic and statistical data analysis. In many of my works, I model and analyze large data sets from a graph or network perspective. I also develop new data science techniques for complex relational data, and apply them in the context of software engineering, information system and computational social science. My approach is quantitative, data-driven and interdisciplinary, combining methods from computer science, mathematics and physics.</p>
+       	  	
+			<p>In September 2014 I was awarded a <a href="https://www.gi.de/fileadmin/redaktion/Personen/Junior-Fellows/GI-Juniorfellow2014-Scholtes.pdf">Juniorfellowship</a> by the <a href="http://www.gi-ev.de">German Informatics Society (GI e.V.).</a></p>
+
+		  	<p>Some facets of my research are summarized in the self-portrayal <a href="http://dx.doi.org/10.1515/itit-2015-0012">Understanding Complex Systems: When Big Data Meets Network Science</a>. Below I outline some recent research interests and key findings.</p>
+			
+			<h3>Statistical Relational Learning</h3>
+			
+			<p>Relational data mining techniques play an important role in many disciplines, such as information science, sociology, bioinformatics or economics. They provide new ways to explore large corpora of data which capture dyadic relationships, interactions or links between documents, humans, genes, or financial institutions. However, we now increasingly have access to complex data that capture more than just dyadic relations.	
+			Examples include multi-relational data, time-stamped relations, relational data with noise, or sequential data. The <strong>question when a graph abstraction of such complex relational data is justified</strong> has not been answered satisfactorily.</p>
+			
+			<p>To address this problem, I develop new algorithmic and statistical data mining techniques for 
+			<iframe width="400" height="240" src="https://www.youtube.com/embed/prenHeyUbB4" frameborder="0" allowfullscreen style="float: right;" ></iframe>
+			relational data with complex characteristics. I am particularly interested in <strong>new ways to infer patterns in sequential data</strong> on networks. In a <a href="https://arxiv.org/abs/1702.05499">recent work</a>, I developed a new method (i) to test when a network abstraction of such data is justified, and (ii) to infer optimal higher-order graphical models which generalize network-analytic methods. It has been implemented in the python package <a href="https://github.com/IngoScholtes/pathpy">pathpy</a>, which is available on <a href="https://github.com/IngoScholtes/pathpy">github</a>.									
+			<a href="https://github.com/IngoScholtes/pathpy">
+				<!-- <img src="/images/pathpy_logo.png" alt="pathpy logo" width="200" style="float: right; width: 200px;" />-->
+			</a>
+			</p>
+			
+			<br class="clear" />
+			
+			<h5>Exemplary publications</h5>
+			<ul class="publications">
+				 <li><i>Ingo Scholtes</i><br/>
+            <a href="http://dl.acm.org/citation.cfm?id=309814">When is a Network a Network? Multi-Order Graphical Model Selection in Pathways and Temporal Networks<br /> </a>In <a href="http://www.kdd.org/kdd2017/">KDD'17 - Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</a>, Halifax, Nova Scotia, Canada, August 13-17, 2017<br />			
+        </li>
+			 <li><i>Giona Casiraghi, Vahan Nanumyan, Ingo Scholtes, Frank Schweitzer</i><br/>
+                 <a href="https://link.springer.com/chapter/10.1007/978-3-319-67256-4_11">From Relational Data to Graphs: Inferring Significant Links using Generalized Hypergeometric Ensembles</a><br /> In <a href="http://socinfo2017.oii.ox.ac.uk/">Social Informatics. SocInfo 2017</a>, Lecture Notes in Computer Science, Vol. 10540, September 2017<br />			
+        </li> 
+				<li>G Casiraghi, V Nanumyan, I Scholtes, F Schweitzer: <a href="http://arxiv.org/abs/1607.02441">Generalized Hypergeometric Ensembles: Statistical Hypothesis Testing in Complex Networks</a>, <a href="http://arxiv.org/abs/1607.02441">arXiv 1607.02441</a>, July 2016</li>
+		  </ul>
+       	
+       		<br class="clear" />
+       	
+        	<h3>Network Analytics for Time Series Data</h3>
+              	  	
+      	  	<p>
+		  	<figure style="float: left; width: 120px; padding: 10px; font-size: 9pt; padding-left: 0px;">
+				<img width="120" src="/images/tempnet.gif" style="border: 1px solid #000;" />
+			  <figcaption><em>Time-unfolded notation of temporal network with four nodes and 24 time-stamped links.</em></figcaption>
+			</figure>
+				Graph analytics and (social) network analysis have become cornerstones of data science. They are widely applied to relational data studied in disciplines such as computer science, physics, systems biology, social science or economics. However, we are increasingly confronted with high-frequency, time-resolved data which not only tell us <em>who</em> is related to <em>whom</em>, but also <em>when</em> and <em>in which sequence</em> these relations occurred. The analysis of such data is still a challenge. A naive application of network analysis and modeling techniques discards information on the timing and ordering of relations, which is the foundation of so-called <em>causal or time-respecting paths</em>, i.e. it is needed to answer the question <em>who</em> can influence <em>whom</em>. In my research, I study the effects of temporal ordering in time-resolved relational data from real-world systems. Using a combination of information-theoretic and statistical methods, we could demonstrate that temporal correlations in data from social and biological systems break the transitivity of causal paths. We further showed that the <strong>application of network-based data analysis and modeling techniques as well as algebraic methods to time-stamped data yields wrong results</strong>.
+			</p>
+      	  	
+       	  	<p>
+	  	  	<figure style="float: right; width: 400px; padding: 10px; font-size: 9pt; padding-right: 0px;">
+			<video loop autoplay width="400" style="border: 1px solid #000;"> 
+			<source src="/images/tube_diffusion_both_dynamic.mp4" type="video/mp4" />        		        		
+			</video>
+			<figcaption><em>Example for a diffusion process in two temporal networks with dynamic topologies. The topology, frequency, and temporal distribution of links is identical in both temporal networks. However, the order in which links in the left example occur exhibit correlations that significantly speed up diffusion.</em></figcaption>
+	  	  	</figure>
+				Addressing the problem that common graphical representations of relational data <a href="http://www.focas-reading-room.eu/understanding-dynamic-networked-systems-when-ordering-matters/">discard information on the temporal ordering</a> of relations, we <strong>developed a data analysis framework based on higher-order graphical models</strong>. Extending the common network perspective, it allows to combine information on both topological and temporal characteristics of time-resolved relational data into compact probabilistic graphical models.
+			This approach provides new ways to (i) model dynamical processes like diffusion, cascades or epidemic spreading, (ii) detect temporal-topological clusters based on higher-order Laplacians and spectral methods, (iii) assess the importance of nodes, and (iv) study the controllability of complex systems. This research aims at methodological advances which not only provide us with novel data mining techniques, but whose impact reaches beyond computer science, with applications in the modeling of complex systems in physics, systems biology, social science and economics.			
+			</p>
+			
+			<br class="clear" />
+			
+			<h5>Exemplary publications</h5>
+			<ul class="publications">
+				<li>Y Zhang, A Garas and I Scholtes: <a href="https://arxiv.org/abs/1701.06331">Controllability of temporal networks: An analysis using higher-order networks</a>, <a href="https://arxiv.org/abs/1701.06331">arXiv 1701.06331</a>, January 2017</li>
+				<li>I Scholtes, N Wider, A Garas: <a href="http://link.springer.com/article/10.1140%2Fepjb%2Fe2016-60663-0">Higher-Order Aggregate Networks in the Analysis of Temporal Networks: Path structures and centralities</a>, <a href="http://link.springer.com/article/10.1140%2Fepjb%2Fe2016-60663-0">European Physical Journal B</a>, March 2016</li>
+				<li>I Scholtes, N Wider, R Pfitzner, A Garas, CJ Tessone, F Schweitzer: <a href="http://www.nature.com/ncomms/2014/140924/ncomms6024/full/ncomms6024.html">Causality-driven slow-down and speed-up of diffusion in non-Markovian temporal networks,</a> <a href="http://www.nature.com/ncomms/">Nature Communications</a>, September 2014</li>
+				<li>R Pfitzner, I Scholtes, A Garas, CJ Tessone, F Schweitzer: <a href="http://prl.aps.org/abstract/PRL/v110/i19/e198701">Betweenness Preference: Quantifying Correlations in the Topological Dynamics of Temporal Networks</a>, <a href="http://prl.aps.org/abstract/PRL/v110/i19/e198701">Physical Review Letters</a>, May 2013</li>		
+			</ul>			
+			
+		  <h3>Data Science in Software Engineering</h3>
+		  
+		  	<p>
+		  	<figure style="float: left; width: 250px; padding: 10px; font-size: 9pt; padding-left: 0px;">
+				<img width="250" src="/images/dependency_net.gif" style="border: 1px solid #000;" />
+			  <figcaption><em>A network perspective on the architecture of the Open Source Software jena.</em></figcaption>
+		  	</figure>
+		  	Software systems are at the heart of the digital society: They control critical infrastructures like communication or energy systems, fuel the increasing automation in industrial manufacturing and are key drivers of the digital economy. Despite this importance, the development of complex software systems is still a fundamental challenge. Credible reports indicate that the majority of software projects run over time or budget -- or fail altogether, resulting in billions of dollars wasted every year. And while technical aspects like, e.g., programming techniques, testing methods, or developer support tools have improved significantly over the past years, our understanding <strong>how human and social factors contribute to success or failure of software projects</strong> is still in its infancy.
+			</p>
+		  
+		  <br class="clear" />
+		  
+		  	<p>
+		  	<figure style="float: right; width: 250px; padding: 10px; font-size: 9pt; padding-right: 0px;">
+				<img width="250" src="/images/gentoo.gif" style="border: 1px solid #000;" />
+				<figcaption><em>Collaboration network of the Open Source Community gentoo</em></figcaption>
+	  	  	</figure>
+			Addressing these challenges, I use data science to quantitatively study <strong>collaborative software engineering processes</strong>. As an example, we use network analysis and statistical modeling to study the evolution of software architectures based on large-scale data from software repositories. This not only allows us to trace the maintainability of software systems. We can also assist developers in the refactoring of code. We further extract large data sets from online support tools, and analyze them to better understand how social factors influence software development processes. This approach has helped us to uncover social mechanisms at work in software development, to quantify risks in Open Source communities, and to improve information systems used by software development teams.
+			</p>
+
+			<br class="clear" />
+			
+			<h5>Exemplary publications</h5>
+      		
+       		<ul class="publications">				
+        		<li>MS Zanetti, CJ Tessone, I Scholtes, F Schweitzer: <a href="http://doi.acm.org/10.1145/2577080.2577097">Automated Software Re-modularization Based on Move Refactoring</a>, <a href="http://doi.acm.org/10.1145/2577080.2577097">International Conference on Modularity</a>, April 2014</li>   				
+				<li>MS Zanetti, I Scholtes, CJ Tessone, F Schweitzer: <a href="http://dl.acm.org/citation.cfm?id=2486930">Categorizing Bugs with Social Networks: A Case Study on Four Open Source Software Communities</a>, <a href="http://www.icse-conferences.org/">International Conference on Software Engineering (ICSE)</a>, May 2013</li>   
+				<li>MS Zanetti, I Scholtes, CJ Tessone, F Schweitzer: <a href="http://ieeexplore.ieee.org/abstract/document/6614731/">The Rise and Fall of a Central Contributor: Centralization and Performance in the Gentoo Community</a>, <a href="http://ieeexplore.ieee.org/abstract/document/6614731/">International Workshop on Cooperative and Human Aspects in Software Engineering (ICSE CHASE)</a>, May 2013</li>
+			</ul>
+        
+       	  <h3>Computational Social Science</h3>
+        	
+        	<p>
+        	<figure style="float: right; width: 300px; padding: 10px; font-size: 9pt;padding-left: 0px;">
+				<img width="300" src="/images/centralities.gif" style="border: 1px solid #000;" />
+				<figcaption><em>Centralities of scientists in the collaboration network of their respective fields. Red: authors of highly cited papers. Blue: authors of other papers.</em></figcaption>
+		  	</figure>
+        	The increasing volume of available data on social systems opens new opportunities for large-scale, quantitative studies of social phenomena. Such studies can help us to better understand how humans communicate and collaborate, what makes teams productive, what mechanism are at work in successful social organizations, and how technology shapes human behavior. This research not only offers new ways to address long-standing issues in the social sciences, it is also crucial to model, design and manage socio-technical systems.
+			</p>
+       	
+       		<br class="clear" />
+        	
+        	<p>        	
+      	  	<figure style="float: left; width: 300px; padding: 10px; font-size: 9pt;padding-left: 0px;">
+				<img width="300" src="/images/ringelmann.gif" style="border: 1px solid #000;" />
+				<figcaption><em>Relation between size of a software development team (x-axis) and productivity of its members (y-axis).</em></figcaption>
+		  	</figure>
+			Addressing these questions, I use <strong>data science techniques to study social organizations</strong>.
+				In a large-scale analysis of data on more than 30,000 developers in 58 Open Source Software projects, we could <a href="http://blog.ieeesoftware.org/2016/08/from-aristotle-to-ringelmann-using-data.html?platform=hootsuite">validate and quantify the Ringelann effect</a> known from social psychology and organizational theory. We could also show how coordination structures in software development teams influence the productivity of team members. Studying large bibliographic data sets, we could further show how social mechanisms influence <a href="https://link.springer.com/article/10.1007/s11192-017-2309-y">editorial processes</a> and <a href="http://www.euroscientist.com/forget-citations-for-unbiased-research-evaluation/">citation practices</a>. These works provide actionable insights for project management and policy-making.
+			</p>
+        	
+        	<br class="clear" />
+        	
+        	<h5>Exemplary publications</h5>
+        	
+        	<ul class="publications">
+        		<li>I Scholtes, P Mavrodiev, F Schweitzer: <a href="https://link.springer.com/article/10.1007%2Fs10664-015-9406-4">From Aristotle to Ringelmann: a large-scale analysis of productivity and coordination in Open Source Software projects</a>, In <a href="https://link.springer.com/article/10.1007%2Fs10664-015-9406-4">Empirical Software Engineering</a>, March 2016</li>
+				<li>E Sarig&ouml;l, D Garcia, I Scholtes, F Schweitzer: <a href="http://dx.doi.org/10.1007/s11192-017-2309-y">Quantifying the effect of editor-author relations on manuscript handling times</a>, In <a href="http://dx.doi.org/10.1007/s11192-017-2309-y">Scientometrics</a>, March 2017</li>	
+				<li>E Sarig&ouml;l, R Pfitzner, I Scholtes, A Garas, F Schweitzer: <a href="http://epjds.epj.org/articles/epjdata/abs/2014/01/13688_2014_Article_9/13688_2014_Article_9.html">Predicting Scientific Success Based on Coauthorship Networks</a>, In <a href="http://epjds.epj.org/articles/epjdata/abs/2014/01/13688_2014_Article_9/13688_2014_Article_9.html">EPJ Data Science</a>, September 2014</li>
+			</ul>
+        </article>
+        </section>
+        <aside id="research" class="four columns offset-by-one">
+        </aside>
+</div>
+<footer class="container">
+		<div class="sixteen columns">
+			<p>Copyright &copy; 2012-2019&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+</html>
