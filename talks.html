@@ -1,0 +1,887 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ingo Scholtes | Talks</title>
+        <meta name="description" content="Homepage of Prof. Dr. rer. nat. Ingo Scholtes, Head of the Data Analytics Group at the Department of Informatics at the University of Z&uuml;rich." />
+        <link href="stylesheets/nivo-slider.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="stylesheets/slider-themes/default/default.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="stylesheets/base.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/skeleton.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+        <script src="scripts/menu.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('#slider').nivoSlider();
+            $("#nav_menu_main").load("content/menu.html");
+            $("#nav_menu_small").load("content/menu.html");
+            $('s.menu.dropdown ul li').click(function(){
+              $(this).find('ul').toggle();
+            });
+          });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    </head>
+    <body>
+        <header class="page">
+        <div class="container">
+          <div class="sixteen columns logo">
+            <h3><a href="/">Ingo Scholtes</a></h3>
+            <div class="menu full">
+                <ul id="nav_menu_main"></ul>
+            </div>
+            <div class="menu dropdown">
+              <ul>
+                  <li><a href="#">Menu</a>
+                    <ul id="nav_menu_small"></ul>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </header>
+        <div class="container" id="container">
+       	<section class="twelve columns">
+        <article>
+        <div id="map" style="width:90%; height:350px; border: thin; border-color: black"></div>
+        <script type="text/javascript">					
+			var div = document.getElementById('map');
+			
+			var platform = new H.service.Platform({
+				app_id: 'WxZYu1p8L4ClnkebR416', 
+				app_code: 'DNvkAh6zMfL88GCGrhNqWA'
+			});
+	
+			var defaultLayers = platform.createDefaultLayers();		
+			var map = new H.Map(div, defaultLayers.normal.map);
+					  	
+			var talks = [];								
+			
+			// Rueschlikon 2018
+			talks.push(new H.clustering.DataPoint(47.3073,8.55535));
+			
+			// Vienna 2018
+			talks.push(new H.clustering.DataPoint(48.19904,16.36997));
+			
+			// Stuttgart 2018
+			talks.push(new H.clustering.DataPoint(48.77919,9.240008));	
+			
+			// Konstanz 2018
+			talks.push(new H.clustering.DataPoint(47.66627,9.1819));
+			
+			// Wuppertal 2018
+			talks.push(new H.clustering.DataPoint(51.24562,7.14976));
+			
+			// Lausanne 2018
+			talks.push(new H.clustering.DataPoint(46.51968,6.63344));
+						
+			// London 2018
+            talks.push(new H.clustering.DataPoint(51.50015,-0.12624));						
+			
+			// Paris 2018
+			talks.push(new H.clustering.DataPoint(48.85775,2.31799));
+            talks.push(new H.clustering.DataPoint(48.85775,2.31799));
+			talks.push(new H.clustering.DataPoint(48.85775,2.31799));
+			
+			// Fribourg 2018
+            talks.push(new H.clustering.DataPoint(47.40457,7.50161));
+						
+			// Zurich 2018
+            talks.push(new H.clustering.DataPoint(47.37704,8.53955));		
+			talks.push(new H.clustering.DataPoint(47.37704,8.53955));
+			talks.push(new H.clustering.DataPoint(47.37704,8.53955));
+			
+			// Marburg 2018
+            talks.push(new H.clustering.DataPoint(50.80293,8.7795));
+			
+			// Berlin 2018
+            talks.push(new H.clustering.DataPoint(52.51607,13.37698));
+			talks.push(new H.clustering.DataPoint(52.51607,13.37698));
+			talks.push(new H.clustering.DataPoint(52.51607,13.37698));
+			
+			// Potsdam 2018
+			talks.push(new H.clustering.DataPoint(52.39962,13.04784));
+			// Bern 2018
+			talks.push(new H.clustering.DataPoint(46.94843,7.44046));
+            // Zurich 2017
+            talks.push(new H.clustering.DataPoint(47.39296,8.4878511));
+			// Uni Luxembourg 2017
+			talks.push(new H.clustering.DataPoint(49.62718,6.15997));
+			// NEU 2017
+			talks.push(new H.clustering.DataPoint(42.35829,-71.05663));	
+			// SASO 2011
+			talks.push(new H.clustering.DataPoint(42.276615,-83.7316204));
+			// SASO 2012
+			talks.push(new H.clustering.DataPoint(45.7480682,4.8652803));
+			// CERN
+			talks.push(new H.clustering.DataPoint(46.235066,6.0456843));
+			// Huenfeld
+			talks.push(new H.clustering.DataPoint(50.673345,9.801418));
+			// MLG 2017
+			talks.push(new H.clustering.DataPoint(44.64549,-63.57655));
+			// Umea 2017
+			talks.push(new H.clustering.DataPoint(63.81987,20.30876));			
+			// NetSci 2017
+			talks.push(new H.clustering.DataPoint(39.76691,-86.14996));
+			talks.push(new H.clustering.DataPoint(39.76691,-86.14996));
+			talks.push(new H.clustering.DataPoint(39.76691,-86.14996));
+			talks.push(new H.clustering.DataPoint(39.76691,-86.14996));
+			// genua 
+			talks.push(new H.clustering.DataPoint(48.17672,11.75571));
+			// UZH
+			talks.push(new H.clustering.DataPoint(47.37704,8.53955));
+			// CSS2016
+			talks.push(new H.clustering.DataPoint(50.94246,6.95285));
+			// Paris 2016
+			talks.push(new H.clustering.DataPoint(48.84635,2.35504));
+			// Klagenfurt 2016
+			talks.push(new H.clustering.DataPoint(46.61474,14.25202));
+			// Karlsruhe 2016
+			talks.push(new H.clustering.DataPoint(49.0108,8.40865));
+			// Augsburg 2016
+			talks.push(new H.clustering.DataPoint(51.7074329,8.778058));
+			// Austin 2016
+			talks.push(new H.clustering.DataPoint(30.26759,-97.74299));		
+			// Vienna 2016
+			talks.push(new H.clustering.DataPoint(48.19904,16.36997));
+			// Wroclaw 2016
+			talks.push(new H.clustering.DataPoint(51.10825,17.02691));	
+			// Singapur 2015
+			talks.push(new H.clustering.DataPoint(1.30407,103.77496));
+			// CSS 2015
+			talks.push(new H.clustering.DataPoint(50.94246,6.95285));	
+			talks.push(new H.clustering.DataPoint(50.94246,6.95285));	
+			// Boston 2015
+			talks.push(new H.clustering.DataPoint(42.35829,-71.05663));	
+			talks.push(new H.clustering.DataPoint(42.35829,-71.05663));	
+			talks.push(new H.clustering.DataPoint(42.35829,-71.05663));
+			// Zurich 2015
+			talks.push(new H.clustering.DataPoint(55.6732451,12.5828747));			
+			// Zaragoza 2015
+			talks.push(new H.clustering.DataPoint(41.65183,-0.88113));
+			talks.push(new H.clustering.DataPoint(41.65183,-0.88113));	
+			// Dresden 2015
+			talks.push(new H.clustering.DataPoint(51.05363,13.74081));				
+			// Luxemburg 2015
+			talks.push(new H.clustering.DataPoint(49.50966,5.92781));			
+			// Dagstuhl 2015
+			talks.push(new H.clustering.DataPoint(49.53109,6.90044));
+			 // Berlin 2015
+            talks.push(new H.clustering.DataPoint(52.51607,13.37698));
+			// Berkeley 2014
+			talks.push(new H.clustering.DataPoint(37.8834449,-122.2453059));
+			talks.push(new H.clustering.DataPoint(37.8834449,-122.2453059));
+			// Lugano 2014
+			talks.push(new H.clustering.DataPoint(45.9985995,8.9774065));
+			// Stockholm 2014
+			talks.push(new H.clustering.DataPoint(59.309915,18.075933));
+			// SE 2014
+			talks.push(new H.clustering.DataPoint(54.341805,10.187713));			
+			// Finland 2014
+			talks.push(new H.clustering.DataPoint(60.2281484,24.8009358));
+			// London 2014
+			talks.push(new H.clustering.DataPoint(51.4981795,-0.1725348));
+			talks.push(new H.clustering.DataPoint(51.4981795,-0.1725348));
+			// SAOS 2014
+			talks.push(new H.clustering.DataPoint(53.88123,10.8565661));
+			// Thessaloniki 2014
+			talks.push(new H.clustering.DataPoint(40.6000499,23.014618));
+			// Leiden 2014
+			talks.push(new H.clustering.DataPoint(52.1485676,4.5096197));			
+			// INFORMATIK 2014
+			talks.push(new H.clustering.DataPoint(48.77919,9.240008));			
+			// Barcelona 2013			
+			talks.push(new H.clustering.DataPoint(41.394835,2.203228));
+			// Zurich 2013
+			talks.push(new H.clustering.DataPoint(47.39296,8.4878511));
+			talks.push(new H.clustering.DataPoint(47.3782,8.601328));						
+			// Omaha 2013
+			talks.push(new H.clustering.DataPoint(41.284615,-95.9488238));	
+			// Augsburg 2013
+			talks.push(new H.clustering.DataPoint(48.33316,10.9011673));				
+			// Kopenhagen 2013
+			talks.push(new H.clustering.DataPoint(55.6732451,12.5828747));	
+			talks.push(new H.clustering.DataPoint(55.6732451,12.5828747));	
+			talks.push(new H.clustering.DataPoint(55.6732451,12.5828747));
+			// Informatik 2013
+			talks.push(new H.clustering.DataPoint(50.34759,7.650133));			
+			// Philadelphia 2013
+			talks.push(new H.clustering.DataPoint(39.9614505,-75.1618845));
+			talks.push(new H.clustering.DataPoint(39.9614505,-75.1618845));				
+			talks.push(new H.clustering.DataPoint(39.9614505,-75.1618845));	
+			// Monte Verita 2013
+			talks.push(new H.clustering.DataPoint(46.1570299,8.7668311));				
+			// Würzburg 2012			
+			talks.push(new H.clustering.DataPoint(49.7809803,9.9791159));
+			// Liverpool 2012
+			talks.push(new H.clustering.DataPoint(53.39873,-2.9908488));
+			// Louvain 2012			
+			talks.push(new H.clustering.DataPoint(50.6632034,4.6350774));
+			// CSECS 2012
+			talks.push(new H.clustering.DataPoint(48.2652549,11.6743723));
+			// DATEV 2012
+			talks.push(new H.clustering.DataPoint(49.45434,11.07349));			
+			// Darmstadt 2011
+			talks.push(new H.clustering.DataPoint(49.87264,8.65014));
+			// Würzburg 2011
+			talks.push(new H.clustering.DataPoint(49.79278,9.9364));
+			// Trier 2011
+			talks.push(new H.clustering.DataPoint(49.7481399,6.6778711));
+			// Dagstuhl 2011
+			talks.push(new H.clustering.DataPoint(49.5312599,6.9007211));
+			// DATEV 2010
+			talks.push(new H.clustering.DataPoint(49.45434,11.07349));
+			talks.push(new H.clustering.DataPoint(49.45434,11.07349));
+			// SASO 2010
+			talks.push(new H.clustering.DataPoint(47.4685,19.13963));
+			// NetSci 2009
+			talks.push(new H.clustering.DataPoint(45.4317789,12.3297441));			
+			// DATEV 2009
+			talks.push(new H.clustering.DataPoint(49.45434,11.07349));
+			talks.push(new H.clustering.DataPoint(49.45434,11.07349));
+			// COMPLEX 2009
+			talks.push(new H.clustering.DataPoint(31.2651299,121.4278811));			
+			// MMVE 2009
+			talks.push(new H.clustering.DataPoint(30.2171539,-92.0313146));	
+			// Paderborn 2009
+			talks.push(new H.clustering.DataPoint(51.7074329,8.778058));				
+			// Vicsek 2009
+			talks.push(new H.clustering.DataPoint(47.4739599,19.0637555));	
+			// DATEV 2008
+			talks.push(new H.clustering.DataPoint(49.45434,11.07349));
+			talks.push(new H.clustering.DataPoint(49.45434,11.07349));
+			// SASO 2008
+			talks.push(new H.clustering.DataPoint(45.4170068,12.3706057));
+			// CollaborateCom 2008
+			talks.push(new H.clustering.DataPoint(28.373041,-81.5111124));			
+			// UCF 2008
+			talks.push(new H.clustering.DataPoint(28.59877,-81.2005588));
+			// Simutools 2008
+			talks.push(new H.clustering.DataPoint(43.2997432,5.3765581));
+			// McKinsey 2007
+			talks.push(new H.clustering.DataPoint(52.5122799,13.3947311));
+			// DATEV 2007
+			talks.push(new H.clustering.DataPoint(49.45434,11.07349));
+			// ATLANTA 2006
+			talks.push(new H.clustering.DataPoint(33.8471125,-84.3660488));
+			// WEBIST 2006
+			talks.push(new H.clustering.DataPoint(38.522187,-8.8668943));			
+			
+			var clusteredDataProvider = new H.clustering.Provider(talks);
+			var layer = new H.map.layer.ObjectLayer(clusteredDataProvider);					
+
+			map.addLayer(layer);
+			
+			var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+						
+    		//map.setViewBounds(talks.getBounds());
+			
+			map.setZoom(1, true);
+		</script>
+       
+        <h2>Talks</h2>
+        <ul class="publications">
+
+	<!-- 	<h4>Forthcoming</h4> -->
+		<h4>2018</h4>	
+			
+		<li>
+		<strong>What makes teams successful? A Data Science Perspective</strong><br />
+			Talk at UZH Executive MBA Information Event, Z&uuml;rich, November 6, 2018<br />
+		</li>
+			
+		<li>
+		<strong>Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data</strong><br />
+			Invited Talk at IBM Research, Rueschlikon, October 11, 2018<br />
+		</li>			
+			
+		<li>
+		<strong>Understanding Complex Systems: From Networks to Optimal Higher-Order Models</strong><br />
+			Talk at <a href="https://www.csh.ac.at">Complexity Science Hub Vienna</a>, Austria, September 5, 2018<br />
+		</li>			
+			
+		<li>
+        <strong>Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data</strong><br />
+			Hands-on Tutorial at <a href="http://www.kdd.org/kdd2018/">2018 ACM SIGKDD Conference on Kowledge Discovery and Data Mining</a>, London, UK, August 19, 2018<br />
+        </li>				
+			
+		<li>
+		<strong>Learning Optimal Models of Causal Topologies in Temporal Network Data</strong><br />
+			Talk at <a href="http://collectivebehaviour.com/">Max-Planck-Institute for Ornithology</a>, University of Konstanz, Germany, July 10, 2018<br />
+		</li>				
+			
+		<li>
+        <strong>Next Generation Network Analytics for Time Series Data</strong><br />
+			Talk at University of Stuttgart, Germany, July 5, 2018<br />
+		</li>			
+			
+		<li>
+        <strong>Entropy-based detection of inherent time scales in temporal networks</strong><br />
+			Talk at <a href="http://www.netsci2018.com/">NetSci 2018</a>, Paris, France, June 15, 2018<br />
+		</li>
+		
+		<li>
+		<strong>Learning optimal models of causal topologies in temporal data streams</strong><br />
+			Talk at Symposium on <a href="https://mlns18.tumblr.com/">Machine Learning in Network Science</a>, Paris, France, June 12, 2018<br />
+		</li>
+		
+		<li>
+        <strong>When networks are not enough: Inference of optimal higher-order models of complex systems</strong><br />
+			Talk at Symposium on <a href="http://danlarremore.com/sinm2018/">Statistical Inference for Network Models</a>, Paris, France, June 11, 2018<br />
+        </li>			
+			
+		<li>
+        <strong>Next-Generation Network Analytics for Time Series Data</strong><br />
+			Talk at Faculty of Mathematics and Natural Sciences, Bergische Universit&auml;t Wuppertal, Germany, June 4, 2018<br />
+        </li>
+
+		<li>
+        <strong>Data Analytics in Social Organizations: Lessons from Software Engineering and Scientometrics</strong><br />
+			Invited Talk at <a href="https://cns.epfl.ch/page-155626-en.html">Computation and Society Workshop</a>, EPFL Lausanne, Switzerland, May 22, 2018<br />
+        </li>			
+			
+		<li>
+        <strong>Next-Generation Network Analytics for Time Series Data</strong><br />
+			Talk at <a href="https://www3.unifr.ch/inf/en/">Department of Informatics</a>, University of Fribourg, Fribourg, Switzerland, April 24, 2018<br />
+        </li>			
+			
+		<li>
+        <strong>Learning Optimal Models of Causal Topologies in Temporal Data Streams</strong><br />
+			Invited Talk at Symposium on <a href="http://https://www.sg.ethz.ch/activities-events/symposium-temp-networks/">Networks, Time and Causality</a>, ETH Zurich, Zurich, Switzerland, April 13, 2018<br />
+        </li>
+			
+		<li>
+        <strong>Next-Generation Network Analytics for Time Series Data</strong><br />
+			Talk at <a href="https://www.uni-marburg.de/fb12/en/index_html?set_language=en">Faculty of Mathematics and Computer Science, Philipps-Universit&auml;t Marburg</a>, Marburg, Germany, April 12, 2018<br />
+        </li>			
+			
+		<li>
+        <strong>Understanding Social Systems: From Sociophysics to Computational Social Science</strong><br />
+			Talk at <a href="http://berlin18.dpg-tagungen.de/">Spring meeting of the German Physical Society</a>, Berlin, Germany, March 15, 2018<br />
+        </li>
+			
+		<li>
+        <strong>When is a network a network? Multi-order graphical model selection in time series data on networks</strong><br />
+			Talk at <a href="http://berlin18.dpg-tagungen.de/">Spring meeting of the German Physical Society</a>, Berlin, Germany, March 14, 2018<br />
+        </li>	
+			
+		<li>
+        <strong>Data Science in den Sozialwissenschaften</strong><br />
+			Talk at <a href="https://gi.de/datascience/">Workshop of GI Data Science Task Force</a>, Berlin, Germany, January 30, 2018<br />
+        </li>
+			
+		<li>
+        <strong>Modelling Social Networks</strong><br />
+			Invited Talk at Workshop on Ethics in Complex Systems, Potsdam, Germany, January 29, 2018<br />
+        </li>
+			
+		<li>
+        <strong>Next Generation Network Analytics for Time Series Data</strong><br />
+			SNSF Interview Talk, Bern, Switzerland, January 11, 2018<br />
+        </li>
+			
+		<h4>2017</h4>
+        
+        <li>
+        <strong>Mining Social Organizations - A Network Perspective!?!</strong><br />
+			Invited Lecture at <a href="http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheitPre.do?semkez=2017W&ansicht=ALLE&lerneinheitId=117471&lang=de">Computational Social Science Seminar</a>, ETH Z&uuml;rich, Z&uuml;rich, Switzerland, November 20, 2017<br />
+        </li>
+            
+		<li>
+        <strong>Optimal Models of Complex Systems: From Networks to Multi-order Models</strong><br />
+			Invited Talk at <a href="https://www.networkscienceinstitute.org/events/ingo-scholtes-2">Network Science Institute</a>, Northeastern University, Boston, MA, USA, November 7, 2017<br />
+        </li>			
+			
+		<li>
+        <strong>Optimal Models of Complex Systems: From Networks to Multi-order Models</strong><br />
+		Talk at Research Unit in Engineering Sciences, University of Luxembourg, October 26, 2017<br />
+        </li>
+			
+		<li>
+        <strong>Optimal Models of Complex Systems: From Networks to Multi-order Models</strong><br />
+		Talk at Icelab, Ume&acirc; University, Umea, Sweden, October 19, 2017<br />
+        </li>
+			
+		<li>
+        <strong>From Relational Data to Graphs: Inferring Significant Links using Generalized Hypergeometric Ensembles </strong><br />
+		Spotlight Talk at 13th International Workshop on Machine Learning in Graphs (MLG 2017), Halifax, Nova Scotia, Canada, August 13, 2017<br />
+        </li>
+                                
+		<li>
+        <strong>When is your network a network? Statistical Inference in Multi-Order Network Models of Pathway Data</strong><br />
+		Talk at NetSci 2017, Indianapolis, IN, USA, June 22, 2017<br />		
+        </li>      
+               
+		<li>
+        <strong> Multi-Order Graphical Models: A Unified Perspective on Pathways and Temporal Networks </strong><br />
+		Talk at HONS 2017, Indianapolis, IN, USA, June 20, 2017<br />
+        </li>                                   
+             
+		<li>
+		<strong>Learning from Relational Data: Beyond Maximum Entropy Models </strong><br />
+		Invited Panel Talk at the 10th workshop on Dynamics on and of Complex Networks, Indianapolis, IN, USA, June 19, 2017<br />		
+		</li>
+			
+         <li>
+        <strong>Controllability of Temporal Networks: An Analysis using Higher-order Networks</strong><br />
+		Invited Talk at Symposium of Controlling Complex Systems, Indianapolis, IN, USA, June 19, 2017<br />
+		</li>     
+                     
+ 		<li>
+        <strong>Data Science in Software Engineering</strong><br />
+		Talk at genua GmbH, Kirchheim bei M&uuml;nchen, Germany, May 17, 2017<br />		  
+        </li>                      
+                      
+		<li>
+        <strong>Network Analytics for Complex Data</strong><br />
+		Talk at Institute for Informatics, University of Zurich, Switzerland, April 5, 2017<br />		   
+        </li>                                                                                                                                      
+		<h4>2016</h4>        
+
+		<li>
+        <strong>From Big to Complex Data: Pushing the Limits of Graph Mining and Network Analysis</strong><br />
+Talk at <a href="http://www.ml.inf.ethz.ch/">Institute for Machine Learning</a>, ETH Z&uuml;rich, Switzerland, December 19, 2016<br /> 
+        </li>
+
+<li>
+        <strong>A Quantitative Study of the Ringelmann Effect in Software Development Teams</strong><br />
+Plenary Talk at <a href="http://www.gesis.org/css-wintersymposium/home/">2nd CSS Winter Symposium</a>, Cologne, Germany, December 1, 2016<br />        
+        </li>      
+
+<li>
+        <strong>Mining Time-stamped Network Data</strong><br />
+Invited Talk at <a href="https://www.lip6.fr/?LANG=fr"> LIP6, Universit&eacute; Pierre et Marie Curie</a>, Paris, France, October 19, 2016<br />      
+        </li>             
+        
+        <li>
+        <strong>Computational Social Science</strong><br />
+Invited Lightning Talk at <a href="http://www.informatik2016.de/1268.html">Symposium of topical section "Informatik und Gesellschaft"</a>, <a href="http://www.informatik2016.de/">Informatik 2016</a>, Klagenfurt, Austria, September 26, 2016<br />         
+        </li>
+        
+          <li>
+        <strong>Knowledge Discovery in Complex Relational Data</strong><br />
+Talk at Oberseminar at <a href="http://www.aifb.kit.edu/web/Hauptseite/en">AIFB</a>, <a href="http://www.kit.edu/english/">Karlsruhe Institute of Technology</a>, Germany, June 7, 2016<br />      
+        </li>
+        
+         <li>
+        <strong>From Aristotle to Ringelmann: A large-scale analysis of productivity and coordination in Open Source Software projects
+</strong><br />
+Invited Talk at <a href="http://2016.icse.cs.txstate.edu/">International Conference on Software Engineering (ICSE 2016)</a>, Austin, TX, USA, May 18, 2016<br /> 
+        </li>  
+        
+         <li>
+        <strong>When Network Science meets Software Engineering
+</strong><br />
+Invited guest lecture at <a href="https://swt.informatik.uni-augsburg.de/elite/se/dates/t20160404100748-0">Elite Graduate Program in Software Engineering</a>, Augsburg University, Germany, April 20, 2016<br />     
+        </li>  
+        
+        <li>
+        <strong>Knowledge Discovery in Complex Relational Data</strong><br />
+Berufungsvortrag at <a href="http://cs.uni-paderborn.de/">Department of Computer Science, Paderborn University</a>, Germany, February 25, 2016<br />          
+        </li>
+        
+        <li>
+        <strong>From Aristotle to Ringelmann: A large-scale analysis of productivity and coordination in Open Source Software projects
+</strong><br />
+Talk at <a href="http://swm2015.de/">Software Engineering 2016 (SE)</a>, TU Wien, Austria, February 24, 2016<br /> 
+        </li>
+        
+         <li>
+            <strong>Mining high-frequency data on temporal networks</strong><br />
+			Invited Lecture at Workshop on <a href="http://engine.pwr.edu.pl/dpcn2016/speakers/">Complex Network Mining and Analysis</a>, Wroclaw University of Technology, Poland, January 9, 2016<br />   
+        </li>                          
+                                
+        <h4>2015</h4>
+        
+        <li>
+            <strong>PhD Course: Modeling and Analysis of Complex Networks</strong><br />
+			Invited Series of 9 Lectures at <a href="http://frs.ethz.ch/about/sec/">Singapore-ETH Centre (SEC)</a>, <a href="http://www.create.edu.sg/">CREATE Campus</a>, Singapore, December 7-11, 2015<br />                    
+        </li>      
+        
+        <li>
+            <strong>Mining Time-Stamped Network Data: Spectral Methods and Centrality Measures</strong><br />
+			Invited Talk at workshop <a href="http://www.gesis.org/css-wintersymposium/program/workshops-tutorials/application-of-network-theory-on-computational-social-science/">Application of network theory on computational social science</a>, GESIS Winter Symposium, Cologne, Germany, December 1, 2015<br />      
+        </li>
+        
+         <li>
+            <strong>Mining Social Organizations: A Network Perspective</strong><br />
+			Invited Talk at <a href="http://www.gesis.org">Leibniz Institute for the Social Sciences (GESIS)</a>, Cologne, Germany, November 30, 2015<br />            
+        </li>          
+        
+         <li>
+            <strong>Understanding Social Organizations</strong><br />
+			Talk at Dagstuhl Seminar <a href="http://www.dagstuhl.de/15482">Social Concepts in Self-organising Systems</a>, Dagstuhl, Germany, November 26, 2015<br />            
+        </li>          
+        
+          <li>
+            <strong>Analysis of Non-Markovian Temporal Networks: Spectral Methods and Centrality Measures</strong><br />
+			Seminar Talk at <a href="http://wwwen.uni.lu/lcsb/">Luxembourg Centre for Systems Biomedicine (LCSB)</a>, Luxembourg, November 25, 2015<br />              
+        </li>               
+        
+          <li>
+            <strong>Mining Social Organizations: A Network Perspective</strong><br />
+			Invited Talk at <a href="https://www.sg.ethz.ch/activities-events/symposium-computational-social-science/">Symposium on computational social science</a>, ETH Z&uuml;rich, Z&uuml;rich, Switzerland, November 6, 2015<br />            
+        </li>           
+        
+        <li>
+            <strong>Understanding Complex Systems: When Big Data meets Network Science</strong><br />
+			Invited Talk at <a href="http://sasost.isse.de/">Workshop on Self-adaptive and self-organising socio-technical systems</a> held at <a href="http://saso2015.mit.edu/">IEEE SASO 2015</a>, MIT, Cambridge, MA, USA, September 25, 2015<br />                    
+        </li>    
+        
+         <li>
+            <strong>Spectral Methods in the Analysis of Non-Markovian Temporal Networks</strong><br />
+			Invited Talk at <a href="http://scholar.harvard.edu/yyl/ingo">Harvard Medical School</a>, <a href="http://scholar.harvard.edu/yyl/home">Prof. Dr. Yang-Yu Liu</a>, Boston, MA, USA, September 25, 2015<br />            
+        </li>         
+        
+		<li>
+            <strong>Analysis of Non-Markovian Temporal Networks: Spectral Methods and Centrality Measures</strong><br />
+			Invited Talk at <a href="http://www.networkscienceinstitute.org/events/ingo-scholtes">Network Science Institute</a>, Northeastern University, <a href="http://www.mobs-lab.org/alessandro-vespignani.html">Prof. Dr. Alessandro Vespignani</a>, Boston, MA, USA, September 24, 2015<br />             
+        </li>   
+        
+         <li>
+            <strong>Analysis of Non-Markovian Temporal Networks</strong><br />
+			Talk at interdisciplinary workshop <a href="http://www.cecam.org/workshop-2-1215.html">Recognizing the Relevance of Change: Analysis and Control of Time-evolving Networks in Epidemiology and Evolutionary Medicine</a>, Freie Universit&auml;t Berlin, Germany, July 20-22, 2015<br />
+            <a href="javascript:map.zoomTo(de.getBoundingBox());">[Show in Map]</a>            
+        </li>       
+        
+		<li>
+            <strong>Spectral Methods in the Analysis of Non-Markovian Temporal Networks</strong><br />
+			Talk at NetSci, Zaragoza, Spain, June 4, 2015<br />                 
+        </li>
+        
+        <li>
+            <strong>Analyzing time-stamped network data: When ordering matters</strong><br />
+			Talk at NetSci satellite <a href="http://hons.netsci2014.net">Higher-Order Models in Network Science</a>, Zaragoza, Spain, June 2, 2015<br />
+        </li>     
+        
+                <li>
+            <strong>Automated Software Remodularization Based on Move Refactoring - A Complex Systems Approach</strong><br />
+			Talk at GI Conference on Software Engineering and Management, Dresden, Germany, March 17-20, 2015<br />  
+        </li>     
+
+        
+		<li>
+            <strong>The Social Dimension of Citations</strong><br />
+            Invited Talk at COST Workshop <a href="https://www.sg.ethz.ch/activities-events/workshops/cost-td1210/">Quantifying scientific impact: networks, measures, insights?</a>, Zurich, Switzerland, February 12-13, 2015<br />
+        </li>        
+                                                          
+		<h4>2014</h4>                 
+
+        <li>
+            <strong>Aggregate Networks Considered Harmful: Towards Higher-Order Models of Time-Varying Networks</strong><br />
+			Talk at Second Annual KnowEscape Conference, Thessaloniki, Greece, November 26, 2014<br />        
+        </li>     
+
+
+ 		<li>
+            <strong>Modeling Time-Varying Complex Networks: The Importance of Non-Markovianity</strong><br />
+			Invited Talk at <a href="http://stat.ethz.ch/events/calendar_AS_2014">Z&uuml;rich Seminar on Applied Statistics</a>, Zürich, Switzerland, October 23, 2014<br />
+            <a href="javascript:map.zoomTo(ch.getBoundingBox());">[Show in Map]</a>            
+        </li>                                         
+ 
+        
+          <li>
+            <strong>The Social Dimension of Information Ranking</strong><br />
+			Talk at <a href="http://www.mcts.tum.de/cvl-a/philwiss/workshop-big-data/">Big Data und Gesellschaft: interdisziplinäre Analysen</a>, Stuttgart, Germany, September 22, 2014<br />           
+        </li> 
+             
+         <li>
+            <strong>Big Data and Socio-Technical Systems</strong><br />
+			Invited Keynote at <a href="http://sasost.isse.de/">SASO^ST 2014</a>, London, United Kingdom, September 12, 2014<br />             
+        </li>        
+        
+        <li>
+            <strong>Complex Structures and Collective Dynamics in Networked Systems: Foundations for Self-Adaptation and Self-Organization</strong><br />
+            Tutorial Lectures at <a href="http://www.iis.ee.imperial.ac.uk/saso2014/">IEEE SASO 2014</a>, London, United Kingdom, September 8, 2014<br />              
+        </li>                                    
+        
+         <li>
+            <strong>Diffusion in Non-Markovian Temporal Networks: Slow-Down or Speed-Up?</strong><br />
+            Ignite Talk at <a href="http://www.netsci2014.net">NetSci 2014</a>, Berkeley, CA, USA, June 6, 2014<br />
+        </li>    
+        
+          <li>
+            <strong>Higher-Order Aggregate Representations of Temporal Networks</strong><br />
+			Talk at NetSci satellite <a href="http://hons.netsci2014.net">Higher-Order Models in Network Science</a>, Berkeley, CA, USA, June 3, 2014<br />
+        </li>   
+        
+                <li>
+            <strong>Complex Structures and Collective Dynamics in Networked Systems: Foundations for Self-Adaptation and Self-Organization</strong><br />
+            Invited Lecture Series at <a href="http://linc.ucy.ac.cy/isocial/index.php/events/42-summer-school-2014">iSocial Summer School</a>, Stockholm, Sweden, June 1, 2014<br />             
+        </li>                  
+        
+         <li>
+            <strong>Automated Software Re-modularization Based on Move Refactoring: A Complex Systems Approach</strong><br />
+            Contributed Talk at <a href="http://aosd.net/2014/">13th International Conference on Modularity 2014</a>, Lugano, Switzerland, April 23, 2014<br />           
+        </li>
+        
+      	<li>
+            <strong>When your social position predicts your success: lessons from Open Source communities and citations</strong><br />
+            Contributed Talk at Lorentz Centre Workshop <a href="http://www.lorentzcenter.nl/lc/web/2014/607/info.php3?wsid=607&venue=Oort">Simulating the Social Processes of Science</a>, Leiden, The Netherlands, April 9, 2014<br />           
+        </li>
+        
+		<li>
+            <strong>Categorizing Bugs with Social Networks: A Case Study on Four Open Source Software Communities</strong><br />
+            Talk at Software Engineering (SE 2014), Kiel, Germany, February 27 2014<br />          
+        </li>                                    
+
+        <li>
+            <strong>Challenges and Research Directions for Self-optimisation, Organic and Autonomic Computing</strong><br />
+            Statement at 2nd International Workshop on Self-optimisation in Organic and Autonomic Computing Systems (SAOS 2014), L&uuml;beck, Germany, February 25, 2014<br />          
+        </li>      
+                    
+			<h4>2013</h4>         
+            
+            <li>
+            <strong>The Social Dimension of Collaborative Information Spaces</strong><br />
+            Talk at First Annual KNOWeSCAPE Conference, Aalto University, Espoo, Finland, November 18-20, 2013<br />
+            </li>   
+                       
+             <li>
+            <strong>Force-based Layout of Non-Markovian Temporal Networks</strong><br />
+            Talk at European Conference on Complex Systems (ECCS), Barcelona, Spain, September 20, 2013<br />
+            </li>    
+            
+             <li>
+            <strong>Predicting success based on social network analysis</strong><br />
+            Invited Talk at ECCS satellite workshop <a href="http://barabasilab.neu.edu/success_eccs2013/">Quantifying Success</a>, Barcelona, Spain, September 18, 2013<br />            
+            </li> 
+            
+             <li>
+            <strong>The Social Dimension of Information Ranking: A Discussion of Research Challenges and Approaches</strong><br />
+            Talk at Workshop <a href="http://www.sozioinformatik2013.de">Sozioinformatik 2013</a>, Koblenz, Germany, September 16, 2013<br />           
+            </li>   
+            
+            <li>
+            <strong>Complex Structures and Collective Dynamics in Networked Systems: Foundations for Self-Adaptation and Self-Organization</strong><br />
+            3 x tutorial lectures at <a href="https://www.cs.drexel.edu/saso2013/">IEEE International Conference on Self-Adaptive and Self-Organizing Systems (SASO 2013)</a>, Philadelphia, PA, USA, September 13, 2013, <a href="http://web.sg.ethz.ch/users/ischoltes/sasotutorial-2013/">[Tutorial material]</a><br />
+            </li>        
+            
+             <li>
+            <strong>Self-Adaptation and Self-Organization in Socio-Technical Systems: A Tale of Two Layers</strong><br />
+            Invited Panel Talk at IEEE SASO 2013, Philadelphia, PA, USA, September 12, 2013<br />
+            </li> 
+            
+            <li>
+            <strong>Topological and Temporal Complexity in Socio-Technical Systems</strong><br />
+            Talk at Workshop on Self-Adaptation and Self-Organization in Socio-Technical Systems (SASO^ST 2013), Philadelphia, PA, USA, September 9, 2013<br />
+            </li> 
+            
+            <li>
+            <strong>Topological and Temporal Complexity in Socio-Technical Systems</strong><br />
+            Invited Talk at University of Nebraska at Omaha, NE, USA, September 5, 2013<br />           
+            </li>
+            
+            <li>
+            <strong>Topological and Temporal Complexity in Socio-Technical Systems</strong><br />
+            Invited Talk at Google Zurich Lab, Zurich, Switzerland, August 26, 2013<br />
+            </li> 
+        
+            <li>
+            <strong>Modeling and Analysis of Complex Dynamic Networks: Why Should Computer Scientists Care?</strong><br />
+            Invited Talk at Computer Science Colloquium, Augsburg University, Germany, July 18, 2013<br />            
+            </li>          
+        
+        	<li>
+            <strong>The Paths Not Taken: Aggregate Networks Considered Harmful!</strong><br />
+            Ignite Talk at <a href="http://netsci2013.net">NetSci 2013</a>, K&oslash;benhavn, Denmark, June 7, 2013<br />
+            </li>
+            
+            <li>
+            <strong>Social Dynamics in Open Source Communities: Research Methods, Applications and Perspectives</strong><br />
+            Talk at NetSci satellite workshop <a href="http://sociald.netsci2013.net">Social Dynamics</a>, K&oslash;benhavn, Denmark, June 4, 2013<br />
+            </li>   
+            
+            <li>
+            <strong>Modeling and Analysis of Complex Dynamic Networks: Why Should Computer Scientists Care?</strong><br />
+            Invited Talk at NetSci satellite workshop <a href="http://www.sg.ethz.ch/NetSciSat2013/wordpress/?page_id=7">Dynamic Information and Communication Networks</a>, K&oslash;benhavn, Denmark, June 3, 2013<br />
+            </li>         
+            
+        	<li>
+            <strong>Structure and Dynamics of Collaborative Software Engineering: A Complex Networks Perspective</strong><br />
+            Invited Talk at IBM Switzerland, Z&uuml;rich, Switzerland, April 11, 2013<br />
+            </li>               
+                      
+        	<li>
+            <strong>Categorizing Bugs with Social Networks: A Case Study on Four Open Source Software Communities</strong><br />
+            Invited Talk at <a href="http://www.ifi.uzh.ch/seal/events/ASDS-2013.html">Monte Verita Symposium Augmenting Software Developer Support to Improve Productivity</a>, Monte Verita, Ascona, Switzerland, March 10-15, 2013<br />           
+            </li>
+
+			<h4>2012</h4>   
+        
+        	<li>
+            <strong>Vom Programmierer zum Team, vom Team zur Community - Perspektiven des Social Software Engineering</strong><br />
+            Invited Talk at <a href="http://www3.informatik.uni-wuerzburg.de/research/projects/trendscout/">DATEV TrendScout Workshop</a>, N&uuml;rnberg, Germany, November 27, 2012<br />
+            </li>
+            
+            <li>
+            <strong>A Tunable Mechanism for Identifying Trusted Nodes in Large Scale Distributed Networks </strong><br />
+            11th IEEE International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom-2012), Liverpool, UK, June 25 - 27, 2012<br />            
+            </li>
+            
+            <li>
+            <strong>Designing adaptive distributed systems: A complex networks perspective</strong><br />
+            Invited talk at <a href="http://sites.uclouvain.be/networks/Seminars/2011-2012">research seminar of Prof. Dr. Vincent D. Blondel</a>, Catholic University of Louvain-La-Neuve, Belgium, April 20, 2012<br />           
+            </li>
+            
+            <li>
+            <strong>Statistical Mechanics of Networks: Applications in Future Information Systems</strong><br />
+            Invited Lecture Series at <a href="http://www3.informatik.uni-wuerzburg.de/events/summerschool2012/home">Summer School "Modeling and Analysis of Novel Mechanisms in Future Internet Applications"</a>, University of Wuerzburg, Germany, March 27 - April 3, 2012<br />
+            </li>
+            
+            <li>
+            <strong>Organic Distributed Systems: A Complex Networks Perspective</strong><br />
+            First International Workshop on Complex Sciences in the Engineering of Computing Systems (CSECS), held at ARCS 2012, Munich, Germany, February 28, 2012<br />            
+            </li>
+
+			<h4>2011</h4>   
+            
+            <li>
+            <strong>Modeling of Emerging Internet Servíces: Social Networks and Crowdsourcing</strong><br />
+            Invited Talk at EuroView 2011, University of Würzburg, Germany, August 1, 2011<br />            
+            </li>
+            
+			<li>
+            <strong>Harnessing Complex Structures and Collective Dynamics in Large Networked Computing Systems </strong><br />
+            Disputation lecture, University of Trier, Germany, May 27, 2011<br />             
+            </li>
+            
+            <li>
+            <strong>Physics-inspired Self-Organization and Adaptation in Large Dynamic Overlay Networks</strong><br />
+            Invited Talk at <a href="http://www.dagstuhl.de/mat/Files/11/11181/11181.SWM.Other.pdf">Dagstuhl Seminar 11181 "Organic Computing - Design of Self-Organizing Systems"</a>, Schloss Dagstuhl, Germany, May 11, 2011<br />
+            </li>
+            
+            <li>
+            <strong>Menschen, Rechner und Atome - Über die Soziophysik verteilter Systeme</strong><br />
+            Invited Talk at Colloquium of the Institute of Computer Science, Group of Prof. Dr. Phuoc Tran-Gia, Würzburg, Germany, February 22, 2011<br />            
+            </li>
+            
+            <li>
+            <strong>Total vernetzt - Über die Beherrschbarkeit großer verteilter Rechnersysteme</strong><br />
+            Invited Talk at Colloquium of the Multimedia Communications Lab, Group of Prof. Dr. Ralf Steinmetz, Darmstadt, Germany, February 9, 2011<br />
+            </li>            			
+
+			<h4>2010</h4>   
+            
+            <li>
+            <strong>Social Web APIs - Die Durchdringung des WWW</strong><br />
+            Talk at DATEV TrendScout Workshop, Nürnberg, Germany, December 2, 2010<br />
+            </li>
+            
+			<li>
+            <strong>Distributed Creation and Adaptation of Random Scale-Free Overlay Topologies</strong><br />
+            Talk at <a href="http://www.inf.u-szeged.hu/saso10/index.php?menu=technical_program">IEEE Conference on Self-Organizing and Self-Adaptive Systems (SASO)</a>, Budapest, Hungary, September 27 - October 1, 2010<br />
+            </li>
+            
+			<li>
+            <strong>Ordnung im Chaos - Über die statistische Physik vernetzter Rechnersysteme</strong><br />
+            DATEV TrendScout Workshop, Nürnberg, Germany, July 27, 2010<br />            
+            </li>
+
+			<h4>2009</h4>   
+            
+			<li>
+            <strong>Moore, Amdahl und Gustafson - ManyCores - Hardware- und Softwaretrends</strong><br />
+            DATEV TrendScout Workshop, Nürnberg, Germany, November 19, 2009<br />            
+            </li>
+            
+            <li>
+            <strong>Die Zukunft von Microsoft .NET </strong><br />
+            DATEV TrendScout Workshop, Nürnberg, Germany, November 19, 2009<br />            
+            </li>
+            
+            <li>
+            <strong>Breathing Life into Networks</strong><br />
+            NetSci 2009, Venice, Italy, July 3, 2009<br />            
+            </li>
+            
+            <li>
+            <strong>Harnessing Complexity in Large-Scale Distributed Systems </strong><br />
+            Invited Talk at Colloquium of the Department of Biological Physics, Group of Prof. Dr. Tamas Vicsek, Budapest, Hungary, April 16, 2009<br />            
+            </li>
+            
+            <li>
+            <strong>Harnessing Complexity in Large-Scale Distributed Systems </strong><br />
+            Invited talk at Colloquium of the Computer Networks Group of Prof. Dr. Holger Karl, University of Paderborn, Germany, April 8, 2009<br />            
+            </li>
+            
+            <li>
+            <strong>HyperVerse: Simulation and Testbed Reconciled</strong><br />
+            Second International Workshop on Massively Multiuser Virtual Environments (MMVE2009) at IEEE Virtual Reality 2009, LaFayette, Louisiana, USA, March 15, 2009<br />            
+            </li>
+            
+            <li>
+            <strong>Epidemic Self-Synchronization in Complex Networks</strong><br />
+            First International Conference on Complex Sciences (Complex 2009), Shanghai, China, February 23-25, 2009<br />            
+            </li>
+            
+ 			<h4>2008</h4>   
+            
+          <li>
+            <strong>Rich Internet Applications</strong><br />
+            DATEV TrendScout Workshop, Nürnberg, Germany, December 2, 2008<br />            
+            </li>
+            
+           <li>
+            <strong>Self-Organization Aspects in the HyperVerse Project </strong><br />            Invited Talk at <a href="http://www.eecs.ucf.edu/eecs-files/seminar_flyers/17Nov2008_Scholtes.pdf"> EECS Seminar Series</a>, Group of Prof. Dr. Dan Marinescu, University of Central Florida, Orlando, FL, USA, November 17, 2008<br />
+            </li>
+            
+            <li>
+            <strong>Minimizing Load Delays in Distributed Virtual Environments Using Epidemic Hoarding</strong><br />
+            Talk at <a href="http://collaboratecom.org/2008/program.php">4th International Conference on Collaborative Computing: Networking, Applications and Worksharing (CollaborateCom’08)</a>, Orlando, FL, USA, November 13 - 16, 2008<br />             
+            </li>
+            
+            <li>
+            <strong>Awareness-Driven Phase Transitions in Very Large Scale Distributed Systems</strong><br />
+            Talk at <a href="http://www.agentgroup.unimo.it/saso2008/paper_program.html">2nd IEEE International Conferences on Self-Adaptive and Self-Organizing Systems (SaSo)</a>, Venice, Italy, October 20 - 24, 2008<br />              
+            </li>
+                        
+          	<li>
+            <strong>Dualcore, Quadcore, Octcore ...</strong><br />
+            DATEV TrendScout Workshop, Nürnberg, Germany, July 24, 2008<br />            
+            </li>
+            
+            <li>
+            <strong>TopGen - Internet Router-Level Topology Generation Based on Technology Constraints</strong><br />
+            Talk at <a href="http://www.simutools.org/2008/techprog.shtml#7164">1st International Conference on Simulation Tools and Techniques for Communications, Networks and Systems (SimuTools’08)</a>, Marseille, France, March 3 - 7, 2008<br />           
+            </li>
+
+			<h4>2007</h4>   
+            
+            <li>
+            <strong>Trends in Virtualization</strong><br />
+            DATEV TrendScout Workshop, Nürnberg, Germany, October 30, 2007<br />
+            </li>
+            
+            <li>
+            <strong>SOA in the Small</strong><br />
+            Invited Talk at McKinsey Workshop, Berlin, Germany, September 5, 2007<br />
+            </li>
+
+			<h4>2006</h4>   
+            
+            <li>
+            <strong>Interface-based Web Service Syndication and its Application to a Collaborative Weblog Search Service</strong><br />
+            Talk at <a href="http://collaboratecom.org/2006/program.php">2nd International Conference on Collaborative Computing (CollaborateCom’06)</a>, Atlanta, Georgia, USA, November 17 - 20, 2006<br />           
+            </li>
+            
+            <li>
+            <strong>Web Federates - Towards A Middleware for Highly Scalable Peer-To-Peer Services</strong><br />
+            Talk at <a href="http://www.webist.org/WEBIST2006/">2nd International Conference on Web Information Systems and Technologies (WEBIST)</a>, Setubal, Portugal, April 11-13, 2006<br />           
+            </li>
+                        
+        </ul>
+        </article>
+		</section>
+</div>
+<footer class="container">
+        <div class="sixteen columns">
+          <p>Copyright &copy; 2012-2019&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
+        </div>
+      </footer>
+  </body>
+</html>
