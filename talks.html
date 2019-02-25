@@ -72,6 +72,7 @@
 			for (city in talk_db)
                 for (y in talk_db[city]['years'])
 			        talks.push(new H.clustering.DataPoint(talk_db[city]['lat'], talk_db[city]['lon']));
+            });
 			
 			var clusteredDataProvider = new H.clustering.Provider(talks);
 			var layer = new H.map.layer.ObjectLayer(clusteredDataProvider);					
@@ -658,11 +659,12 @@ Talk at <a href="http://swm2015.de/">Software Engineering 2016 (SE)</a>, TU Wien
             
           <li>
             <strong>Rich Internet Applications</strong><br />
-            DATEV TrendScout Workshop, Nürnberg, Germany, December 2, 2008<br />            
+            DATEV TrendScout Workshop, Nürnberg, Germany, December 2, 2008<br />
             </li>
             
            <li>
-            <strong>Self-Organization Aspects in the HyperVerse Project </strong><br />            Invited Talk at <a href="http://www.eecs.ucf.edu/eecs-files/seminar_flyers/17Nov2008_Scholtes.pdf"> EECS Seminar Series</a>, Group of Prof. Dr. Dan Marinescu, University of Central Florida, Orlando, FL, USA, November 17, 2008<br />
+            <strong>Self-Organization Aspects in the HyperVerse Project </strong><br />
+            Invited Talk at <a href="http://www.eecs.ucf.edu/eecs-files/seminar_flyers/17Nov2008_Scholtes.pdf"> EECS Seminar Series</a>, Group of Prof. Dr. Dan Marinescu, University of Central Florida, Orlando, FL, USA, November 17, 2008<br />
             </li>
             
             <li>
