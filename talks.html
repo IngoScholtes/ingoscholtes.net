@@ -69,19 +69,19 @@
 			var talks = [];								
 			
             $.getJSON("talks.json", function(talk_db) {
-			for (city in talk_db)
-                for (y in talk_db[city]['years'])
-			        talks.push(new H.clustering.DataPoint(talk_db[city]['lat'], talk_db[city]['lon']));
-                    var clusteredDataProvider = new H.clustering.Provider(talks);
-			var layer = new H.map.layer.ObjectLayer(clusteredDataProvider);					
+                for (city in talk_db)
+                    for (y in talk_db[city]['years'])
+                        talks.push(new H.clustering.DataPoint(talk_db[city]['lat'], talk_db[city]['lon']));
+                        var clusteredDataProvider = new H.clustering.Provider(talks);
+                var layer = new H.map.layer.ObjectLayer(clusteredDataProvider);					
 
-			map.addLayer(layer);
-			
-			var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-						
-    		//map.setViewBounds(talks.getBounds());
-			
-			map.setZoom(1, true);
+                map.addLayer(layer);
+                
+                var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+                            
+                //map.setViewBounds(talks.getBounds());
+                
+                map.setZoom(1, true);
             });			
 		</script>
        
