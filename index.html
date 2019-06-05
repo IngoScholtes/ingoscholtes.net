@@ -26,6 +26,37 @@
           });
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            /* Create two equal columns that floats next to each other */
+            .columnimg {
+              float: left;
+              width: 15%;
+              display: table-cell;
+              vertical-align: middle;
+              padding: 5px;
+            }
+
+            .logo {
+              display: table-cell;
+              vertical-align: middle;
+            }
+
+            .column {
+              float: left;
+              width: 80%;
+            }
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            </style>
     </head>
     <body>
         <header class="page">
@@ -73,25 +104,65 @@
               <h2>Welcome</h2>
                 <p>I am an SNSF-Professor for <a href="http://www.ifi.uzh.ch/en/dag.html">Data Analytics</a> in the <a href="http://www.ifi.uzh.ch/">Department of Informatics</a> at University of Zurich. My research focuses on problems at the intersection between data analytics, network science, and machine learning.</p>
             <p>In 2014 I received a <a href="http://junior-fellows.gi.de/">Juniorfellowship</a> from the <a href="http://www.gi-ev.de">German Informatics Society (GI e.V.)</a>. In 2018 I was awarded an <a href="http://www.snf.ch/en/researchinFocus/newsroom/Pages/news-180301-39-new-snsf-professorships.aspx">SNSF Professorship</a> from the Swiss National Science Foundation.</p>
-            <h4>Research Experience</h3>
+            <h4>Current Positions</h4>            
+            <div class="row">
+                <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/BUW_siegel-schwarz.png" class="logo"  /></div>
+                <div class="column">
+              <p><a href="https://www.uni-wuppertal.de/en/">Bergische Universität Wuppertal</a><br />
+                <a href="https://fk4.uni-wuppertal.de/en/faculty-of-mathematics-und-natural-sciences.html">Faculty of Mathematics and Natural Sciences</a><br />
+              Full Professor (W3) for Data Analytics, from July 2019</p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/en/5/5a/University_of_Zurich_seal.svg" class="logo"  /></div>
+              <div class="column">
             <p><a href="http://www.uzh.ch">University of Z&uuml;rich</a><br />
-              <a href="http://www.ifi.uzh.ch/">Department of Informatics</a><br />
-            Head of <a href="http://www.ifi.uzh.ch/en/dag.html">Data Analytics Group</a>, since 2018</p>
+              <a href="http://www.ifi.uzh.ch/">Department of Informatics (IfI)</a><br />
+            SNSF Professor for <a href="http://www.ifi.uzh.ch/en/dag.html">Data Analytics</a>, since 2018</p>
+          </div>
+        </div>
+              
+            <h4>Research Experience</h4>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/ETH_Z%C3%BCrich_Logo_black.svg" class="logo" /></div>
+              <div class="column">
               <p><a href="http://www.ethz.ch">ETH Z&uuml;rich</a><br />
               <a href="http://www.sg.ethz.ch">Chair of Systems Design</a><br />
-            Senior assistant and lecturer, 2017 - 2018</p>
+              Senior assistant and lecturer, 2017 - 2018</p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_KIT.svg" class="logo" /></div>
+              <div class="column">
               <p><a href="http://www.kit.edu/english/">Karlsruhe Institute of Technology (KIT)</a><br />
               <a href="http://www.aifb.kit.edu/web/Hauptseite/en">AIFB Institute</a><br/>
-              Temporary W3 Professorship, 2016</p>
+              Vertretungsprofessor (W3), 2016</p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/ETH_Z%C3%BCrich_Logo_black.svg" class="logo"  /></div>
+              <div class="column">
             <p><a href="http://www.ethz.ch">ETH Z&uuml;rich</a><br />
               <a href="http://www.sg.ethz.ch">Chair of Systems Design</a><br />
-              Postdoctoral researcher and lecturer, 2011 - 2016</p>
+              Postdoctoral researcher, 2011 - 2016</p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/de/5/59/Universit%C3%A4t-Trier_Siegel.svg" class="logo" /></div>
+              <div class="column">
             <p><a href="http://www.uni-trier.de">University of Trier</a><br />
-              <a href="http://informatik.uni-trier.de">Dept. of Computer Science</a><br />
-              Research Assistant, 2006-2011</p>
+              <a href="http://informatik.uni-trier.de">Department of Computer Science</a><br />
+              Research Assistant, 2006 - 2011</p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/de/8/8e/Cern_Logo_black.svg"></div>
+              <div class="column">
             <p><a href="http://www.cern.ch">CERN</a><br />
                 <a href="http://atlas.cern/discover/detector/trigger-daq">ATLAS Trigger and Data Acquisition Project</a><br />
-              External software developer, 2004-2008</p>
+              Summer student and external software developer, 2004 - 2008</p>
+            </div>
+          </div>
             <p>On this website, you can find information about my <a href="research.html">research</a>, <a href="publications.html">publications</a> and <a href="service.html">academic activities</a>. If you are interested in my work as amateur photographer, feel free to visit <a href="http://www.ingoscholtes.photo">ingoscholtes.photo</a>.</p>
             </article>
           </section>
