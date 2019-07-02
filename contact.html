@@ -25,6 +25,26 @@
           });
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <style>
+          * {
+            box-sizing: border-box;
+          }
+
+          .column {
+              display: table-cell;
+          }
+
+          .row {
+            display: table;            
+            border-spacing: 0px;
+          }
+
+          /* Clear floats after the columns */
+          .row:after {
+            content: "";
+            clear: both;
+          }
+          </style>
     </head>
     <body>
         <header class="page">
@@ -45,27 +65,33 @@
         </div>
         </header>
         <div class="container" id="container">
-        <section class="seven columns">
+        <section class="eleven columns">
         <h3>Contact</h3>
-        <p>Prof. Dr. rer. nat. Ingo Scholtes</p>
-        <p>Head of <a href="https://www.ifi.uzh.ch/en/dag.html">Data Analytics Group</a><br />
-		<a href="https://www.ifi.uzh.ch">Department of Informatics (IfI)</a><br />
-		<a href="https://www.uzh.ch">University of Z&uuml;rich</a><br />
-		BIN 2.A.24 <br/>
-        Binzm&uuml;hlestrasse 14<br />
-        CH-8050 Z&uuml;rich<br />
-        Switzerland</p>
-        <p>
-        <a href="mailto:scholtes@ifi.uzh.ch">scholtes@ifi.uzh.ch</a><br />
-        </p>
-        <p>
-        <a href="https://scholar.google.de/citations?user=pouriVsAAAAJ&hl=en">Google Scholar profile</a><br />        
-        <p>
-		<a href="https://twitter.com/ingo_S" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @ingo_S</a><br /><br />
-
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                
+        <div class="row">
+          <p style="padding:10px;">Prof. Dr. rer. nat. Ingo Scholtes</p>
+          <div class="column">
+          <p>Data Analytics Group<br />
+          <a href="https://www.uni-wuppertal.de/en/">Bergische Universität Wuppertal</a><br />
+          <a href="https://fk4.uni-wuppertal.de/en/faculty-of-mathematics-und-natural-sciences.html">Faculty of  Mathematics und Natural Sciences</a><br />
+          Gau&szlig;stra&szlig;e 20<br />
+          D-42119 Wuppertal<br />
+          Germany</p></div>
+          <div class="column">
+          <p><a href="https://www.ifi.uzh.ch/dag">Data Analytics Group</a><br />
+            <a href="https://www.uzh.ch">Universität Z&uuml;rich</a><br />
+            <a href="https://www.ifi.uzh.ch/">Department of Informatics (IfI)</a><br />
+            Binzm&uuml;hlestrasse 14<br />
+            CH-8050 Z&uuml;rich<br />
+            Switzerland</p></div>
+        </div>
+        <p style="padding:10px;">
+          <a href="https://scholar.google.de/citations?user=pouriVsAAAAJ&hl=en">Google Scholar profile</a><br />        
+		      <a href="https://twitter.com/ingo_S" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @ingo_S</a><br /><br />
+		      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         
-		<iframe src="https://githubbadge.appspot.com/badge/IngoScholtes" style="border: 0;height: 160px;width: 200px;overflow: hidden;" frameBorder="0"> </iframe><br />
+          <iframe src="https://githubbadge.appspot.com/badge/IngoScholtes" style="border: 0;height: 160px;width: 200px;overflow: hidden;" frameBorder="0"> </iframe><br />
+        <p>
         </section>
 </div>
 <footer class="container">
