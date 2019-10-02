@@ -1,4 +1,16 @@
 {
+    "vermont": {
+        "country": "USA",
+        "years": [2019],
+        "lat": 44.4778588,
+        "lon": -73.1973837
+    },
+    "regensburg": {
+        "country": "Germany",
+        "years": [2020],
+        "lat": 49.0213956,
+        "lon": 12.0462263
+    },
     "warwick": {
         "country": "United Kingdom",
         "years": [2019],
@@ -31,7 +43,7 @@
     },
     "wuppertal": {
         "country": "Germany",
-        "years": [2018],
+        "years": [2018, 2019],
         "lat": 51.24562,
         "lon": 7.14976
     },
