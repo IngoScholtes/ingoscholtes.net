@@ -12,9 +12,32 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
         <script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
         <script src="scripts/menu.js" type="text/javascript"></script>
         <script type="text/javascript">
+        function UnCryptMailto( s )
+        {
+            var n = 0;
+            var r = "";
+            for( var i = 0; i < s.length; i++)
+            {
+                n = s.charCodeAt( i );
+                if( n >= 8364 )
+                {
+                    n = 128;
+                }
+                r += String.fromCharCode( n - 1 );
+            }
+            return r;
+        }
+
+        function linkTo_UnCryptMailto( s )
+        {
+            location.href=UnCryptMailto( s );
+        }
+
+
           $(document).ready(function(){
             $('#slider').nivoSlider();
             $("#nav_menu_main").load("content/menu.html");
@@ -71,7 +94,7 @@
         <div class="row">
           <p style="padding:10px;">Univ.-Prof. Dr. rer. nat. Ingo Scholtes</p>
           <div class="column">
-          <p>Chair of Data Analytics<br />
+          <p><a href="http://cs.uni-wuppertal.de/profile.html?id=scholtes">Chair of Data Analytics</a><br />
           <a href="https://www.uni-wuppertal.de/en/">Bergische Universität Wuppertal</a><br />
           <a href="https://fk4.uni-wuppertal.de/en/faculty-of-mathematics-und-natural-sciences.html">Faculty of  Mathematics und Natural Sciences</a><br />
           Gau&szlig;stra&szlig;e 20<br />
@@ -86,17 +109,21 @@
             Switzerland</p></div>
         </div>
         <p style="padding:10px;">
-          <a href="https://scholar.google.de/citations?user=pouriVsAAAAJ&hl=en">Google Scholar profile</a><br />        
-		      <a href="https://twitter.com/ingo_S" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @ingo_S</a><br /><br />
-		      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <i class="far fa-envelope"></i><span style="white-space: pre;">    </span><a href="javascript:linkTo_UnCryptMailto('nbjmup;tdipmuftAvoj.xvqqfsubm/ef');"style="text-decoration: none;">Send E-Mail</a></p>
+        <p style="padding:10px;">
+          <i class="fab fa-google"></i><span style="white-space: pre;">    </span><a href="https://scholar.google.de/citations?user=pouriVsAAAAJ&hl=en">Profile at Google Scholar</a><br />
+          <i class="fas fa-id-badge"></i><span style="white-space: pre;">     </span><a href="https://dblp.uni-trier.de/pid/s/IngoScholtes.html">Profile at DBLP</a><br />
+          <i class="fab fa-instagram"></i><span style="white-space: pre;">    </span><a href="https://www.instagram.com/ingoscholtes/" style="text-decoration: none;">@ingoscholtes</a> <br />
+		      <i class="fab fa-twitter"></i><span style="white-space: pre;">    </span><a href="https://twitter.com/ingo_S">@ingo_S</a>
+		      <!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         
-          <iframe src="https://githubbadge.appspot.com/badge/IngoScholtes" style="border: 0;height: 160px;width: 200px;overflow: hidden;" frameBorder="0"> </iframe><br />
+          <iframe src="https://githubbadge.appspot.com/badge/IngoScholtes" style="border: 0;height: 160px;width: 200px;overflow: hidden;" frameBorder="0"> </iframe><br /> -->
         <p>
         </section>
 </div>
 <footer class="container">
         <div class="sixteen columns">
-          <p>Copyright &copy; 2012-2019&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
+          <p>Copyright &copy; 2012-2021&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
         </div>
       </footer>
   </body>
