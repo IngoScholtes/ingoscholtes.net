@@ -13,9 +13,15 @@
     },
     "washington": {
         "country": "USA",
-        "years": [2021],
+        "years": [2021, 2021],
         "lat": 38.88287,
         "lon": -77.01346
+    },
+    "wolfsburg": {
+        "country": "Germany",
+        "years": [2021],
+        "lat": 52.39626,
+        "lon": 10.9994
     },
     "mannheim": {
         "country": "Germany",
@@ -337,7 +343,7 @@
     },
     "wuerzburg": {
         "country": "Germany",
-        "years": [2011, 2012],
+        "years": [2011, 2012, 2021],
         "lat": 49.7809803,
         "lon": 9.9791159
     },
