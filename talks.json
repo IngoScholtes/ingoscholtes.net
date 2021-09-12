@@ -11,6 +11,12 @@
         "lat": 43.5081323,
         "lon": 16.4401935
     },
+    "washington": {
+        "country": "USA",
+        "years": [2021],
+        "lat": 38.88287,
+        "lon": -77.01346
+    },
     "mannheim": {
         "country": "Germany",
         "years": [2020],
@@ -247,7 +253,7 @@
     },
     "dagstuhl": {
         "country": "Germany",
-        "years": [2011, 2015],
+        "years": [2011, 2015, 2021],
         "lat": 49.53109,
         "lon": 6.90044
     },
