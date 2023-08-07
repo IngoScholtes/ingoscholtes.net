@@ -65,6 +65,12 @@
         "lat": 48.77919,
         "lon": 9.240008
     },
+    "neworleans": {
+        "country": "USA",
+        "years": [2023],
+        "lat": 30.0325855,
+        "lon": -90.2122159
+    },
     "konstanz": {
         "country": "Germany",
         "years": [2018],
