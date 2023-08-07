@@ -17,12 +17,6 @@
         "lat": 38.88287,
         "lon": -77.01346
     },
-    "wolfsburg": {
-        "country": "Germany",
-        "years": [2021],
-        "lat": 52.39626,
-        "lon": 10.9994
-    },
     "mannheim": {
         "country": "Germany",
         "years": [2020, 2022, 2023],
