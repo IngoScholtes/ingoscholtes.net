@@ -5,6 +5,12 @@
         "lat": 44.4778588,
         "lon": -73.1973837
     },
+    "vilnius" {
+        "country": "Lithuania",
+        "years": [2024],
+        "lat": 54.7007711,
+        "lon": 25.0882312
+    },
     "split": {
         "country": "Croatia",
         "years": [2020],
