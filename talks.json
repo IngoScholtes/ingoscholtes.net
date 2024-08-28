@@ -5,6 +5,12 @@
         "lat": 44.4778588,
         "lon": -73.1973837
     },
+    "exeter": {
+        "country": "United Kingdom",
+        "years": [2024],
+        "lat": 50.7244209,
+        "lon": -3.5548325
+    },
     "vilnius": {
         "country": "Lithuania",
         "years": [2024],
