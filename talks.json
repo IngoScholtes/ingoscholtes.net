@@ -301,7 +301,7 @@
     },
     "stockholm": {
         "country": "Sweden",
-        "years": [2014],
+        "years": [2014,2025],
         "lat": 59.309915,
         "lon": 18.075933
     },
