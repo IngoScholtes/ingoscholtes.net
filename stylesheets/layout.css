@@ -112,11 +112,12 @@ ul.insights {
 	list-style-position:outside;
 	font-size: 13px;	
 	margin-top: 5px;
-	margin-left:10px;
+	background-color: #0c29b80e;
 }
 
 ul.insights li {
 	margin-bottom: 3px;
+	margin-left:20px;
 	padding-bottom: 0px;
 }
 
@@ -140,13 +141,13 @@ ol.publications {
 ol.publications li {
 	margin: 5px 5px 5px 5px;
 	padding: 2px 5px 2px 5px;
-	background-color: #dddddd31;
+	background-color: #0c29b80e;
 	border-bottom: 1px solid #6e6b6b42;
 	border-top: 1px solid #6e6b6b42;
 }
 
 ol.publications li:nth-child(odd) { 
-	background-color: #dddddd84;
+	background-color: #0c29b818;
 }
 
 /* ol.publications li:last-child {
