@@ -107,13 +107,18 @@ ol.slats li p span.meta {
 	color: #666;
 	}
 	
-ul.publications {
-	list-style-type: none;
+ul.insights {
+	list-style-type: square;
 	list-style-position:outside;
-	font-size: 12px;	
-	margin-left:20px;
+	font-size: 13px;	
+	margin-top: 5px;
+	margin-left:10px;
 }
 
+ul.insights li {
+	margin-bottom: 3px;
+	padding-bottom: 0px;
+}
 
 ul.activities {	
 	font-size: 0px;
