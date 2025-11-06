@@ -59,6 +59,12 @@
         "lat": 52.38497,
         "lon": -1.56402
     },
+    "auckland": {
+        "country": "New Zealand",
+        "years": [2026, 2026, 2026],
+        "lat": -36.852095,
+        "lon": 174.768202
+    },
     "rueschlikon": {
         "country": "Switzerland",
         "years": [2018],
