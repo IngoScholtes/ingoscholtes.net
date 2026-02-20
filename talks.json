@@ -41,6 +41,12 @@
         "lat": 49.4874592,
         "lon": 8.4660395
     },
+    "manchester": {
+        "country": "United Kingdom",
+        "years":  [2026],
+        "lat": 53.4656853,
+        "lon": -2.2352809
+    },
     "tuebingen": {
         "country": "Germany",
         "years": [2020],
