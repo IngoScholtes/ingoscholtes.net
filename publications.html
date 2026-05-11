@@ -77,8 +77,16 @@
             function arcWeight(n) {
                 return n >= 15 ? 5 : n >= 8 ? 3.5 : n >= 4 ? 2.5 : 1.5;
             }
-            function markerRadius(n) {
-                return 5 + Math.min(n, 20) * 0.4;
+
+            function makeLogoIcon(domain) {
+                var img = '<img src="https://www.google.com/s2/favicons?domain=' + domain + '&sz=128"'
+                    + ' style="width:28px;height:28px;object-fit:contain;image-rendering:auto"'
+                    + ' onerror="this.style.display=\'none\';this.parentNode.style.background=\'#2980b9\'" />';
+                var html = '<div style="width:36px;height:36px;background:white;border-radius:6px;'
+                    + 'border:1.5px solid #c8d6e0;box-shadow:0 2px 6px rgba(0,0,0,0.18);'
+                    + 'display:flex;align-items:center;justify-content:center;overflow:hidden">'
+                    + img + '</div>';
+                return L.divIcon({ html: html, className: '', iconSize: [36, 36], iconAnchor: [18, 18], popupAnchor: [0, -22] });
             }
 
             function greatCircle(from, to, n) {
@@ -146,17 +154,14 @@
                         opacity: 0.45
                     }).addTo(map);
 
-                    var marker = L.circleMarker([d.lat, d.lon], {
-                        radius: markerRadius(d.papers),
-                        fillColor: '#2980b9',
-                        color: '#1a5276',
-                        weight: 1.5,
-                        opacity: 0,
-                        fillOpacity: 0
-                    }).bindPopup(popup, { maxWidth: 300 }).addTo(map);
+                    var marker = L.marker([d.lat, d.lon], { icon: makeLogoIcon(d.domain) })
+                        .bindPopup(popup, { maxWidth: 300 }).addTo(map);
+                    var el = marker.getElement();
+                    if (el) { el.style.opacity = '0'; el.style.transition = 'opacity 0.3s ease'; }
 
                     animateArc(polyline, pts, i * 80, 1200, function() {
-                        marker.setStyle({ opacity: 1, fillOpacity: 0.75 });
+                        var e = marker.getElement();
+                        if (e) e.style.opacity = '1';
                     });
                 });
             });
@@ -823,7 +828,7 @@
 </div>
 <footer class="container">
         <div class="sixteen columns">
-          <p>Copyright &copy; 2012-2025&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
+          <p>Copyright &copy; 2012-2026&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
         </div>
       </footer>
   </body>
