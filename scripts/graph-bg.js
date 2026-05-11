@@ -3,7 +3,7 @@
         if (!document.getElementById('graph-bg-style')) {
             var s = document.createElement('style');
             s.id = 'graph-bg-style';
-            s.textContent = '#graph-bg{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none}';
+            s.textContent = '#graph-bg{position:absolute;top:0;left:0;width:100%;z-index:-1;pointer-events:none}';
             document.head.appendChild(s);
         }
 
@@ -14,11 +14,15 @@
             document.body.insertBefore(cvs, document.body.firstChild);
         }
         var ctx = cvs.getContext('2d');
-        var W, H;
+        var W, H, VH;
 
         function resize() {
-            W = cvs.width  = window.innerWidth;
-            H = cvs.height = window.innerHeight;
+            W  = cvs.width  = document.documentElement.clientWidth;
+            VH = window.innerHeight;
+            H  = cvs.height = Math.max(
+                document.body.scrollHeight,
+                document.documentElement.scrollHeight
+            );
         }
         window.addEventListener('resize', resize);
         resize();
@@ -54,7 +58,8 @@
 
         function draw() {
             ctx.clearRect(0, 0, W, H);
-            var R  = Math.min(W, H) * 0.20;
+            // Use viewport height for radius so density stays consistent regardless of page length
+            var R  = Math.min(W, VH) * 0.20;
             var R2 = R * R;
             ctx.strokeStyle = 'rgba(41,128,185,0.08)';
             ctx.lineWidth   = 0.9;
