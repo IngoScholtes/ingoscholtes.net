@@ -14,7 +14,8 @@ img {
 }
 
 header.page {
-
+  position: relative;
+  z-index: 1000;
   color: #bfbfbf;
   margin-bottom: 30px;
   
@@ -368,6 +369,12 @@ form input[type="submit"]:active {
 
 .menu.dropdown {
   display: none;
+}
+
+/* Contain Leaflet's internal z-index stack so the nav dropdown sits above the maps */
+#collabs_map,
+#map {
+  z-index: 0;
 }
 
 /* ----------------------- FOOTER CSS ------------------------------ */
