@@ -33,6 +33,7 @@
         <script src="https://unpkg.com/leaflet-arc/bin/leaflet-arc.min.js" crossorigin=""></script>
         <script src="scripts/graph-bg.js"></script>
         <style>
+        .map-tiles-light { filter: brightness(1.12) saturate(0.6); }
         .pub-chip {
             display: inline-block;
             padding: 4px 13px;
@@ -90,9 +91,9 @@
             var HOME = [49.7846, 9.9715];
 
             var map = L.map('collabs_map').setView([30, 10], 2);
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-                subdomains: 'abcd', maxZoom: 19
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abc', maxZoom: 19, className: 'map-tiles-light'
             }).addTo(map);
 
             var homeIcon = L.divIcon({

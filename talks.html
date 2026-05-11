@@ -36,6 +36,7 @@
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <script src="scripts/graph-bg.js"></script>
+        <style>.map-tiles-light { filter: brightness(1.12) saturate(0.6); }</style>
     </head>
     <body>
         <header class="page">
@@ -78,9 +79,9 @@
             }
 
             var map = L.map('map').setView([30, 10], 2);
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>',
-                subdomains: 'abcd', maxZoom: 19
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abc', maxZoom: 19, className: 'map-tiles-light'
             }).addTo(map);
 
             var legend = L.control({ position: 'bottomright' });

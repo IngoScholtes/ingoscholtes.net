@@ -24,9 +24,9 @@
         resize();
 
         var N       = 55;
-        var MIN_SPD = 0.15;
-        var MAX_SPD = 0.50;
-        var DRIFT   = 0.018;
+        var MIN_SPD = 0.06;
+        var MAX_SPD = 0.20;
+        var DRIFT   = 0.007;
 
         var nodes = [];
         for (var i = 0; i < N; i++) {
