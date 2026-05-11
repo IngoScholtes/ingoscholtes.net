@@ -81,8 +81,57 @@
                 return 5 + Math.min(n, 20) * 0.4;
             }
 
+            function greatCircle(from, to, n) {
+                var lat1 = from[0] * Math.PI / 180, lon1 = from[1] * Math.PI / 180;
+                var lat2 = to[0] * Math.PI / 180, lon2 = to[1] * Math.PI / 180;
+                var d = 2 * Math.asin(Math.sqrt(
+                    Math.pow(Math.sin((lat1 - lat2) / 2), 2) +
+                    Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin((lon1 - lon2) / 2), 2)
+                ));
+                if (d < 0.0001) return [from, to];
+                var pts = [];
+                for (var i = 0; i <= n; i++) {
+                    var f = i / n;
+                    var A = Math.sin((1 - f) * d) / Math.sin(d);
+                    var B = Math.sin(f * d) / Math.sin(d);
+                    var x = A * Math.cos(lat1) * Math.cos(lon1) + B * Math.cos(lat2) * Math.cos(lon2);
+                    var y = A * Math.cos(lat1) * Math.sin(lon1) + B * Math.cos(lat2) * Math.sin(lon2);
+                    var z = A * Math.sin(lat1) + B * Math.sin(lat2);
+                    pts.push([Math.atan2(z, Math.sqrt(x * x + y * y)) * 180 / Math.PI,
+                               Math.atan2(y, x) * 180 / Math.PI]);
+                }
+                return pts;
+            }
+
+            function haversine(a, b) {
+                var d2r = Math.PI / 180;
+                var dlat = (b[0] - a[0]) * d2r, dlon = (b[1] - a[1]) * d2r;
+                var h = Math.sin(dlat/2)*Math.sin(dlat/2) +
+                        Math.cos(a[0]*d2r)*Math.cos(b[0]*d2r)*Math.sin(dlon/2)*Math.sin(dlon/2);
+                return Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
+            }
+
+            function animateArc(polyline, pts, delay, duration, onDone) {
+                setTimeout(function() {
+                    var t0 = null;
+                    function step(ts) {
+                        if (!t0) t0 = ts;
+                        var p = Math.min((ts - t0) / duration, 1);
+                        var ep = p < 0.5 ? 2*p*p : -1 + (4 - 2*p)*p;
+                        polyline.setLatLngs(pts.slice(0, Math.max(2, Math.ceil(ep * pts.length))));
+                        if (p < 1) requestAnimationFrame(step);
+                        else if (onDone) onDone();
+                    }
+                    requestAnimationFrame(step);
+                }, delay);
+            }
+
             $.getJSON('pubs_collabs.json', function(data) {
-                data.forEach(function(d) {
+                data.sort(function(a, b) {
+                    return haversine(HOME, [a.lat, a.lon]) - haversine(HOME, [b.lat, b.lon]);
+                });
+
+                data.forEach(function(d, i) {
                     var popup = '<div style="min-width:180px">'
                         + '<div style="font-size:13px;font-weight:700;margin-bottom:2px">' + d.institution + '</div>'
                         + '<div style="font-size:11px;color:#777;margin-bottom:6px">' + d.city + ', ' + d.country + '</div>'
@@ -90,20 +139,25 @@
                         + '<div style="font-size:11px;color:#444;margin-top:4px;line-height:1.5">' + d.collaborators.join(' &middot; ') + '</div>'
                         + '</div>';
 
-                    L.Polyline.Arc(HOME, [d.lat, d.lon], {
+                    var pts = greatCircle(HOME, [d.lat, d.lon], 100);
+                    var polyline = L.polyline([], {
                         color: '#2980b9',
                         weight: arcWeight(d.papers),
                         opacity: 0.45
                     }).addTo(map);
 
-                    L.circleMarker([d.lat, d.lon], {
+                    var marker = L.circleMarker([d.lat, d.lon], {
                         radius: markerRadius(d.papers),
                         fillColor: '#2980b9',
                         color: '#1a5276',
                         weight: 1.5,
-                        opacity: 1,
-                        fillOpacity: 0.75
+                        opacity: 0,
+                        fillOpacity: 0
                     }).bindPopup(popup, { maxWidth: 300 }).addTo(map);
+
+                    animateArc(polyline, pts, i * 80, 1200, function() {
+                        marker.setStyle({ opacity: 1, fillOpacity: 0.75 });
+                    });
                 });
             });
 

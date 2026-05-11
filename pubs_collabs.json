@@ -153,6 +153,15 @@
         "papers": 1
     },
     {
+        "institution": "ISI Foundation",
+        "city": "Turin",
+        "country": "Italy",
+        "lat": 45.0792,
+        "lon": 7.6617,
+        "collaborators": ["Vincenzo Perri"],
+        "papers": 10
+    },
+    {
         "institution": "Princeton University",
         "city": "Princeton",
         "country": "USA",
