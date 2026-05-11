@@ -31,6 +31,35 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         <script src="https://unpkg.com/leaflet-arc/bin/leaflet-arc.min.js" crossorigin=""></script>
+        <script src="scripts/graph-bg.js"></script>
+        <style>
+        .pub-chip {
+            display: inline-block;
+            padding: 4px 13px;
+            margin: 2px 3px;
+            border: 1.5px solid #2980b9;
+            border-radius: 20px;
+            background: transparent;
+            color: #2980b9;
+            font-size: 12px;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            font-family: inherit;
+        }
+        .pub-chip:hover, .pub-chip.active {
+            background: #2980b9;
+            color: white;
+        }
+        .publications li {
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+        .publications li.pub-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        </style>
     </head>
     <body>
         <header class="page">
@@ -180,6 +209,16 @@
             legend.addTo(map);
         })();
         </script>
+
+        <div id="pub-filter" style="margin:10px 0 14px 0;">
+          <span style="font-size:12px;color:#888;margin-right:6px;">Filter:</span>
+          <button class="pub-chip active" data-tag="all">All</button>
+          <button class="pub-chip" data-tag="gnn">Graph Neural Networks</button>
+          <button class="pub-chip" data-tag="temporal">Temporal Networks</button>
+          <button class="pub-chip" data-tag="higher-order">Higher-Order Models</button>
+          <button class="pub-chip" data-tag="software">Software Engineering</button>
+          <button class="pub-chip" data-tag="network-science">Network Science</button>
+        </div>
 
         <h4>Submitted Works, Preprints and Non-Archival Publications</h4>   
 
@@ -776,6 +815,64 @@
 			<a href="https://edms.cern.ch/document/685256">[CERN Document Server]</a>
         </li>
         </ol>
+
+        <script>
+        (function () {
+            var TAG_RULES = [
+                { tag: 'gnn', kw: ['graph neural', 'deep', 'graph pooling', 'message passing', 'deep graph learning', 'goes neural', 'causality-aware graph neural', 'untrained message', 'spatial transcriptomics', 'school curriculum with graph', 'self-loop paradox', 'map equation goes', 'node features in graph', 'inference of sequential patterns for neural', 'link prediction', 'enhancing graph neural'] },
+                { tag: 'temporal', kw: ['temporal graph', 'temporal network', 'dynamic graph', 'time-stamped', 'arrow of time', 'temporal centrali', 'contact graph', 'temporal event', 'time series data on', 'time-aware', 'activity cascade', 'causal timescale', 'temporal contact', 'temporal web analytics', 'temporal network data'] },
+                { tag: 'higher-order', kw: ['higher-order', 'higher order aggregate', 'markov order', 'multi-order', 'de bruijn', 'causal path', 'sequential motif', 'variable-length path', 'multibody interaction', 'betweenness preference', 'non-markovian', 'paco: fast', 'hotvis', 'hypa: efficient', 'path anomal', 'paths in graph', 'paths in network'] },
+                { tag: 'software', kw: ['software engineering', 'software development', 'software re-modular', 'git2net', 'co-editing', 'open source software', 'oss communit', 'code review', 'community smell', "brooks' law", 'ringelmann', 'gentoo', 'mining software', 'mining time-stamped co-editing'] },
+                { tag: 'network-science', kw: ['network science', 'complex network', 'complex system', 'network flow', 'generalized hypergeometric', 'social resilience', 'coauthorship', 'scientific success', 'consensus', 'synchroniz', 'p2p', 'peer-to-peer', 'overlay', 'distributed virtual', 'hyperverse', 'epidemic', 'atlas event', 'organic design', 'scale-free', 'trusted nodes', 'opinion bias', 'social network', 'predicting scientific', 'flow divergence'] }
+            ];
+
+            document.querySelectorAll('.publications li').forEach(function (li) {
+                var text = li.textContent.toLowerCase();
+                var tags = TAG_RULES
+                    .filter(function (r) { return r.kw.some(function (k) { return text.indexOf(k) !== -1; }); })
+                    .map(function (r) { return r.tag; });
+                if (tags.length) li.setAttribute('data-tags', tags.join(' '));
+            });
+
+            var chips = document.querySelectorAll('.pub-chip');
+            chips.forEach(function (chip) {
+                chip.addEventListener('click', function () {
+                    chips.forEach(function (c) { c.classList.remove('active'); });
+                    chip.classList.add('active');
+                    var tag = chip.getAttribute('data-tag');
+                    document.querySelectorAll('.publications li').forEach(function (li) {
+                        var liTags = (li.getAttribute('data-tags') || '').split(' ');
+                        var show = tag === 'all' || liTags.indexOf(tag) !== -1;
+                        li.style.display = show ? '' : 'none';
+                        if (show && !li.classList.contains('pub-visible')) {
+                            setTimeout(function () {
+                                if (li.style.display !== 'none') li.classList.add('pub-visible');
+                            }, 30);
+                        }
+                    });
+                });
+            });
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('pub-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '0px 0px -20px 0px', threshold: 0.05 });
+                document.querySelectorAll('.publications li').forEach(function (li) {
+                    observer.observe(li);
+                });
+            } else {
+                document.querySelectorAll('.publications li').forEach(function (li) {
+                    li.classList.add('pub-visible');
+                });
+            }
+        })();
+        </script>
+
         </article>
         </section>
         <aside class="four columns offset-by-one">
