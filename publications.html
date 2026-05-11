@@ -26,6 +26,11 @@
           });
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script src="https://unpkg.com/leaflet-arc/bin/leaflet-arc.min.js" crossorigin=""></script>
     </head>
     <body>
         <header class="page">
@@ -49,6 +54,73 @@
         <section class="eleven columns">
         <article>
         <h2>Publications</h2>
+
+        <div id="collabs_map" style="width:100%; height:420px; border-radius:4px; margin-bottom:8px;"></div>
+        <script type="text/javascript">
+        (function() {
+            var HOME = [49.7846, 9.9715];
+
+            var map = L.map('collabs_map').setView([30, 10], 2);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+                subdomains: 'abcd', maxZoom: 19
+            }).addTo(map);
+
+            var homeIcon = L.divIcon({
+                html: '<div style="background:#c0392b;width:13px;height:13px;border-radius:50%;border:2.5px solid white;box-shadow:0 1px 5px rgba(0,0,0,0.4)"></div>',
+                className: '', iconSize: [13, 13], iconAnchor: [6, 6]
+            });
+            L.marker(HOME, { icon: homeIcon }).bindPopup(
+                '<strong>Universität Würzburg</strong><br><span style="font-size:11px;color:#555">Würzburg, Germany &middot; Home Institution</span>'
+            ).addTo(map);
+
+            function arcWeight(n) {
+                return n >= 15 ? 5 : n >= 8 ? 3.5 : n >= 4 ? 2.5 : 1.5;
+            }
+            function markerRadius(n) {
+                return 5 + Math.min(n, 20) * 0.4;
+            }
+
+            $.getJSON('pubs_collabs.json', function(data) {
+                data.forEach(function(d) {
+                    var popup = '<div style="min-width:180px">'
+                        + '<div style="font-size:13px;font-weight:700;margin-bottom:2px">' + d.institution + '</div>'
+                        + '<div style="font-size:11px;color:#777;margin-bottom:6px">' + d.city + ', ' + d.country + '</div>'
+                        + '<div style="font-size:12px"><strong>' + d.papers + '</strong> joint publication' + (d.papers > 1 ? 's' : '') + '</div>'
+                        + '<div style="font-size:11px;color:#444;margin-top:4px;line-height:1.5">' + d.collaborators.join(' &middot; ') + '</div>'
+                        + '</div>';
+
+                    L.Polyline.Arc(HOME, [d.lat, d.lon], {
+                        color: '#2980b9',
+                        weight: arcWeight(d.papers),
+                        opacity: 0.45
+                    }).addTo(map);
+
+                    L.circleMarker([d.lat, d.lon], {
+                        radius: markerRadius(d.papers),
+                        fillColor: '#2980b9',
+                        color: '#1a5276',
+                        weight: 1.5,
+                        opacity: 1,
+                        fillOpacity: 0.75
+                    }).bindPopup(popup, { maxWidth: 300 }).addTo(map);
+                });
+            });
+
+            var legend = L.control({ position: 'bottomright' });
+            legend.onAdd = function() {
+                var div = L.DomUtil.create('div');
+                div.style.cssText = 'background:rgba(255,255,255,0.92);padding:8px 11px;border-radius:4px;box-shadow:0 1px 5px rgba(0,0,0,0.18);font-size:11px;line-height:1.9';
+                div.innerHTML = '<div style="font-weight:700;margin-bottom:3px">Joint Publications</div>'
+                    + '<svg width="36" height="9"><line x1="0" y1="4.5" x2="36" y2="4.5" stroke="#2980b9" stroke-width="5" opacity="0.7"/></svg>&nbsp;15+<br>'
+                    + '<svg width="36" height="8"><line x1="0" y1="4" x2="36" y2="4" stroke="#2980b9" stroke-width="3.5" opacity="0.7"/></svg>&nbsp;8&ndash;14<br>'
+                    + '<svg width="36" height="6"><line x1="0" y1="3" x2="36" y2="3" stroke="#2980b9" stroke-width="2.5" opacity="0.7"/></svg>&nbsp;4&ndash;7<br>'
+                    + '<svg width="36" height="4"><line x1="0" y1="2" x2="36" y2="2" stroke="#2980b9" stroke-width="1.5" opacity="0.7"/></svg>&nbsp;1&ndash;3';
+                return div;
+            };
+            legend.addTo(map);
+        })();
+        </script>
 
         <h4>Submitted Works, Preprints and Non-Archival Publications</h4>   
 

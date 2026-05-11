@@ -1,0 +1,164 @@
+[
+    {
+        "institution": "ETH Zürich",
+        "city": "Zürich",
+        "country": "Switzerland",
+        "lat": 47.3769,
+        "lon": 8.5417,
+        "collaborators": ["Frank Schweitzer", "Giona Casiraghi", "René Pfitzner", "Pavlin Mavrodiev", "Nicolas Wider", "Antonios Garas", "Claudio J. Tessone", "Vahan Nanumyan", "Yan Zhang", "Emre Sarigöl", "Christoph Gote", "Christian Zingg", "Nicolas Perony", "Luca Verginer"],
+        "papers": 22
+    },
+    {
+        "institution": "University of Trier",
+        "city": "Trier",
+        "country": "Germany",
+        "lat": 49.7484,
+        "lon": 6.6780,
+        "collaborators": ["Peter Sturm", "Jean Botev", "Markus Esch", "Hermann Schloss", "Alexander Hohfeld"],
+        "papers": 18
+    },
+    {
+        "institution": "Umeå University",
+        "city": "Umeå",
+        "country": "Sweden",
+        "lat": 63.8199,
+        "lon": 20.3088,
+        "collaborators": ["Martin Rosvall", "Jelena Smiljanić"],
+        "papers": 5
+    },
+    {
+        "institution": "Northeastern University",
+        "city": "Boston",
+        "country": "USA",
+        "lat": 42.3398,
+        "lon": -71.0892,
+        "collaborators": ["Tina Eliassi-Rad", "Timothy LaRock"],
+        "papers": 3
+    },
+    {
+        "institution": "CERN",
+        "city": "Geneva",
+        "country": "Switzerland",
+        "lat": 46.2351,
+        "lon": 6.0456,
+        "collaborators": ["Serguei Kolos", "Pasquale Federico Zema"],
+        "papers": 3
+    },
+    {
+        "institution": "University of Oxford",
+        "city": "Oxford",
+        "country": "United Kingdom",
+        "lat": 51.7548,
+        "lon": -1.2544,
+        "collaborators": ["Renaud Lambiotte"],
+        "papers": 2
+    },
+    {
+        "institution": "University of Bonn",
+        "city": "Bonn",
+        "country": "Germany",
+        "lat": 50.7345,
+        "lon": 7.0991,
+        "collaborators": ["Petra Mutzel", "Jonas Sauer"],
+        "papers": 2
+    },
+    {
+        "institution": "University College London",
+        "city": "London",
+        "country": "United Kingdom",
+        "lat": 51.5247,
+        "lon": -0.1340,
+        "collaborators": ["Anatol E. Wegner"],
+        "papers": 2
+    },
+    {
+        "institution": "Queen Mary University of London",
+        "city": "London",
+        "country": "United Kingdom",
+        "lat": 51.5241,
+        "lon": -0.0398,
+        "collaborators": ["Vito Latora"],
+        "papers": 1
+    },
+    {
+        "institution": "TU Delft",
+        "city": "Delft",
+        "country": "Netherlands",
+        "lat": 51.9995,
+        "lon": 4.3287,
+        "collaborators": ["Piet Van Mieghem", "Anton-David Almasan", "Sergey Shvydun"],
+        "papers": 1
+    },
+    {
+        "institution": "IIT Kharagpur",
+        "city": "Kharagpur",
+        "country": "India",
+        "lat": 22.3149,
+        "lon": 87.3105,
+        "collaborators": ["Joydeep Chandra", "Niloy Ganguly"],
+        "papers": 1
+    },
+    {
+        "institution": "University of Washington",
+        "city": "Seattle",
+        "country": "USA",
+        "lat": 47.6553,
+        "lon": -122.3035,
+        "collaborators": ["Jevin West"],
+        "papers": 1
+    },
+    {
+        "institution": "Carnegie Mellon University",
+        "city": "Pittsburgh",
+        "country": "USA",
+        "lat": 40.4432,
+        "lon": -79.9427,
+        "collaborators": ["Marcelo Cataldo"],
+        "papers": 1
+    },
+    {
+        "institution": "RWTH Aachen University",
+        "city": "Aachen",
+        "country": "Germany",
+        "lat": 50.7780,
+        "lon": 6.0785,
+        "collaborators": ["Michael Schaub"],
+        "papers": 1
+    },
+    {
+        "institution": "CentraleSupélec / Université Paris-Saclay",
+        "city": "Gif-sur-Yvette",
+        "country": "France",
+        "lat": 48.7103,
+        "lon": 2.1681,
+        "collaborators": ["Fragkiskos D. Malliaros"],
+        "papers": 1
+    },
+    {
+        "institution": "University of Milan",
+        "city": "Milan",
+        "country": "Italy",
+        "lat": 45.4654,
+        "lon": 9.1866,
+        "collaborators": ["Matteo Zignani"],
+        "papers": 1
+    },
+    {
+        "institution": "Honda Research Institute Europe",
+        "city": "Offenbach",
+        "country": "Germany",
+        "lat": 50.0957,
+        "lon": 8.7762,
+        "collaborators": ["Stefan Menzel", "Bernhard Sendhoff"],
+        "papers": 1
+    },
+    {
+        "institution": "Princeton University",
+        "city": "Princeton",
+        "country": "USA",
+        "lat": 40.3562,
+        "lon": -74.6974,
+        "collaborators": ["Jürgen Hackl"],
+        "papers": 1
+    }
+]
