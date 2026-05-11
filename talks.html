@@ -18,10 +18,12 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin=""/>
-         <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
- integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
- crossorigin=""></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
         <script type="text/javascript">
           $(document).ready(function(){
             $('#slider').nivoSlider();
@@ -55,20 +57,71 @@
         <div class="container" id="container">
        	<section class="twelve columns">
         <article>
-        <div id="map" style="width:100%; height:350px; border: thin; border-color: black"></div>
-        <script type="text/javascript">					
-			var map = L.map('map').setView([51.505, -0.09], 1);
-			L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap'
-}).addTo(map);			
-            $.getJSON("talks.json", function(talk_db) {
-                for (city in talk_db)
-                    for (y in talk_db[city]['years'])
-                    L.marker([talk_db[city]['lat'], talk_db[city]['lon']]).addTo(map);
-                        
-            });			
-		</script>
+        <div id="map" style="width:100%; height:420px; border-radius:4px; margin-bottom:8px;"></div>
+        <script type="text/javascript">
+        (function() {
+            var TYPES = {
+                'keynote':     { color: '#e74c3c', label: 'Keynote / Plenary' },
+                'invited':     { color: '#3498db', label: 'Invited Talk / Lecture' },
+                'contributed': { color: '#2ecc71', label: 'Contributed Talk'       }
+            };
+
+            function makeIcon(color) {
+                var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28">'
+                    + '<path d="M10 0C4.477 0 0 4.477 0 10c0 6.667 10 18 10 18S20 16.667 20 10C20 4.477 15.523 0 10 0z"'
+                    + ' fill="' + color + '" stroke="rgba(0,0,0,0.22)" stroke-width="1"/>'
+                    + '<circle cx="10" cy="10" r="3.8" fill="white" opacity="0.88"/>'
+                    + '</svg>';
+                return L.divIcon({ html: svg, iconSize: [20, 28], iconAnchor: [10, 28], popupAnchor: [0, -28], className: '' });
+            }
+
+            var map = L.map('map').setView([30, 10], 2);
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/">CARTO</a>',
+                subdomains: 'abcd', maxZoom: 19
+            }).addTo(map);
+
+            var legend = L.control({ position: 'bottomright' });
+            legend.onAdd = function() {
+                var div = L.DomUtil.create('div');
+                div.style.cssText = 'background:rgba(255,255,255,0.92);padding:7px 11px;border-radius:5px;font-size:11px;line-height:1.7;box-shadow:0 1px 5px rgba(0,0,0,0.18)';
+                div.innerHTML = Object.keys(TYPES).map(function(k) {
+                    return '<div style="display:flex;align-items:center;gap:6px">'
+                        + '<span style="width:10px;height:10px;border-radius:50%;background:' + TYPES[k].color + ';display:inline-block;flex-shrink:0"></span>'
+                        + TYPES[k].label + '</div>';
+                }).join('');
+                return div;
+            };
+            legend.addTo(map);
+
+            $.getJSON('talks_map.json', function(talks) {
+                var cluster = L.markerClusterGroup({
+                    maxClusterRadius: 40,
+                    iconCreateFunction: function(c) {
+                        var n = c.getChildCount();
+                        return L.divIcon({
+                            html: '<div style="background:#546e7a;color:#fff;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;border:2px solid rgba(255,255,255,0.65);box-shadow:0 1px 4px rgba(0,0,0,0.25)">' + n + '</div>',
+                            className: '', iconSize: [30, 30], iconAnchor: [15, 15]
+                        });
+                    }
+                }).addTo(map);
+
+                var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                talks.forEach(function(t) {
+                    var talkType = TYPES[t.type] ? t.type : 'contributed';
+                    var d = t.date.split('-');
+                    var dateStr = MONTHS[parseInt(d[1]) - 1] + ' ' + parseInt(d[2]) + ', ' + d[0];
+                    var marker = L.marker([t.lat, t.lon], { icon: makeIcon(TYPES[talkType].color) });
+                    marker.bindPopup(
+                        '<div style="font-size:13px;font-weight:600;line-height:1.35;margin-bottom:4px">' + t.title + '</div>'
+                        + '<div style="font-size:11px;color:#555">' + dateStr + ' &middot; ' + t.city + ', ' + t.country + '</div>',
+                        { maxWidth: 270 }
+                    );
+                    cluster.addLayer(marker);
+                });
+            });
+        })();
+        </script>
         <h2>Talks</h2>
         <ol class="publications" reversed=true>
         <h4>Forthcoming</h4>

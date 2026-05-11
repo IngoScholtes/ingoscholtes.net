@@ -1,0 +1,1932 @@
+﻿[
+    {
+        "id":  1,
+        "title":  "Web Federates - Towards A Middleware for Highly Scalable Peer-To-Peer Services",
+        "date":  "2006-04-11",
+        "city":  "Setubal",
+        "country":  "Portugal",
+        "lat":  38.522187,
+        "lon":  -8.8668943,
+        "type":  "contributed"
+    },
+    {
+        "id":  2,
+        "title":  "Interface-based Web Service Syndication and its Application to a Collaborative Weblog Search Service",
+        "date":  "2006-11-17",
+        "city":  "Atlanta",
+        "country":  "USA",
+        "lat":  33.8471125,
+        "lon":  -84.3660488,
+        "type":  "contributed"
+    },
+    {
+        "id":  3,
+        "title":  "SOA in the Small",
+        "date":  "2007-09-05",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "invited"
+    },
+    {
+        "id":  4,
+        "title":  "Trends in Virtualization",
+        "date":  "2007-10-30",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "contributed"
+    },
+    {
+        "id":  5,
+        "title":  "TopGen - Internet Router-Level Topology Generation Based on Technology Constraints",
+        "date":  "2008-03-03",
+        "city":  "Marseille",
+        "country":  "France",
+        "lat":  43.2997432,
+        "lon":  5.3765581,
+        "type":  "contributed"
+    },
+    {
+        "id":  6,
+        "title":  "Dualcore, Quadcore, Octcore ...",
+        "date":  "2008-07-24",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "contributed"
+    },
+    {
+        "id":  7,
+        "title":  "Awareness-Driven Phase Transitions in Very Large Scale Distributed Systems",
+        "date":  "2008-10-20",
+        "city":  "Venice",
+        "country":  "Italy",
+        "lat":  45.4317789,
+        "lon":  12.3297441,
+        "type":  "contributed"
+    },
+    {
+        "id":  8,
+        "title":  "Minimizing Load Delays in Distributed Virtual Environments Using Epidemic Hoarding",
+        "date":  "2008-11-13",
+        "city":  "Orlando",
+        "country":  "USA",
+        "lat":  28.373041,
+        "lon":  -81.5111124,
+        "type":  "contributed"
+    },
+    {
+        "id":  9,
+        "title":  "Self-Organization Aspects in the HyperVerse Project",
+        "date":  "2008-11-17",
+        "city":  "Orlando",
+        "country":  "USA",
+        "lat":  28.373041,
+        "lon":  -81.5111124,
+        "type":  "invited"
+    },
+    {
+        "id":  10,
+        "title":  "Rich Internet Applications",
+        "date":  "2008-12-02",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "contributed"
+    },
+    {
+        "id":  11,
+        "title":  "Epidemic Self-Synchronization in Complex Networks",
+        "date":  "2009-02-23",
+        "city":  "Shanghai",
+        "country":  "China",
+        "lat":  31.2651299,
+        "lon":  121.4278811,
+        "type":  "contributed"
+    },
+    {
+        "id":  12,
+        "title":  "HyperVerse: Simulation and Testbed Reconciled",
+        "date":  "2009-03-15",
+        "city":  "Lafayette",
+        "country":  "USA",
+        "lat":  30.2171539,
+        "lon":  -92.0313146,
+        "type":  "contributed"
+    },
+    {
+        "id":  13,
+        "title":  "Harnessing Complexity in Large-Scale Distributed Systems",
+        "date":  "2009-04-08",
+        "city":  "Paderborn",
+        "country":  "Germany",
+        "lat":  51.7074329,
+        "lon":  8.778058,
+        "type":  "invited"
+    },
+    {
+        "id":  14,
+        "title":  "Harnessing Complexity in Large-Scale Distributed Systems",
+        "date":  "2009-04-16",
+        "city":  "Budapest",
+        "country":  "Hungary",
+        "lat":  47.4685,
+        "lon":  19.13963,
+        "type":  "invited"
+    },
+    {
+        "id":  15,
+        "title":  "Breathing Life into Networks",
+        "date":  "2009-07-03",
+        "city":  "Venice",
+        "country":  "Italy",
+        "lat":  45.4317789,
+        "lon":  12.3297441,
+        "type":  "contributed"
+    },
+    {
+        "id":  16,
+        "title":  "Moore, Amdahl und Gustafson - ManyCores - Hardware- und Softwaretrends",
+        "date":  "2009-11-19",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "contributed"
+    },
+    {
+        "id":  17,
+        "title":  "Die Zukunft von Microsoft .NET",
+        "date":  "2009-11-19",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "contributed"
+    },
+    {
+        "id":  18,
+        "title":  "Ordnung im Chaos - Über die statistische Physik vernetzter Rechnersysteme",
+        "date":  "2010-07-27",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "contributed"
+    },
+    {
+        "id":  19,
+        "title":  "Distributed Creation and Adaptation of Random Scale-Free Overlay Topologies",
+        "date":  "2010-09-27",
+        "city":  "Budapest",
+        "country":  "Hungary",
+        "lat":  47.4685,
+        "lon":  19.13963,
+        "type":  "contributed"
+    },
+    {
+        "id":  20,
+        "title":  "Social Web APIs - Die Durchdringung des WWW",
+        "date":  "2010-12-02",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "contributed"
+    },
+    {
+        "id":  21,
+        "title":  "Total vernetzt - Über die Beherrschbarkeit großer verteilter Rechnersysteme",
+        "date":  "2011-02-09",
+        "city":  "Darmstadt",
+        "country":  "Germany",
+        "lat":  49.87264,
+        "lon":  8.65014,
+        "type":  "invited"
+    },
+    {
+        "id":  22,
+        "title":  "Menschen, Rechner und Atome - Über die Soziophysik verteilter Systeme",
+        "date":  "2011-02-22",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  23,
+        "title":  "Physics-inspired Self-Organization and Adaptation in Large Dynamic Overlay Networks",
+        "date":  "2011-05-11",
+        "city":  "Dagstuhl",
+        "country":  "Germany",
+        "lat":  49.53109,
+        "lon":  6.90044,
+        "type":  "invited"
+    },
+    {
+        "id":  24,
+        "title":  "Harnessing Complex Structures and Collective Dynamics in Large Networked Computing Systems",
+        "date":  "2011-05-27",
+        "city":  "Trier",
+        "country":  "Germany",
+        "lat":  49.7481399,
+        "lon":  6.6778711,
+        "type":  "contributed"
+    },
+    {
+        "id":  25,
+        "title":  "Modeling of Emerging Internet Services: Social Networks and Crowdsourcing",
+        "date":  "2011-08-01",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  26,
+        "title":  "Organic Distributed Systems: A Complex Networks Perspective",
+        "date":  "2012-02-28",
+        "city":  "Munich",
+        "country":  "Germany",
+        "lat":  48.2652549,
+        "lon":  11.6743723,
+        "type":  "contributed"
+    },
+    {
+        "id":  27,
+        "title":  "Statistical Mechanics of Networks: Applications in Future Information Systems",
+        "date":  "2012-03-27",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  28,
+        "title":  "Designing adaptive distributed systems: A complex networks perspective",
+        "date":  "2012-04-20",
+        "city":  "Louvain",
+        "country":  "Belgium",
+        "lat":  50.6632034,
+        "lon":  4.6350774,
+        "type":  "invited"
+    },
+    {
+        "id":  29,
+        "title":  "A Tunable Mechanism for Identifying Trusted Nodes in Large Scale Distributed Networks",
+        "date":  "2012-06-25",
+        "city":  "Liverpool",
+        "country":  "United Kingdom",
+        "lat":  53.39873,
+        "lon":  -2.9908488,
+        "type":  "contributed"
+    },
+    {
+        "id":  30,
+        "title":  "Vom Programmierer zum Team, vom Team zur Community - Perspektiven des Social Software Engineering",
+        "date":  "2012-11-27",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "invited"
+    },
+    {
+        "id":  31,
+        "title":  "Categorizing Bugs with Social Networks: A Case Study on Four Open Source Software Communities",
+        "date":  "2013-03-10",
+        "city":  "Monte Verita",
+        "country":  "Switzerland",
+        "lat":  46.1570299,
+        "lon":  8.7668311,
+        "type":  "invited"
+    },
+    {
+        "id":  32,
+        "title":  "Structure and Dynamics of Collaborative Software Engineering: A Complex Networks Perspective",
+        "date":  "2013-04-11",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  33,
+        "title":  "Modeling and Analysis of Complex Dynamic Networks: Why Should Computer Scientists Care?",
+        "date":  "2013-06-03",
+        "city":  "Copenhagen",
+        "country":  "Denmark",
+        "lat":  55.6732451,
+        "lon":  12.5828747,
+        "type":  "invited"
+    },
+    {
+        "id":  34,
+        "title":  "Social Dynamics in Open Source Communities: Research Methods, Applications and Perspectives",
+        "date":  "2013-06-04",
+        "city":  "Copenhagen",
+        "country":  "Denmark",
+        "lat":  55.6732451,
+        "lon":  12.5828747,
+        "type":  "contributed"
+    },
+    {
+        "id":  35,
+        "title":  "The Paths Not Taken: Aggregate Networks Considered Harmful!",
+        "date":  "2013-06-07",
+        "city":  "Copenhagen",
+        "country":  "Denmark",
+        "lat":  55.6732451,
+        "lon":  12.5828747,
+        "type":  "contributed"
+    },
+    {
+        "id":  36,
+        "title":  "Modeling and Analysis of Complex Dynamic Networks: Why Should Computer Scientists Care?",
+        "date":  "2013-07-18",
+        "city":  "Augsburg",
+        "country":  "Germany",
+        "lat":  48.3584838,
+        "lon":  10.7789576,
+        "type":  "invited"
+    },
+    {
+        "id":  37,
+        "title":  "Topological and Temporal Complexity in Socio-Technical Systems",
+        "date":  "2013-08-26",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  38,
+        "title":  "Topological and Temporal Complexity in Socio-Technical Systems",
+        "date":  "2013-09-05",
+        "city":  "Omaha",
+        "country":  "USA",
+        "lat":  41.284615,
+        "lon":  -95.9488238,
+        "type":  "invited"
+    },
+    {
+        "id":  39,
+        "title":  "Topological and Temporal Complexity in Socio-Technical Systems",
+        "date":  "2013-09-09",
+        "city":  "Philadelphia",
+        "country":  "USA",
+        "lat":  39.9614505,
+        "lon":  -75.1618845,
+        "type":  "contributed"
+    },
+    {
+        "id":  40,
+        "title":  "Self-Adaptation and Self-Organization in Socio-Technical Systems: A Tale of Two Layers",
+        "date":  "2013-09-12",
+        "city":  "Philadelphia",
+        "country":  "USA",
+        "lat":  39.9614505,
+        "lon":  -75.1618845,
+        "type":  "invited"
+    },
+    {
+        "id":  41,
+        "title":  "Complex Structures and Collective Dynamics in Networked Systems",
+        "date":  "2013-09-13",
+        "city":  "Philadelphia",
+        "country":  "USA",
+        "lat":  39.9614505,
+        "lon":  -75.1618845,
+        "type":  "invited"
+    },
+    {
+        "id":  42,
+        "title":  "The Social Dimension of Information Ranking: A Discussion of Research Challenges and Approaches",
+        "date":  "2013-09-16",
+        "city":  "Koblenz",
+        "country":  "Germany",
+        "lat":  50.34759,
+        "lon":  7.650133,
+        "type":  "contributed"
+    },
+    {
+        "id":  43,
+        "title":  "Predicting success based on social network analysis",
+        "date":  "2013-09-18",
+        "city":  "Barcelona",
+        "country":  "Spain",
+        "lat":  41.394835,
+        "lon":  2.203228,
+        "type":  "invited"
+    },
+    {
+        "id":  44,
+        "title":  "Force-based Layout of Non-Markovian Temporal Networks",
+        "date":  "2013-09-20",
+        "city":  "Barcelona",
+        "country":  "Spain",
+        "lat":  41.394835,
+        "lon":  2.203228,
+        "type":  "contributed"
+    },
+    {
+        "id":  45,
+        "title":  "The Social Dimension of Collaborative Information Spaces",
+        "date":  "2013-11-18",
+        "city":  "Espoo (Aalto)",
+        "country":  "Finland",
+        "lat":  60.2281484,
+        "lon":  24.8009358,
+        "type":  "contributed"
+    },
+    {
+        "id":  46,
+        "title":  "Challenges and Research Directions for Self-optimisation, Organic and Autonomic Computing",
+        "date":  "2014-02-25",
+        "city":  "Kiel",
+        "country":  "Germany",
+        "lat":  54.341805,
+        "lon":  10.187713,
+        "type":  "contributed"
+    },
+    {
+        "id":  47,
+        "title":  "Categorizing Bugs with Social Networks: A Case Study on Four Open Source Software Communities",
+        "date":  "2014-02-27",
+        "city":  "Kiel",
+        "country":  "Germany",
+        "lat":  54.341805,
+        "lon":  10.187713,
+        "type":  "contributed"
+    },
+    {
+        "id":  48,
+        "title":  "When your social position predicts your success: lessons from Open Source communities and citations",
+        "date":  "2014-04-09",
+        "city":  "Leiden",
+        "country":  "Netherlands",
+        "lat":  52.1485676,
+        "lon":  4.5096197,
+        "type":  "contributed"
+    },
+    {
+        "id":  49,
+        "title":  "Automated Software Re-modularization Based on Move Refactoring: A Complex Systems Approach",
+        "date":  "2014-04-23",
+        "city":  "Lugano",
+        "country":  "Switzerland",
+        "lat":  45.9985995,
+        "lon":  8.9774065,
+        "type":  "contributed"
+    },
+    {
+        "id":  50,
+        "title":  "Complex Structures and Collective Dynamics in Networked Systems",
+        "date":  "2014-06-01",
+        "city":  "Stockholm",
+        "country":  "Sweden",
+        "lat":  59.309915,
+        "lon":  18.075933,
+        "type":  "invited"
+    },
+    {
+        "id":  51,
+        "title":  "Higher-Order Aggregate Representations of Temporal Networks",
+        "date":  "2014-06-03",
+        "city":  "Berkeley",
+        "country":  "USA",
+        "lat":  37.8834449,
+        "lon":  -122.2453059,
+        "type":  "contributed"
+    },
+    {
+        "id":  52,
+        "title":  "Diffusion in Non-Markovian Temporal Networks: Slow-Down or Speed-Up?",
+        "date":  "2014-06-06",
+        "city":  "Berkeley",
+        "country":  "USA",
+        "lat":  37.8834449,
+        "lon":  -122.2453059,
+        "type":  "contributed"
+    },
+    {
+        "id":  53,
+        "title":  "Complex Structures and Collective Dynamics in Networked Systems",
+        "date":  "2014-09-08",
+        "city":  "London",
+        "country":  "United Kingdom",
+        "lat":  51.50015,
+        "lon":  -0.12624,
+        "type":  "invited"
+    },
+    {
+        "id":  54,
+        "title":  "Big Data and Socio-Technical Systems",
+        "date":  "2014-09-12",
+        "city":  "London",
+        "country":  "United Kingdom",
+        "lat":  51.50015,
+        "lon":  -0.12624,
+        "type":  "keynote"
+    },
+    {
+        "id":  55,
+        "title":  "The Social Dimension of Information Ranking",
+        "date":  "2014-09-22",
+        "city":  "Stuttgart",
+        "country":  "Germany",
+        "lat":  48.77919,
+        "lon":  9.240008,
+        "type":  "contributed"
+    },
+    {
+        "id":  56,
+        "title":  "Modeling Time-Varying Complex Networks: The Importance of Non-Markovianity",
+        "date":  "2014-10-23",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  57,
+        "title":  "Aggregate Networks Considered Harmful: Towards Higher-Order Models of Time-Varying Networks",
+        "date":  "2014-11-26",
+        "city":  "Thessaloniki",
+        "country":  "Greece",
+        "lat":  40.6000499,
+        "lon":  23.014618,
+        "type":  "contributed"
+    },
+    {
+        "id":  58,
+        "title":  "The Social Dimension of Citations",
+        "date":  "2015-02-12",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  59,
+        "title":  "Automated Software Remodularization Based on Move Refactoring - A Complex Systems Approach",
+        "date":  "2015-03-17",
+        "city":  "Dresden",
+        "country":  "Germany",
+        "lat":  51.05363,
+        "lon":  13.74081,
+        "type":  "contributed"
+    },
+    {
+        "id":  60,
+        "title":  "Analyzing time-stamped network data: When ordering matters",
+        "date":  "2015-06-02",
+        "city":  "Zaragoza",
+        "country":  "Spain",
+        "lat":  41.65183,
+        "lon":  -0.88113,
+        "type":  "contributed"
+    },
+    {
+        "id":  61,
+        "title":  "Spectral Methods in the Analysis of Non-Markovian Temporal Networks",
+        "date":  "2015-06-04",
+        "city":  "Zaragoza",
+        "country":  "Spain",
+        "lat":  41.65183,
+        "lon":  -0.88113,
+        "type":  "contributed"
+    },
+    {
+        "id":  62,
+        "title":  "Analysis of Non-Markovian Temporal Networks",
+        "date":  "2015-07-20",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "invited"
+    },
+    {
+        "id":  63,
+        "title":  "Analysis of Non-Markovian Temporal Networks: Spectral Methods and Centrality Measures",
+        "date":  "2015-09-24",
+        "city":  "Boston",
+        "country":  "USA",
+        "lat":  42.35829,
+        "lon":  -71.05663,
+        "type":  "invited"
+    },
+    {
+        "id":  64,
+        "title":  "Understanding Complex Systems: When Big Data meets Network Science",
+        "date":  "2015-09-25",
+        "city":  "Boston",
+        "country":  "USA",
+        "lat":  42.35829,
+        "lon":  -71.05663,
+        "type":  "invited"
+    },
+    {
+        "id":  65,
+        "title":  "Spectral Methods in the Analysis of Non-Markovian Temporal Networks",
+        "date":  "2015-09-25",
+        "city":  "Boston",
+        "country":  "USA",
+        "lat":  42.35829,
+        "lon":  -71.05663,
+        "type":  "invited"
+    },
+    {
+        "id":  66,
+        "title":  "Mining Social Organizations: A Network Perspective",
+        "date":  "2015-11-06",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  67,
+        "title":  "Analysis of Non-Markovian Temporal Networks: Spectral Methods and Centrality Measures",
+        "date":  "2015-11-25",
+        "city":  "Belval",
+        "country":  "Luxembourg",
+        "lat":  49.50966,
+        "lon":  5.92781,
+        "type":  "invited"
+    },
+    {
+        "id":  68,
+        "title":  "Understanding Social Organizations",
+        "date":  "2015-11-26",
+        "city":  "Dagstuhl",
+        "country":  "Germany",
+        "lat":  49.53109,
+        "lon":  6.90044,
+        "type":  "invited"
+    },
+    {
+        "id":  69,
+        "title":  "Mining Social Organizations: A Network Perspective",
+        "date":  "2015-11-30",
+        "city":  "Cologne",
+        "country":  "Germany",
+        "lat":  50.94246,
+        "lon":  6.95285,
+        "type":  "invited"
+    },
+    {
+        "id":  70,
+        "title":  "Mining Time-Stamped Network Data: Spectral Methods and Centrality Measures",
+        "date":  "2015-12-01",
+        "city":  "Cologne",
+        "country":  "Germany",
+        "lat":  50.94246,
+        "lon":  6.95285,
+        "type":  "invited"
+    },
+    {
+        "id":  71,
+        "title":  "PhD Course: Modeling and Analysis of Complex Networks",
+        "date":  "2015-12-07",
+        "city":  "Singapore",
+        "country":  "Singapore",
+        "lat":  1.30407,
+        "lon":  103.77496,
+        "type":  "invited"
+    },
+    {
+        "id":  72,
+        "title":  "Mining high-frequency data on temporal networks",
+        "date":  "2016-01-09",
+        "city":  "Wroclaw",
+        "country":  "Poland",
+        "lat":  51.10825,
+        "lon":  17.02691,
+        "type":  "invited"
+    },
+    {
+        "id":  73,
+        "title":  "From Aristotle to Ringelmann: A large-scale analysis of productivity and coordination in Open Source Software projects",
+        "date":  "2016-02-24",
+        "city":  "Vienna",
+        "country":  "Austria",
+        "lat":  48.19904,
+        "lon":  16.36997,
+        "type":  "contributed"
+    },
+    {
+        "id":  74,
+        "title":  "Knowledge Discovery in Complex Relational Data",
+        "date":  "2016-02-25",
+        "city":  "Paderborn",
+        "country":  "Germany",
+        "lat":  51.7074329,
+        "lon":  8.778058,
+        "type":  "contributed"
+    },
+    {
+        "id":  75,
+        "title":  "When Network Science meets Software Engineering",
+        "date":  "2016-04-20",
+        "city":  "Augsburg",
+        "country":  "Germany",
+        "lat":  48.3584838,
+        "lon":  10.7789576,
+        "type":  "invited"
+    },
+    {
+        "id":  76,
+        "title":  "From Aristotle to Ringelmann: A large-scale analysis of productivity and coordination in Open Source Software projects",
+        "date":  "2016-05-18",
+        "city":  "Austin",
+        "country":  "USA",
+        "lat":  30.26759,
+        "lon":  -97.74299,
+        "type":  "invited"
+    },
+    {
+        "id":  77,
+        "title":  "Knowledge Discovery in Complex Relational Data",
+        "date":  "2016-06-07",
+        "city":  "Karlsruhe",
+        "country":  "Germany",
+        "lat":  49.0108,
+        "lon":  8.40865,
+        "type":  "invited"
+    },
+    {
+        "id":  78,
+        "title":  "Computational Social Science",
+        "date":  "2016-09-26",
+        "city":  "Klagenfurt",
+        "country":  "Austria",
+        "lat":  46.61474,
+        "lon":  14.25202,
+        "type":  "invited"
+    },
+    {
+        "id":  79,
+        "title":  "Mining Time-stamped Network Data",
+        "date":  "2016-10-19",
+        "city":  "Paris",
+        "country":  "France",
+        "lat":  48.85775,
+        "lon":  2.31799,
+        "type":  "invited"
+    },
+    {
+        "id":  80,
+        "title":  "A Quantitative Study of the Ringelmann Effect in Software Development Teams",
+        "date":  "2016-12-01",
+        "city":  "Cologne",
+        "country":  "Germany",
+        "lat":  50.94246,
+        "lon":  6.95285,
+        "type":  "keynote"
+    },
+    {
+        "id":  81,
+        "title":  "From Big to Complex Data: Pushing the Limits of Graph Mining and Network Analysis",
+        "date":  "2016-12-19",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  82,
+        "title":  "Network Analytics for Complex Data",
+        "date":  "2017-04-05",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  83,
+        "title":  "Data Science in Software Engineering",
+        "date":  "2017-05-17",
+        "city":  "Kirchheim",
+        "country":  "Germany",
+        "lat":  48.17672,
+        "lon":  11.75571,
+        "type":  "contributed"
+    },
+    {
+        "id":  84,
+        "title":  "Learning from Relational Data: Beyond Maximum Entropy Models",
+        "date":  "2017-06-19",
+        "city":  "Indianapolis",
+        "country":  "USA",
+        "lat":  39.76691,
+        "lon":  -86.14996,
+        "type":  "invited"
+    },
+    {
+        "id":  85,
+        "title":  "Controllability of Temporal Networks: An Analysis using Higher-order Networks",
+        "date":  "2017-06-19",
+        "city":  "Indianapolis",
+        "country":  "USA",
+        "lat":  39.76691,
+        "lon":  -86.14996,
+        "type":  "invited"
+    },
+    {
+        "id":  86,
+        "title":  "Multi-Order Graphical Models: A Unified Perspective on Pathways and Temporal Networks",
+        "date":  "2017-06-20",
+        "city":  "Indianapolis",
+        "country":  "USA",
+        "lat":  39.76691,
+        "lon":  -86.14996,
+        "type":  "contributed"
+    },
+    {
+        "id":  87,
+        "title":  "When is your network a network? Statistical Inference in Multi-Order Network Models of Pathway Data",
+        "date":  "2017-06-22",
+        "city":  "Indianapolis",
+        "country":  "USA",
+        "lat":  39.76691,
+        "lon":  -86.14996,
+        "type":  "contributed"
+    },
+    {
+        "id":  88,
+        "title":  "From Relational Data to Graphs: Inferring Significant Links using Generalized Hypergeometric Ensembles",
+        "date":  "2017-08-13",
+        "city":  "Halifax",
+        "country":  "Canada",
+        "lat":  44.64549,
+        "lon":  -63.57655,
+        "type":  "contributed"
+    },
+    {
+        "id":  89,
+        "title":  "Optimal Models of Complex Systems: From Networks to Multi-order Models",
+        "date":  "2017-10-19",
+        "city":  "Umeå",
+        "country":  "Sweden",
+        "lat":  63.81987,
+        "lon":  20.30876,
+        "type":  "invited"
+    },
+    {
+        "id":  90,
+        "title":  "Optimal Models of Complex Systems: From Networks to Multi-order Models",
+        "date":  "2017-10-26",
+        "city":  "Kirchberg",
+        "country":  "Luxembourg",
+        "lat":  49.62718,
+        "lon":  6.15997,
+        "type":  "invited"
+    },
+    {
+        "id":  91,
+        "title":  "Optimal Models of Complex Systems: From Networks to Multi-order Models",
+        "date":  "2017-11-07",
+        "city":  "Boston",
+        "country":  "USA",
+        "lat":  42.35829,
+        "lon":  -71.05663,
+        "type":  "invited"
+    },
+    {
+        "id":  92,
+        "title":  "Mining Social Organizations - A Network Perspective!?!",
+        "date":  "2017-11-20",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  93,
+        "title":  "Next Generation Network Analytics for Time Series Data",
+        "date":  "2018-01-11",
+        "city":  "Bern",
+        "country":  "Switzerland",
+        "lat":  46.94843,
+        "lon":  7.44046,
+        "type":  "contributed"
+    },
+    {
+        "id":  94,
+        "title":  "Modelling Social Networks",
+        "date":  "2018-01-29",
+        "city":  "Potsdam",
+        "country":  "Germany",
+        "lat":  52.39962,
+        "lon":  13.04784,
+        "type":  "invited"
+    },
+    {
+        "id":  95,
+        "title":  "Data Science in den Sozialwissenschaften",
+        "date":  "2018-01-30",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "contributed"
+    },
+    {
+        "id":  96,
+        "title":  "When is a network a network? Multi-order graphical model selection in time series data on networks",
+        "date":  "2018-03-14",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "contributed"
+    },
+    {
+        "id":  97,
+        "title":  "Understanding Social Systems: From Sociophysics to Computational Social Science",
+        "date":  "2018-03-15",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "contributed"
+    },
+    {
+        "id":  98,
+        "title":  "Next-Generation Network Analytics for Time Series Data",
+        "date":  "2018-04-12",
+        "city":  "Marburg",
+        "country":  "Germany",
+        "lat":  50.80293,
+        "lon":  8.7795,
+        "type":  "invited"
+    },
+    {
+        "id":  99,
+        "title":  "Learning Optimal Models of Causal Topologies in Temporal Data Streams",
+        "date":  "2018-04-13",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  100,
+        "title":  "Next-Generation Network Analytics for Time Series Data",
+        "date":  "2018-04-24",
+        "city":  "Fribourg",
+        "country":  "Switzerland",
+        "lat":  46.8032463,
+        "lon":  7.1392126,
+        "type":  "invited"
+    },
+    {
+        "id":  101,
+        "title":  "Data Analytics in Social Organizations: Lessons from Software Engineering and Scientometrics",
+        "date":  "2018-05-22",
+        "city":  "Lausanne",
+        "country":  "Switzerland",
+        "lat":  46.51968,
+        "lon":  6.63344,
+        "type":  "invited"
+    },
+    {
+        "id":  102,
+        "title":  "Next-Generation Network Analytics for Time Series Data",
+        "date":  "2018-06-04",
+        "city":  "Wuppertal",
+        "country":  "Germany",
+        "lat":  51.24562,
+        "lon":  7.14976,
+        "type":  "invited"
+    },
+    {
+        "id":  103,
+        "title":  "When networks are not enough: Inference of optimal higher-order models of complex systems",
+        "date":  "2018-06-11",
+        "city":  "Paris",
+        "country":  "France",
+        "lat":  48.85775,
+        "lon":  2.31799,
+        "type":  "contributed"
+    },
+    {
+        "id":  104,
+        "title":  "Learning optimal models of causal topologies in temporal data streams",
+        "date":  "2018-06-12",
+        "city":  "Paris",
+        "country":  "France",
+        "lat":  48.85775,
+        "lon":  2.31799,
+        "type":  "contributed"
+    },
+    {
+        "id":  105,
+        "title":  "Entropy-based detection of inherent time scales in temporal networks",
+        "date":  "2018-06-15",
+        "city":  "Paris",
+        "country":  "France",
+        "lat":  48.85775,
+        "lon":  2.31799,
+        "type":  "contributed"
+    },
+    {
+        "id":  106,
+        "title":  "Next Generation Network Analytics for Time Series Data",
+        "date":  "2018-07-05",
+        "city":  "Stuttgart",
+        "country":  "Germany",
+        "lat":  48.77919,
+        "lon":  9.240008,
+        "type":  "invited"
+    },
+    {
+        "id":  107,
+        "title":  "Learning Optimal Models of Causal Topologies in Temporal Network Data",
+        "date":  "2018-07-10",
+        "city":  "Konstanz",
+        "country":  "Germany",
+        "lat":  47.66627,
+        "lon":  9.1819,
+        "type":  "invited"
+    },
+    {
+        "id":  108,
+        "title":  "Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data",
+        "date":  "2018-08-19",
+        "city":  "London",
+        "country":  "United Kingdom",
+        "lat":  51.50015,
+        "lon":  -0.12624,
+        "type":  "invited"
+    },
+    {
+        "id":  109,
+        "title":  "Understanding Complex Systems: From Networks to Optimal Higher-Order Models",
+        "date":  "2018-09-05",
+        "city":  "Vienna",
+        "country":  "Austria",
+        "lat":  48.19904,
+        "lon":  16.36997,
+        "type":  "invited"
+    },
+    {
+        "id":  110,
+        "title":  "Beyond Graph Mining: Higher-Order Data Analytics for Temporal Network Data",
+        "date":  "2018-10-11",
+        "city":  "Rueschlikon",
+        "country":  "Switzerland",
+        "lat":  47.3073,
+        "lon":  8.55535,
+        "type":  "invited"
+    },
+    {
+        "id":  111,
+        "title":  "What makes teams successful? A Data Science Perspective",
+        "date":  "2018-11-06",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  112,
+        "title":  "Learning [with] Graphs",
+        "date":  "2019-02-11",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "contributed"
+    },
+    {
+        "id":  113,
+        "title":  "Optimal Network Models for Time Series Data",
+        "date":  "2019-02-14",
+        "city":  "Warwick",
+        "country":  "United Kingdom",
+        "lat":  52.38497,
+        "lon":  -1.56402,
+        "type":  "invited"
+    },
+    {
+        "id":  114,
+        "title":  "Next Generation Network Analytics for Time Series Data",
+        "date":  "2019-03-08",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  115,
+        "title":  "Data Analytics in Social Organizations: Lessons from Software Engineering and Scientometrics",
+        "date":  "2019-03-21",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  116,
+        "title":  "Data Analytics in Social Organizations",
+        "date":  "2019-04-16",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  117,
+        "title":  "Demystifying Machine Learning",
+        "date":  "2019-04-25",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  118,
+        "title":  "Data, Networks, Social Science",
+        "date":  "2019-04-26",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  119,
+        "title":  "pathpy: From Past to Future",
+        "date":  "2019-06-17",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "contributed"
+    },
+    {
+        "id":  120,
+        "title":  "What makes teams successful? A Data Science Perspective",
+        "date":  "2019-07-12",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  121,
+        "title":  "Higher-Order Network Analytics for Time-Stamped Data on Social Interactions",
+        "date":  "2019-09-02",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  122,
+        "title":  "Networks in Space and Time (Inaugural Lecture)",
+        "date":  "2019-09-16",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  123,
+        "title":  "Networks in Space and Time",
+        "date":  "2019-10-22",
+        "city":  "Wuppertal",
+        "country":  "Germany",
+        "lat":  51.24562,
+        "lon":  7.14976,
+        "type":  "invited"
+    },
+    {
+        "id":  124,
+        "title":  "Networks in Space and Time",
+        "date":  "2020-01-16",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  125,
+        "title":  "Temporal Networks and Higher-Order Models",
+        "date":  "2020-09-08",
+        "city":  "Split",
+        "country":  "Croatia",
+        "lat":  43.5081323,
+        "lon":  16.4401935,
+        "type":  "invited"
+    },
+    {
+        "id":  126,
+        "title":  "Next Generation Network Analytics for Time Series Data",
+        "date":  "2020-09-11",
+        "city":  "Koblenz",
+        "country":  "Germany",
+        "lat":  50.34759,
+        "lon":  7.650133,
+        "type":  "invited"
+    },
+    {
+        "id":  127,
+        "title":  "Next Generation Network Analytics for Time Series Data",
+        "date":  "2020-09-15",
+        "city":  "Tübingen",
+        "country":  "Germany",
+        "lat":  48.5216364,
+        "lon":  9.0576448,
+        "type":  "invited"
+    },
+    {
+        "id":  128,
+        "title":  "Data Science in den Sozialwissenschaften: Eine Geschichte voller Missverständnisse",
+        "date":  "2020-09-23",
+        "city":  "Regensburg",
+        "country":  "Germany",
+        "lat":  49.0213956,
+        "lon":  12.0462263,
+        "type":  "keynote"
+    },
+    {
+        "id":  129,
+        "title":  "Next Generation Network Analytics for Time Series Data",
+        "date":  "2020-11-09",
+        "city":  "Mannheim",
+        "country":  "Germany",
+        "lat":  49.4874592,
+        "lon":  8.4660395,
+        "type":  "invited"
+    },
+    {
+        "id":  130,
+        "title":  "Next Generation Network Analytics for Time Series Data",
+        "date":  "2021-01-14",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  131,
+        "title":  "Higher-Order Network Science: From Theoretical Foundations to Machine Learning",
+        "date":  "2021-07-02",
+        "city":  "Washington D.C.",
+        "country":  "USA",
+        "lat":  38.88287,
+        "lon":  -77.01346,
+        "type":  "keynote"
+    },
+    {
+        "id":  132,
+        "title":  "Higher-Order Network Science: From Theoretical Foundations to Machine Learning",
+        "date":  "2021-08-29",
+        "city":  "Dagstuhl",
+        "country":  "Germany",
+        "lat":  49.53109,
+        "lon":  6.90044,
+        "type":  "invited"
+    },
+    {
+        "id":  133,
+        "title":  "Optimal Models of Causal Topologies in Temporal Networks",
+        "date":  "2021-10-01",
+        "city":  "Washington D.C.",
+        "country":  "USA",
+        "lat":  38.88287,
+        "lon":  -77.01346,
+        "type":  "keynote"
+    },
+    {
+        "id":  134,
+        "title":  "From networks to optimal models of complex systems",
+        "date":  "2021-11-16",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  135,
+        "title":  "What makes teams successful? Insights from Repository Mining, Network Science, and Empirical Software Engineering",
+        "date":  "2021-11-18",
+        "city":  "Munich",
+        "country":  "Germany",
+        "lat":  48.2652549,
+        "lon":  11.6743723,
+        "type":  "keynote"
+    },
+    {
+        "id":  136,
+        "title":  "What makes teams successful? Insights from Repository Mining, Network Science, and Empirical Software Engineering",
+        "date":  "2022-01-14",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  137,
+        "title":  "Introduction to Supervised and Unsupervised Learning",
+        "date":  "2022-01-20",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  138,
+        "title":  "From networks to optimal models of complex systems",
+        "date":  "2022-02-23",
+        "city":  "Athens",
+        "country":  "Greece",
+        "lat":  37.9908164,
+        "lon":  23.6682993,
+        "type":  "invited"
+    },
+    {
+        "id":  139,
+        "title":  "From Networks to Optimal Higher-Order Models of Complex Systems",
+        "date":  "2022-06-13",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "invited"
+    },
+    {
+        "id":  140,
+        "title":  "From Networks to Optimal Higher-Order Models of Complex Systems",
+        "date":  "2022-07-27",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  141,
+        "title":  "Temporal Networks and Higher-Order Models of Causal Topologies",
+        "date":  "2022-09-12",
+        "city":  "Dresden",
+        "country":  "Germany",
+        "lat":  51.05363,
+        "lon":  13.74081,
+        "type":  "invited"
+    },
+    {
+        "id":  142,
+        "title":  "Introduction to Network Science",
+        "date":  "2022-09-20",
+        "city":  "Ghent",
+        "country":  "Belgium",
+        "lat":  51.0517701,
+        "lon":  3.5998853,
+        "type":  "invited"
+    },
+    {
+        "id":  143,
+        "title":  "Data Science und Sozialwissenschaften: Eine Geschichte voller Missverständnisse",
+        "date":  "2022-10-13",
+        "city":  "Mannheim",
+        "country":  "Germany",
+        "lat":  49.4874592,
+        "lon":  8.4660395,
+        "type":  "invited"
+    },
+    {
+        "id":  144,
+        "title":  "From Aristotle to Ringelmann: Using Big Data and Network Science to Understand Productivity in Software Teams",
+        "date":  "2022-11-01",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  145,
+        "title":  "[Photo]graphing Middle-Earth: A Visual Exploration of Tolkien\u0027s Legendarium",
+        "date":  "2022-11-22",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  146,
+        "title":  "Using Big Data and Network Science to Understand Productivity in Software Teams",
+        "date":  "2022-11-24",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "contributed"
+    },
+    {
+        "id":  147,
+        "title":  "De Bruijn Goes Neural: Towards Causality-Aware Graph Neural Networks for Time Series Data",
+        "date":  "2022-11-24",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  148,
+        "title":  "From Networks to Optimal Higher-Order Models of Complex Systems",
+        "date":  "2022-11-28",
+        "city":  "Orlando",
+        "country":  "USA",
+        "lat":  28.373041,
+        "lon":  -81.5111124,
+        "type":  "keynote"
+    },
+    {
+        "id":  149,
+        "title":  "Networks in Space and Time - Exploring the Physics in Graph Learning",
+        "date":  "2022-12-12",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  150,
+        "title":  "De Bruijn Goes Neural: Towards Causality-Aware Graph Neural Networks for Time Series Data",
+        "date":  "2023-03-28",
+        "city":  "Mannheim",
+        "country":  "Germany",
+        "lat":  49.4874592,
+        "lon":  8.4660395,
+        "type":  "invited"
+    },
+    {
+        "id":  151,
+        "title":  "Networks in Space and Time - Exploring the Physics in Graph Learning",
+        "date":  "2023-03-30",
+        "city":  "Dresden",
+        "country":  "Germany",
+        "lat":  51.05363,
+        "lon":  13.74081,
+        "type":  "invited"
+    },
+    {
+        "id":  152,
+        "title":  "Mapping Complex Networks",
+        "date":  "2023-05-12",
+        "city":  "Umeå",
+        "country":  "Sweden",
+        "lat":  63.81987,
+        "lon":  20.30876,
+        "type":  "invited"
+    },
+    {
+        "id":  153,
+        "title":  "How to get your paper rejected: An editor\u0027s perspective",
+        "date":  "2023-07-10",
+        "city":  "Vienna",
+        "country":  "Austria",
+        "lat":  48.19904,
+        "lon":  16.36997,
+        "type":  "keynote"
+    },
+    {
+        "id":  154,
+        "title":  "Higher-Order Models of Causal Topologies in Temporal Networks - From Modelling to Deep Learning",
+        "date":  "2023-08-30",
+        "city":  "Delft",
+        "country":  "Netherlands",
+        "lat":  51.9995297,
+        "lon":  4.3286784,
+        "type":  "keynote"
+    },
+    {
+        "id":  155,
+        "title":  "Causality-Aware Deep Learning for Time Series Data on Graphs",
+        "date":  "2023-09-27",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  156,
+        "title":  "De Bruijn Goes Neural: Causality-Aware Graph Neural Networks for Time Series Data on Dynamic Graphs",
+        "date":  "2023-12-16",
+        "city":  "New Orleans",
+        "country":  "USA",
+        "lat":  30.0325855,
+        "lon":  -90.2122159,
+        "type":  "keynote"
+    },
+    {
+        "id":  157,
+        "title":  "The Map Equation Goes Neural",
+        "date":  "2024-03-18",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "contributed"
+    },
+    {
+        "id":  158,
+        "title":  "Using Higher-Order De Bruijn Graphs to Learn Causality-Aware Representations of Temporal Graphs",
+        "date":  "2024-03-21",
+        "city":  "Dagstuhl",
+        "country":  "Germany",
+        "lat":  49.53109,
+        "lon":  6.90044,
+        "type":  "invited"
+    },
+    {
+        "id":  159,
+        "title":  "The Arrow of Time in Networks: From Laplacian Dynamics to De Bruijn Graph Neural Networks",
+        "date":  "2024-05-23",
+        "city":  "Bonn",
+        "country":  "Germany",
+        "lat":  50.7036567,
+        "lon":  7.0349,
+        "type":  "invited"
+    },
+    {
+        "id":  160,
+        "title":  "De Bruijn Goes Neural: Causality-Aware Graph Neural Networks for Time Series Data on Dynamic Graphs",
+        "date":  "2024-06-28",
+        "city":  "Munich",
+        "country":  "Germany",
+        "lat":  48.2652549,
+        "lon":  11.6743723,
+        "type":  "invited"
+    },
+    {
+        "id":  161,
+        "title":  "PathpyG: GPU-accelerated Causality-aware Learning in Temporal Graphs",
+        "date":  "2024-09-03",
+        "city":  "Exeter",
+        "country":  "United Kingdom",
+        "lat":  50.7244209,
+        "lon":  -3.5548325,
+        "type":  "keynote"
+    },
+    {
+        "id":  162,
+        "title":  "Higher-Order Models of Causal Topologies in Temporal Networks - From Modelling to Deep Learning",
+        "date":  "2024-09-13",
+        "city":  "Vilnius",
+        "country":  "Lithuania",
+        "lat":  54.7007711,
+        "lon":  25.0882312,
+        "type":  "keynote"
+    },
+    {
+        "id":  163,
+        "title":  "How the Arrow of Time shapes the Causal Topology of Temporal Graphs",
+        "date":  "2024-09-24",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  164,
+        "title":  "What makes teams successful? From Network Science to Causal Graph Learning",
+        "date":  "2024-10-31",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  165,
+        "title":  "Risks in the EU AI Act",
+        "date":  "2024-11-03",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "contributed"
+    },
+    {
+        "id":  166,
+        "title":  "Towards Efficient and Robust Graph Learning - Bridging Statistical Inference and Deep Learning",
+        "date":  "2025-02-06",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "contributed"
+    },
+    {
+        "id":  167,
+        "title":  "Graph-based Data Science and Machine Learning - A Primer",
+        "date":  "2025-02-26",
+        "city":  "Munich",
+        "country":  "Germany",
+        "lat":  48.2652549,
+        "lon":  11.6743723,
+        "type":  "invited"
+    },
+    {
+        "id":  168,
+        "title":  "A Brief Intro to Machine Learning",
+        "date":  "2025-03-17",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  169,
+        "title":  "The Arrow of Time in Dynamic Graphs",
+        "date":  "2025-04-24",
+        "city":  "Dagstuhl",
+        "country":  "Germany",
+        "lat":  49.53109,
+        "lon":  6.90044,
+        "type":  "keynote"
+    },
+    {
+        "id":  170,
+        "title":  "Directed Acyclic Graphs, Time and Causality in Networks",
+        "date":  "2025-06-02",
+        "city":  "Maastricht",
+        "country":  "Netherlands",
+        "lat":  50.8577895,
+        "lon":  5.6596214,
+        "type":  "invited"
+    },
+    {
+        "id":  171,
+        "title":  "Machine Learning für komplexe Netzwerke",
+        "date":  "2025-07-02",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  172,
+        "title":  "Machine Learning for Complex Networks: From GNNs to Causal Graph Learning",
+        "date":  "2025-07-03",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  173,
+        "title":  "Temporal Graph Learning in Narrative Networks in Literature",
+        "date":  "2025-09-23",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "keynote"
+    },
+    {
+        "id":  174,
+        "title":  "Machine Learning for Complex Networks: From GNNs to Causality-Aware Graph Learning",
+        "date":  "2025-09-25",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "invited"
+    },
+    {
+        "id":  175,
+        "title":  "Deep Learning for Temporal Graphs: On the Expressivity of Causality-Aware Graph Neural Networks",
+        "date":  "2025-10-15",
+        "city":  "Boston",
+        "country":  "USA",
+        "lat":  42.35829,
+        "lon":  -71.05663,
+        "type":  "invited"
+    },
+    {
+        "id":  176,
+        "title":  "Causality-Aware Deep Learning for Complex Networks",
+        "date":  "2025-10-29",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  177,
+        "title":  "Machine Learning for Complex Networks: From GNNs to Causality-Aware Graph Learning",
+        "date":  "2025-11-05",
+        "city":  "Umeå",
+        "country":  "Sweden",
+        "lat":  63.81987,
+        "lon":  20.30876,
+        "type":  "invited"
+    },
+    {
+        "id":  178,
+        "title":  "Representation Learning on Complex Networks",
+        "date":  "2025-11-07",
+        "city":  "Stockholm",
+        "country":  "Sweden",
+        "lat":  59.309915,
+        "lon":  18.075933,
+        "type":  "invited"
+    },
+    {
+        "id":  179,
+        "title":  "Introduction to Graph Learning for Computational Humanities",
+        "date":  "2025-11-12",
+        "city":  "Würzburg",
+        "country":  "Germany",
+        "lat":  49.7809803,
+        "lon":  9.9791159,
+        "type":  "invited"
+    },
+    {
+        "id":  180,
+        "title":  "Deep Learning for Temporal Graphs: On the Expressivity of Causality-Aware Graph Neural Networks",
+        "date":  "2025-11-28",
+        "city":  "Tainan",
+        "country":  "Taiwan",
+        "lat":  23.150521,
+        "lon":  119.6840193,
+        "type":  "invited"
+    },
+    {
+        "id":  181,
+        "title":  "Understanding the Expressivity of Causality-Aware Graph Neural Networks for Temporal Graphs",
+        "date":  "2025-12-08",
+        "city":  "Princeton",
+        "country":  "USA",
+        "lat":  40.3561625,
+        "lon":  -74.6974799,
+        "type":  "invited"
+    },
+    {
+        "id":  182,
+        "title":  "Using Temporal Graph Isomorphism to Understand the Expressivity of Temporal Graph Neural Networks",
+        "date":  "2026-01-21",
+        "city":  "Mannheim",
+        "country":  "Germany",
+        "lat":  49.4874592,
+        "lon":  8.4660395,
+        "type":  "invited"
+    },
+    {
+        "id":  183,
+        "title":  "A Gentle Introduction to Deep Graph Learning for Network Scientists",
+        "date":  "2026-02-17",
+        "city":  "Auckland",
+        "country":  "New Zealand",
+        "lat":  -36.852095,
+        "lon":  174.768202,
+        "type":  "invited"
+    },
+    {
+        "id":  184,
+        "title":  "Using Temporal Graph Isomorphism to Understand the Expressivity of Temporal Graph Neural Networks",
+        "date":  "2026-02-18",
+        "city":  "Auckland",
+        "country":  "New Zealand",
+        "lat":  -36.852095,
+        "lon":  174.768202,
+        "type":  "contributed"
+    },
+    {
+        "id":  185,
+        "title":  "Enhancing Graph Neural Networks with Random Graph Ensembles",
+        "date":  "2026-02-18",
+        "city":  "Auckland",
+        "country":  "New Zealand",
+        "lat":  -36.852095,
+        "lon":  174.768202,
+        "type":  "contributed"
+    },
+    {
+        "id":  186,
+        "title":  "Using Temporal Collaboration Networks to Understand Activity Cascades in OSS Communities",
+        "date":  "2026-02-20",
+        "city":  "Auckland",
+        "country":  "New Zealand",
+        "lat":  -36.852095,
+        "lon":  174.768202,
+        "type":  "contributed"
+    },
+    {
+        "id":  187,
+        "title":  "Temporal Graph Isomorphism and the Expressivity of Temporal GNNs",
+        "date":  "2026-03-26",
+        "city":  "Zurich",
+        "country":  "Switzerland",
+        "lat":  47.37704,
+        "lon":  8.53955,
+        "type":  "invited"
+    },
+    {
+        "id":  188,
+        "title":  "Towards GPU-accelerated Temporal Graph Learning with Higher-Order De Bruijn Graphs",
+        "date":  "2026-06-01",
+        "city":  "Boston",
+        "country":  "USA",
+        "lat":  42.35829,
+        "lon":  -71.05663,
+        "type":  "contributed"
+    },
+    {
+        "id":  189,
+        "title":  "Temporal Graph Isomorphism and the Expressivity of Temporal GNNs (Keynote TENET 2026)",
+        "date":  "2026-06-01",
+        "city":  "Boston",
+        "country":  "USA",
+        "lat":  42.35829,
+        "lon":  -71.05663,
+        "type":  "keynote"
+    },
+    {
+        "id":  190,
+        "title":  "Deep Graph Learning for Science",
+        "date":  "2026-06-10",
+        "city":  "Munich",
+        "country":  "Germany",
+        "lat":  48.2652549,
+        "lon":  11.6743723,
+        "type":  "invited"
+    },
+    {
+        "id":  191,
+        "title":  "Introduction to Deep Graph Learning",
+        "date":  "2026-08-04",
+        "city":  "Manchester",
+        "country":  "United Kingdom",
+        "lat":  53.4656853,
+        "lon":  -2.2352809,
+        "type":  "invited"
+    },
+    {
+        "id":  192,
+        "title":  "What makes OSS Projects successful: Insights from Repository Mining, Network Science and Machine Learning",
+        "date":  "2026-09-17",
+        "city":  "Nuremberg",
+        "country":  "Germany",
+        "lat":  49.45434,
+        "lon":  11.07349,
+        "type":  "contributed"
+    },
+    {
+        "id":  193,
+        "title":  "One Graph to Rule Them All: Using NLP and Graph Neural Networks to Analyse Tolkien\u0027s Legendarium",
+        "date":  "2026-09-21",
+        "city":  "Berlin",
+        "country":  "Germany",
+        "lat":  52.51607,
+        "lon":  13.37698,
+        "type":  "keynote"
+    }
+]
