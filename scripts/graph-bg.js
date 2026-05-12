@@ -3,7 +3,7 @@
         if (!document.getElementById('graph-bg-style')) {
             var s = document.createElement('style');
             s.id = 'graph-bg-style';
-            s.textContent = '#graph-bg{position:absolute;top:0;left:0;width:100%;z-index:-1;pointer-events:none}';
+            s.textContent = '#graph-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none}';
             document.head.appendChild(s);
         }
 
@@ -14,15 +14,14 @@
             document.body.insertBefore(cvs, document.body.firstChild);
         }
         var ctx = cvs.getContext('2d');
-        var W, H, VH;
+        var W, H;
 
+        var R, R2;
         function resize() {
             W  = cvs.width  = document.documentElement.clientWidth;
-            VH = window.innerHeight;
-            H  = cvs.height = Math.max(
-                document.body.scrollHeight,
-                document.documentElement.scrollHeight
-            );
+            H  = cvs.height = window.innerHeight;
+            R  = 100;
+            R2 = R * R;
         }
         window.addEventListener('resize', resize);
         resize();
@@ -61,9 +60,6 @@
             var dark = document.documentElement.getAttribute('data-theme') === 'dark';
             var edgeColor = dark ? 'rgba(96,165,250,0.45)'  : 'rgba(41,128,185,0.08)';
             var nodeColor = dark ? 'rgba(96,165,250,0.35)'  : 'rgba(41,128,185,0.15)';
-            // Use viewport height for radius so density stays consistent regardless of page length
-            var R  = Math.min(W, VH) * 0.20;
-            var R2 = R * R;
             ctx.strokeStyle = edgeColor;
             ctx.lineWidth   = 0.9;
             ctx.beginPath();

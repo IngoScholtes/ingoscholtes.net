@@ -150,3 +150,9 @@ header.page .menu.full ul li a {
 [data-theme="dark"] .quote {
     color: #94a3b8;
 }
+
+/* Institution logos on the front page — invert black logos to white */
+[data-theme="dark"] .columnimg img {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+}
