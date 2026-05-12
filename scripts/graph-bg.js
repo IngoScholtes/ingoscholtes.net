@@ -21,7 +21,7 @@
             H  = cvs.height = window.innerHeight;
             CX = W / 2;
             CY = H / 2;
-            DR = Math.min(W, H) * 0.46;
+            DR = Math.min(W, H) * 0.50;
         }
         window.addEventListener('resize', resize);
         resize();
