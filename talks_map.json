@@ -1938,5 +1938,15 @@
         "lat":  52.51607,
         "lon":  13.37698,
         "type":  "keynote"
+    },
+        {
+        "id":  195,
+        "title":  "What makes teams successful? Insights from Social Network Analysis, Graph Learning, and Repository Mining",
+        "date":  "2026-05-18",
+        "city":  "Martigny",
+        "country":  "Switzerland",
+        "lat":  46.34275,
+        "lon":  7.82011,
+        "type":  "invited"
     }
 ]
