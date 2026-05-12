@@ -62,6 +62,78 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* ── Publication card layout ───────────────────────────────── */
+        ol.publications li {
+            background: #ffffff !important;
+            border: none !important;
+            border-left: 4px solid #94a3b8 !important;
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+            padding: 13px 15px 11px 14px !important;
+            margin: 0 0 8px 0 !important;
+        }
+        ol.publications li:nth-child(odd) { background: #ffffff !important; }
+
+        /* Border colour by primary research area */
+        ol.publications li[data-primary-tag="deep-learning"]               { border-left-color: #6366f1 !important; }
+        ol.publications li[data-primary-tag="temporal"]                    { border-left-color: #0891b2 !important; }
+        ol.publications li[data-primary-tag="higher-order"]                { border-left-color: #059669 !important; }
+        ol.publications li[data-primary-tag="software"]                    { border-left-color: #d97706 !important; }
+        ol.publications li[data-primary-tag="network-science"]             { border-left-color: #2563eb !important; }
+        ol.publications li[data-primary-tag="computational-social-science"]{ border-left-color: #dc2626 !important; }
+        ol.publications li[data-primary-tag="interdisciplinary"]           { border-left-color: #7c3aed !important; }
+
+        .pub-header  { display: flex; align-items: baseline; gap: 8px; margin-bottom: 1px; }
+        .pub-title   { flex: 1 1 auto; min-width: 0; }
+        .pub-title strong { font-size: 14px; font-weight: 600; line-height: 1.4; }
+        .pub-authors { font-size: 12px; color: #4b5563; margin-top: 5px; font-style: italic; }
+        .pub-meta    { font-size: 11.5px; color: #6b7280; margin-top: 4px; line-height: 1.6; }
+        .pub-highlight { font-weight: 700; font-style: normal; color: #1d4ed8; }
+
+        /* Venue / type badge */
+        .pub-badge {
+            flex: 0 0 auto;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+            background: #f1f5f9;
+            color: #475569;
+        }
+        .pub-badge--topconf { background: #ede9fe; color: #4f46e5; }
+        .pub-badge--conf    { background: #dbeafe; color: #1d4ed8; }
+        .pub-badge--journal { background: #dcfce7; color: #15803d; }
+        .pub-badge--preprint{ background: #fef3c7; color: #b45309; }
+        .pub-badge--workshop{ background: #e0f2fe; color: #0369a1; }
+        .pub-badge--thesis  { background: #f3e8ff; color: #6d28d9; }
+        .pub-badge--book    { background: #ffedd5; color: #c2410c; }
+        .pub-badge--report  { background: #f1f5f9; color: #64748b; }
+
+        /* Filter chip colours by research area */
+        .pub-chip[data-tag="deep-learning"]               { border-color: #6366f1; color: #6366f1; }
+        .pub-chip[data-tag="temporal"]                    { border-color: #0891b2; color: #0891b2; }
+        .pub-chip[data-tag="higher-order"]                { border-color: #059669; color: #059669; }
+        .pub-chip[data-tag="software"]                    { border-color: #d97706; color: #d97706; }
+        .pub-chip[data-tag="network-science"]             { border-color: #2563eb; color: #2563eb; }
+        .pub-chip[data-tag="computational-social-science"]{ border-color: #dc2626; color: #dc2626; }
+        .pub-chip[data-tag="interdisciplinary"]           { border-color: #7c3aed; color: #7c3aed; }
+        .pub-chip[data-tag="deep-learning"]:hover,
+        .pub-chip[data-tag="deep-learning"].active   { background: #6366f1; border-color: #6366f1; color: #fff; }
+        .pub-chip[data-tag="temporal"]:hover,
+        .pub-chip[data-tag="temporal"].active         { background: #0891b2; border-color: #0891b2; color: #fff; }
+        .pub-chip[data-tag="higher-order"]:hover,
+        .pub-chip[data-tag="higher-order"].active     { background: #059669; border-color: #059669; color: #fff; }
+        .pub-chip[data-tag="software"]:hover,
+        .pub-chip[data-tag="software"].active         { background: #d97706; border-color: #d97706; color: #fff; }
+        .pub-chip[data-tag="network-science"]:hover,
+        .pub-chip[data-tag="network-science"].active  { background: #2563eb; border-color: #2563eb; color: #fff; }
+        .pub-chip[data-tag="computational-social-science"]:hover,
+        .pub-chip[data-tag="computational-social-science"].active { background: #dc2626; border-color: #dc2626; color: #fff; }
+        .pub-chip[data-tag="interdisciplinary"]:hover,
+        .pub-chip[data-tag="interdisciplinary"].active{ background: #7c3aed; border-color: #7c3aed; color: #fff; }
         </style>
     </head>
     <body>
@@ -225,8 +297,6 @@
           <button class="pub-chip" data-tag="interdisciplinary">Interdisciplinary Applications</button>
         </div>
 
-        <h4>Submitted Works, Preprints and Non-Archival Publications</h4>   
-
         <ol class="publications" reversed=True>     
 
         <li><i>Jan von Pichowski, Alžbeta Hrabošová, Ingo Scholtes, Christopher Blöcker</i><br />
@@ -311,8 +381,6 @@
             </strong>preprint, July 2016<br />
             <a href="https://arxiv.org/pdf/1607.02441"><i class="fas fa-file-pdf"></i></a>  <a href="http://arxiv.org/abs/1607.02441">[arXiv 1607.02441]</a>
          </li>
-
-        <h4>Journals and Refereed Conference Proceedings</h4>         
 
         <li><i>Moritz Lampert, Christopher Blöcker, Ingo Scholtes</i><br />
             <strong>From Link Prediction to Forecasting: Information Loss in Batch-based Temporal Graph Learning</strong><br />
@@ -764,8 +832,6 @@
             <a href="http://cds.cern.ch/record/941077?ln=de">[CERN Document Server]</a>
         </li>
 
-		<h4>Book Chapters</h4>
-        
         <li><i>Ingo Scholtes</i><br/>
             <strong>Chancen und Risiken von KI im Kontext des EU AI Acts</strong><br/>
             In <em>Zukunftsfähige Regulierung Künstlicher Intelligenz durch die Europäische Union?</em>, IUS EUROPAEUM, Band 70, pp. 203 -- 206, April 2026<br />
@@ -797,8 +863,6 @@
             <a href="http://dx.doi.org/10.1007/978-3-540-74063-6_11">[SpringerLink]</a> <a href="http://dblp.uni-trier.de/rec/bibtex/conf/webist/ScholtesS06a">[DBLP BibTeX]</a>
         </li>
 
-        <h4>Monographs</h4>
-
         <li><i>Ingo Scholtes</i><br />
         <strong>Harnessing Complex Structures and Collective Dynamics in Large Networked Computing Systems</strong><br />
         Dissertation, University of Trier, 204 pages, May 2011<br />
@@ -813,9 +877,7 @@
         <a href="http://cdsweb.cern.ch/record/1091698">[CERN Document Server]</a>
         </li>
 
-        <h4>Technical Reports</h4>
-
-		<li><i>The Community of Testers and Developers in ATLAS DAQ/HLT</i><br/>
+        <li><i>The Community of Testers and Developers in ATLAS DAQ/HLT</i><br/>
             <strong>ATLAS DAQ/HLT Software Large Scale Functionality and Performance Tests July 2005<br /></strong>           
 			<a href="https://edms.cern.ch/document/685256">[CERN Document Server]</a>
         </li>
@@ -823,6 +885,133 @@
 
         <script>
         (function () {
+            // ── Restructure each <li>: title first, venue badge, highlighted author ──
+            function detectVenue(text, li) {
+                var t = text.toLowerCase();
+                var ym = text.match(/\b(20\d{2}|19\d{2})\b/);
+                var yr = ym ? ym[0] : '';
+                if (t.indexOf('preprint') !== -1 || t.indexOf('under revision') !== -1)
+                    return { label: 'Preprint', type: 'preprint' };
+                if (t.indexOf('neurips') !== -1 || t.indexOf('neural information processing systems') !== -1)
+                    return { label: 'NeurIPS ' + yr, type: 'topconf' };
+                if (t.indexOf('learning on graphs') !== -1) return { label: 'LoG ' + yr, type: 'conf' };
+                if (t.indexOf('mlgenx') !== -1 || (t.indexOf('iclr') !== -1 && t.indexOf('workshop') !== -1))
+                    return { label: 'ICLR Workshop ' + yr, type: 'workshop' };
+                if ((t.indexOf('kdd') !== -1 || t.indexOf('sigkdd') !== -1) && t.indexOf('tutorial') === -1)
+                    return { label: 'KDD ' + yr, type: 'topconf' };
+                if (t.indexOf('kdd') !== -1 && t.indexOf('tutorial') !== -1)
+                    return { label: 'KDD Tutorial ' + yr, type: 'workshop' };
+                if (t.indexOf('iclr') !== -1) return { label: 'ICLR ' + yr, type: 'topconf' };
+                if (t.indexOf('the web conference') !== -1 || /www\s*'?2/.test(t))
+                    return { label: 'WWW ' + yr, type: 'topconf' };
+                if (t.indexOf('(icse') !== -1 || t.indexOf('icse ') !== -1)
+                    return { label: 'ICSE ' + yr, type: 'topconf' };
+                if (t.indexOf('mining software repositories') !== -1 || t.indexOf('msr 20') !== -1)
+                    return { label: 'MSR ' + yr, type: 'conf' };
+                if (t.indexOf('nature physics') !== -1)      return { label: 'Nature Physics', type: 'journal' };
+                if (t.indexOf('nature communications') !== -1) return { label: 'Nat. Comms.', type: 'journal' };
+                if (t.indexOf('physical review letters') !== -1) return { label: 'PRL', type: 'journal' };
+                if (t.indexOf('physical review e') !== -1)   return { label: 'PRE', type: 'journal' };
+                if (t.indexOf('transactions on machine learning') !== -1 || t.indexOf('tmlr') !== -1)
+                    return { label: 'TMLR', type: 'journal' };
+                if (t.indexOf('empirical software engineering') !== -1) return { label: 'EMSE', type: 'journal' };
+                if (t.indexOf('journal of physics: complexity') !== -1) return { label: 'JoP: Complexity', type: 'journal' };
+                if (t.indexOf('applied network science') !== -1) return { label: 'Appl. Net. Sci.', type: 'journal' };
+                if (t.indexOf('epj data science') !== -1)    return { label: 'EPJ Data Sci.', type: 'journal' };
+                if (t.indexOf('social network analysis and mining') !== -1) return { label: 'SNAM', type: 'journal' };
+                if (t.indexOf('advances in complex systems') !== -1) return { label: 'Adv. Comp. Sys.', type: 'journal' };
+                if (t.indexOf('scientometrics') !== -1)      return { label: 'Scientometrics', type: 'journal' };
+                if (t.indexOf('journal of complex networks') !== -1) return { label: 'J. Comp. Nets.', type: 'journal' };
+                if (t.indexOf('journal of computational social science') !== -1) return { label: 'JCSS', type: 'journal' };
+                if (t.indexOf('ieee transactions on network') !== -1) return { label: 'IEEE TNSE', type: 'journal' };
+                if (t.indexOf('transactions on nuclear science') !== -1) return { label: 'IEEE TNS', type: 'journal' };
+                if (t.indexOf('informatik spektrum') !== -1) return { label: 'Informatik Spektrum', type: 'journal' };
+                if (t.indexOf('it - information technology') !== -1) return { label: 'IT Journal', type: 'journal' };
+                if (t.indexOf('international journal of advanced media') !== -1) return { label: 'IJAMC', type: 'journal' };
+                if (t.indexOf('dagstuhl reports') !== -1)    return { label: 'Dagstuhl Reports', type: 'journal' };
+                if (t.indexOf('dagstuhl') !== -1)            return { label: 'Dagstuhl', type: 'conf' };
+                if (t.indexOf('asonam') !== -1)              return { label: 'ASONAM ' + yr, type: 'conf' };
+                if (t.indexOf('esann') !== -1)               return { label: 'ESANN ' + yr, type: 'conf' };
+                if (t.indexOf('siam') !== -1)                return { label: 'SDM ' + yr, type: 'conf' };
+                if (t.indexOf('graph drawing') !== -1 || /\bgd 20/.test(t)) return { label: 'GD ' + yr, type: 'conf' };
+                if (t.indexOf('chase') !== -1)               return { label: 'CHASE ' + yr, type: 'conf' };
+                if (t.indexOf('hhai') !== -1)                return { label: 'HHAI ' + yr, type: 'conf' };
+                if (t.indexOf('computational humanities research') !== -1) return { label: 'CHR ' + yr, type: 'conf' };
+                if (t.indexOf('saso') !== -1)                return { label: 'IEEE SASO ' + yr, type: 'conf' };
+                if (t.indexOf('collaboratecom') !== -1)      return { label: 'CollaborateCom ' + yr, type: 'conf' };
+                if (t.indexOf('icpads') !== -1)              return { label: 'ICPADS ' + yr, type: 'conf' };
+                if (t.indexOf('cisis') !== -1)               return { label: 'CISIS ' + yr, type: 'conf' };
+                if (t.indexOf('simutools') !== -1)           return { label: 'SimuTools ' + yr, type: 'conf' };
+                if (t.indexOf('modularity') !== -1 && t.indexOf('conference') !== -1)
+                    return { label: 'Modularity ' + yr, type: 'conf' };
+                if (t.indexOf('registered report') !== -1)  return { label: 'Registered Report', type: 'workshop' };
+                if (t.indexOf('extended abstract') !== -1)  return { label: 'Extended Abstract', type: 'workshop' };
+                if (t.indexOf('hands-on tutorial') !== -1)  return { label: 'Tutorial', type: 'workshop' };
+                if (t.indexOf('workshop') !== -1)           return { label: 'Workshop', type: 'workshop' };
+                if (t.indexOf('tutorial') !== -1)           return { label: 'Tutorial', type: 'workshop' };
+                if (t.indexOf('dissertation') !== -1)       return { label: 'PhD Thesis', type: 'thesis' };
+                if (t.indexOf('diploma thesis') !== -1)     return { label: 'Diploma Thesis', type: 'thesis' };
+                if (li && li.querySelector('em'))           return { label: 'Book Chapter', type: 'book' };
+                return null;
+            }
+
+            document.querySelectorAll('.publications li').forEach(function(li) {
+                var authorEl = li.querySelector('i');
+                var titleEl  = li.querySelector('strong');
+                if (!authorEl || !titleEl) return;
+
+                // Remove <br> inside <strong>
+                Array.from(titleEl.querySelectorAll('br')).forEach(function(br) { br.remove(); });
+
+                // Collect nodes that follow <strong> as the meta section
+                var metaNodes = [], afterStrong = false, metaStarted = false;
+                Array.from(li.childNodes).forEach(function(node) {
+                    if (node === titleEl) { afterStrong = true; return; }
+                    if (!afterStrong) return;
+                    if (!metaStarted) {
+                        if (node.nodeType === 3 && !node.textContent.trim()) return;
+                        if (node.nodeName === 'BR') return;
+                        metaStarted = true;
+                    }
+                    metaNodes.push(node.cloneNode(true));
+                });
+
+                var venueText = metaNodes.map(function(n) { return n.textContent || ''; }).join('');
+                var badge = detectVenue(venueText.trim(), li);
+
+                var authHtml = authorEl.innerHTML
+                    .replace(/Ingo Scholtes/g, '<span class="pub-highlight">Ingo Scholtes</span>');
+
+                var headerDiv = document.createElement('div');
+                headerDiv.className = 'pub-header';
+
+                var titleDiv = document.createElement('div');
+                titleDiv.className = 'pub-title';
+                titleDiv.appendChild(titleEl.cloneNode(true));
+                headerDiv.appendChild(titleDiv);
+
+                if (badge) {
+                    var badgeEl = document.createElement('span');
+                    badgeEl.className = 'pub-badge pub-badge--' + badge.type;
+                    badgeEl.textContent = badge.label;
+                    headerDiv.appendChild(badgeEl);
+                }
+
+                var authDiv = document.createElement('div');
+                authDiv.className = 'pub-authors';
+                authDiv.innerHTML = authHtml;
+
+                var metaDiv = document.createElement('div');
+                metaDiv.className = 'pub-meta';
+                metaNodes.forEach(function(n) { metaDiv.appendChild(n); });
+
+                li.innerHTML = '';
+                li.appendChild(headerDiv);
+                li.appendChild(authDiv);
+                li.appendChild(metaDiv);
+            });
+            // ─────────────────────────────────────────────────────────────
+
             var TAG_RULES = [
                 { tag: 'deep-learning', kw: ['neural', 'deep', 'graph pooling', 'message passing', 'deep graph learning', 'untrained message', 'spatial transcriptomics', 'self-loop paradox', 'link prediction', 'flow divergence'] },
                 { tag: 'temporal', kw: ['temporal graph', 'temporal network', 'dynamic graph', 'time-stamped', 'arrow of time', 'temporal centralities', 'contact graph', 'temporal event', 'time series data on', 'time-aware', 'hotvis', 'activity cascade', 'causal', 'temporal contact', 'temporal web', 'temporal network'] },
@@ -840,6 +1029,28 @@
                     .map(function (r) { return r.tag; });
                 if (tags.length) li.setAttribute('data-tags', tags.join(' '));
             });
+
+            // Set data-primary-tag for CSS border colour selection
+            document.querySelectorAll('.publications li').forEach(function(li) {
+                var tags = (li.getAttribute('data-tags') || '').split(' ').filter(Boolean);
+                if (tags.length) li.setAttribute('data-primary-tag', tags[0]);
+            });
+
+            // Sort all entries into a single chronological list (newest first)
+            (function() {
+                var ol = document.querySelector('ol.publications');
+                if (!ol) return;
+                var items = Array.from(ol.querySelectorAll('li'));
+                function getPubYear(li) {
+                    var meta = li.querySelector('.pub-meta');
+                    var text = meta ? meta.textContent : '';
+                    var m = text.match(/\b(20\d{2}|19\d{2})\b/);
+                    if (!m) m = li.textContent.match(/\b(20\d{2}|19\d{2})\b/);
+                    return m ? parseInt(m[1] || m[0]) : 0;
+                }
+                items.sort(function(a, b) { return getPubYear(b) - getPubYear(a); });
+                items.forEach(function(li) { ol.appendChild(li); });
+            })();
 
             var chips = document.querySelectorAll('.pub-chip');
             chips.forEach(function (chip) {
