@@ -157,6 +157,14 @@ header.page .menu.full ul li a {
     opacity: 0.85;
 }
 
+/* Venue logos in publications sidebar — white card background so dark logos stay legible */
+[data-theme="dark"] aside img {
+    background: rgba(255,255,255,0.92);
+    border-radius: 4px;
+    padding: 5px 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
 /* Publication cards */
 [data-theme="dark"] ol.publications li {
     background: #1e293b !important;
