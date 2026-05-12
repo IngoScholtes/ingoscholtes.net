@@ -58,10 +58,13 @@
 
         function draw() {
             ctx.clearRect(0, 0, W, H);
+            var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+            var edgeColor = dark ? 'rgba(96,165,250,0.45)'  : 'rgba(41,128,185,0.08)';
+            var nodeColor = dark ? 'rgba(96,165,250,0.35)'  : 'rgba(41,128,185,0.15)';
             // Use viewport height for radius so density stays consistent regardless of page length
             var R  = Math.min(W, VH) * 0.20;
             var R2 = R * R;
-            ctx.strokeStyle = 'rgba(41,128,185,0.08)';
+            ctx.strokeStyle = edgeColor;
             ctx.lineWidth   = 0.9;
             ctx.beginPath();
             for (var i = 0; i < N; i++) {
@@ -75,7 +78,7 @@
                 }
             }
             ctx.stroke();
-            ctx.fillStyle = 'rgba(41,128,185,0.15)';
+            ctx.fillStyle = nodeColor;
             for (var i = 0; i < N; i++) {
                 ctx.beginPath();
                 ctx.arc(nodes[i].x, nodes[i].y, 5, 0, Math.PI * 2);

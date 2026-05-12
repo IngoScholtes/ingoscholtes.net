@@ -1,0 +1,152 @@
+/* ── Nav item padding reduction ──────────────────────────────────────────
+   Reducing horizontal padding by 3 px/side × 9 items frees ~54 px,
+   making room for the toggle <li> (~35 px) while keeping the float
+   layout intact and "Ingo Scholtes" on the same line as the nav.       */
+header.page .menu.full ul li a {
+    padding-left:  7px !important;
+    padding-right: 7px !important;
+}
+
+/* ── Dark mode toggle button (injected as <li> into the nav menu) ── */
+#dark-toggle,
+#dark-toggle-mobile {
+    display: block;
+    padding: 5px 8px 3px;
+    margin: 13px 4px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: normal;
+    background: transparent;
+    border: 1.5px solid rgba(191,191,191,0.45);
+    border-radius: 20px;
+    color: #bfbfbf;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    font-family: inherit;
+    text-shadow: none;
+    white-space: nowrap;
+}
+
+#dark-toggle:hover,
+#dark-toggle-mobile:hover {
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    border-color: rgba(255,255,255,0.5);
+}
+
+/* ── Dark mode overrides — applied when <html data-theme="dark"> ── */
+
+[data-theme="dark"] body {
+    background: #0f172a;
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: #f1f5f9;
+}
+
+[data-theme="dark"] strong {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] a,
+[data-theme="dark"] a:link,
+[data-theme="dark"] a:visited {
+    color: #60a5fa;
+}
+
+[data-theme="dark"] a:hover {
+    color: #93c5fd;
+}
+
+[data-theme="dark"] p.lead,
+[data-theme="dark"] .subheader {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] blockquote,
+[data-theme="dark"] blockquote p {
+    color: #94a3b8;
+    border-left-color: #334155;
+}
+
+[data-theme="dark"] hr {
+    border-color: #334155;
+}
+
+/* Slat lists */
+[data-theme="dark"] ol.slats li {
+    border-bottom-color: #334155;
+}
+
+[data-theme="dark"] ol.slats li p span.meta {
+    color: #94a3b8;
+}
+
+/* Publications list */
+[data-theme="dark"] ol.publications li {
+    background-color: rgba(41,128,185,0.08);
+    border-color: rgba(100,116,139,0.3);
+}
+
+[data-theme="dark"] ol.publications li:nth-child(odd) {
+    background-color: rgba(41,128,185,0.13);
+}
+
+/* Insights list */
+[data-theme="dark"] ul.insights {
+    background-color: rgba(41,128,185,0.08);
+}
+
+/* Footer */
+[data-theme="dark"] footer {
+    border-top-color: #334155;
+}
+
+[data-theme="dark"] footer nav ul li {
+    border-right-color: #334155;
+}
+
+/* Publication filter chips */
+[data-theme="dark"] .pub-chip {
+    border-color: #60a5fa;
+    color: #60a5fa;
+}
+
+[data-theme="dark"] .pub-chip:hover,
+[data-theme="dark"] .pub-chip.active {
+    background: #60a5fa;
+    color: #0f172a;
+}
+
+/* Form elements */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="password"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] textarea,
+[data-theme="dark"] select,
+[data-theme="dark"] form fieldset input.form-text,
+[data-theme="dark"] form fieldset textarea {
+    background: #1e293b;
+    border-color: #475569;
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] form fieldset {
+    border-bottom-color: #334155;
+}
+
+/* Map tiles — invert to a dark style in dark mode */
+[data-theme="dark"] .map-tiles-light {
+    filter: brightness(0.7) saturate(0.5) invert(1) hue-rotate(180deg);
+}
+
+/* Quote block */
+[data-theme="dark"] .quote {
+    color: #94a3b8;
+}

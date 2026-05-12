@@ -8,6 +8,7 @@
         <link href="stylesheets/base.css" rel="stylesheet" type="text/css" />
         <link href="stylesheets/skeleton.css" rel="stylesheet" type="text/css" />
         <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/darkmode.css" rel="stylesheet" type="text/css" />
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -32,6 +33,7 @@
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
         <script src="https://unpkg.com/leaflet-arc/bin/leaflet-arc.min.js" crossorigin=""></script>
         <script src="scripts/graph-bg.js"></script>
+        <script src="scripts/darkmode.js"></script>
         <style>
         .map-tiles-light { filter: brightness(1.12) saturate(0.6); }
         .pub-chip {
@@ -214,11 +216,12 @@
         <div id="pub-filter" style="margin:10px 0 14px 0;">
           <span style="font-size:12px;color:#888;margin-right:6px;">Filter:</span>
           <button class="pub-chip active" data-tag="all">All</button>
-          <button class="pub-chip" data-tag="gnn">Graph Neural Networks</button>
+          <button class="pub-chip" data-tag="deep-learning">Deep Graph Learning</button>
           <button class="pub-chip" data-tag="temporal">Temporal Networks</button>
           <button class="pub-chip" data-tag="higher-order">Higher-Order Models</button>
-          <button class="pub-chip" data-tag="software">Software Engineering</button>
-          <button class="pub-chip" data-tag="network-science">Network Science</button>
+          <button class="pub-chip" data-tag="software">Empirical Software Engineering</button>
+          <button class="pub-chip" data-tag="network-science">Network Science and Complex Systems</button>
+          <button class="pub-chip" data-tag="computational-social-science">Computational Social Science</button>
           <button class="pub-chip" data-tag="interdisciplinary">Interdisciplinary Applications</button>
         </div>
 
@@ -821,12 +824,13 @@
         <script>
         (function () {
             var TAG_RULES = [
-                { tag: 'gnn', kw: ['graph neural', 'deep', 'graph pooling', 'message passing', 'deep graph learning', 'goes neural', 'causality-aware graph neural', 'untrained message', 'spatial transcriptomics', 'school curriculum with graph', 'self-loop paradox', 'map equation goes', 'node features in graph', 'inference of sequential patterns for neural', 'link prediction', 'enhancing graph neural'] },
-                { tag: 'temporal', kw: ['temporal graph', 'temporal network', 'dynamic graph', 'time-stamped', 'arrow of time', 'temporal centrali', 'contact graph', 'temporal event', 'time series data on', 'time-aware', 'activity cascade', 'causal timescale', 'temporal contact', 'temporal web analytics', 'temporal network data'] },
-                { tag: 'higher-order', kw: ['higher-order', 'higher order aggregate', 'markov order', 'multi-order', 'de bruijn', 'causal path', 'sequential motif', 'variable-length path', 'multibody interaction', 'betweenness preference', 'non-markovian', 'paco: fast', 'hotvis', 'hypa: efficient', 'path anomal', 'paths in graph', 'paths in network'] },
+                { tag: 'deep-learning', kw: ['neural', 'deep', 'graph pooling', 'message passing', 'deep graph learning', 'untrained message', 'spatial transcriptomics', 'self-loop paradox', 'link prediction', 'flow divergence'] },
+                { tag: 'temporal', kw: ['temporal graph', 'temporal network', 'dynamic graph', 'time-stamped', 'arrow of time', 'temporal centralities', 'contact graph', 'temporal event', 'time series data on', 'time-aware', 'hotvis', 'activity cascade', 'causal', 'temporal contact', 'temporal web', 'temporal network'] },
+                { tag: 'higher-order', kw: ['higher-order', 'higher order aggregate', 'markov order', 'multi-order', 'de bruijn', 'sequential motif', 'variable-length path', 'multibody interaction', 'paco: fast', 'hotvis', 'hypa: efficient', 'path anomaly', 'paths in graph', 'paths in network'] },
                 { tag: 'software', kw: ['software engineering', 'software development', 'software re-modular', 'git2net', 'co-editing', 'open source software', 'oss communit', 'code review', 'community smell', "brooks' law", 'ringelmann', 'gentoo', 'mining software', 'mining time-stamped co-editing'] },
-                { tag: 'network-science', kw: ['network science', 'complex network', 'complex system', 'network flow', 'generalized hypergeometric', 'social resilience', 'coauthorship', 'scientific success', 'consensus', 'synchroniz', 'p2p', 'peer-to-peer', 'overlay', 'distributed virtual', 'hyperverse', 'epidemic', 'atlas event', 'organic design', 'scale-free', 'trusted nodes', 'opinion bias', 'social network', 'predicting scientific', 'flow divergence'] },
-                { tag: 'interdisciplinary', kw: ['black hole', 'spatial transcriptomics', 'school curriculum', 'tolkien', 'image recognition', 'editor-author', 'physical review', 'nature communications', 'journal of physics', 'virtual environment', 'hyperverse', 'atlas event monitoring', 'kuramoto', 'neural operator surrogate', 'epj data science', 'computational humanities'] }
+                { tag: 'network-science', kw: ['network science', 'complex network', 'complex system', 'network flow', 'generalized hypergeometric', 'synchron', 'epidemic', 'atlas event', 'organic design', 'scale-free'] },
+                { tag: 'interdisciplinary', kw: ['black hole', 'spatial transcriptomics', 'school curriculum', 'tolkien', 'image recognition', 'editor-author', 'atlas event monitoring', 'kuramoto', 'humanities'] },
+                { tag: 'computational-social-science', kw: ['social', 'social simulation', 'agent-based modeling', 'computational sociology', 'social resilience', 'social network',  'coauthorship', 'scientific success', 'consensus', 'trusted nodes', 'opinion bias', 'social network', 'predicting scientific',] }
             ];
 
             document.querySelectorAll('.publications li').forEach(function (li) {
