@@ -174,7 +174,12 @@ header.page .menu.full ul li a {
 [data-theme="dark"] .pub-badge--workshop   { background: #0c4a6e; color: #7dd3fc; }
 [data-theme="dark"] .pub-badge--thesis     { background: #3b0764; color: #d8b4fe; }
 [data-theme="dark"] .pub-badge--book       { background: #431407; color: #fdba74; }
-[data-theme="dark"] .pub-badge--report     { background: #1e293b; color: #94a3b8; }
+[data-theme="dark"] .pub-badge--report      { background: #1e293b; color: #94a3b8; }
+
+/* Talk-type badge dark mode */
+[data-theme="dark"] .pub-badge--keynote     { background: #450a0a; color: #fca5a5; }
+[data-theme="dark"] .pub-badge--invited     { background: #1e3a5f; color: #93c5fd; }
+[data-theme="dark"] .pub-badge--contributed { background: #14532d; color: #86efac; }
 
 /* Filter chip colours in dark mode */
 [data-theme="dark"] .pub-chip[data-tag="deep-learning"]               { border-color: #818cf8; color: #818cf8; }

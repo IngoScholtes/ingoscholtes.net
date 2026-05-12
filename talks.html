@@ -38,7 +38,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <script src="scripts/graph-bg.js"></script>
         <script src="scripts/darkmode.js"></script>
-        <style>.map-tiles-light { filter: brightness(1.12) saturate(0.6); }</style>
+        <style>
+        .map-tiles-light { filter: brightness(1.12) saturate(0.6); }
+
+        /* ── Talk list card layout ──────────────────────────────── */
+        .publications li {
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+        .publications li.pub-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        ol.publications li {
+            background: #ffffff !important;
+            border: none !important;
+            border-left: 4px solid #94a3b8 !important;
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+            padding: 13px 15px 11px 14px !important;
+            margin: 0 0 8px 0 !important;
+        }
+        ol.publications li:nth-child(odd) { background: #ffffff !important; }
+
+        ol.publications li[data-talk-type="keynote"]     { border-left-color: #e74c3c !important; }
+        ol.publications li[data-talk-type="invited"]     { border-left-color: #3498db !important; }
+        ol.publications li[data-talk-type="contributed"] { border-left-color: #2ecc71 !important; }
+
+        .pub-header { display: flex; align-items: baseline; gap: 8px; margin-bottom: 1px; }
+        .pub-title  { flex: 1 1 auto; min-width: 0; }
+        .pub-title strong { font-size: 14px; font-weight: 600; line-height: 1.4; }
+        .pub-meta   { font-size: 11.5px; color: #6b7280; margin-top: 4px; line-height: 1.6; }
+
+        .pub-badge {
+            flex: 0 0 auto;
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+            background: #f1f5f9;
+            color: #475569;
+        }
+        .pub-badge--keynote     { background: #fee2e2; color: #b91c1c; }
+        .pub-badge--invited     { background: #dbeafe; color: #1d4ed8; }
+        .pub-badge--contributed { background: #dcfce7; color: #15803d; }
+        </style>
     </head>
     <body>
         <header class="page">
@@ -1183,7 +1230,94 @@ Talk at <a href="http://swm2015.de/">Software Engineering 2016 (SE)</a>, TU Wien
             Talk at <a href="http://www.webist.org/WEBIST2006/">2nd International Conference on Web Information Systems and Technologies (WEBIST)</a>, Setubal, Portugal, April 11-13, 2006<br />           
             </li>
                         
-        </ul>
+        </ol>
+        <script>
+        (function() {
+            var ol = document.querySelector('ol.publications');
+            if (!ol) return;
+
+            // Remove all year/section h4 headers
+            Array.from(ol.querySelectorAll('h4')).forEach(function(h) { h.remove(); });
+
+            function detectType(text) {
+                var t = text.toLowerCase();
+                if (t.indexOf('keynote') !== -1 || t.indexOf('plenary') !== -1) return 'keynote';
+                if (t.indexOf('invited')    !== -1 || t.indexOf('tutorial')    !== -1 ||
+                    t.indexOf('lecture')    !== -1 || t.indexOf('opponent')    !== -1 ||
+                    t.indexOf('colloquium') !== -1 || t.indexOf('seminar talk') !== -1) return 'invited';
+                return 'contributed';
+            }
+
+            var TYPE_LABELS = { keynote: 'Keynote', invited: 'Invited', contributed: 'Contributed' };
+
+            Array.from(ol.querySelectorAll('li')).forEach(function(li) {
+                var titleEl = li.querySelector('strong');
+                if (!titleEl) return;
+
+                Array.from(titleEl.querySelectorAll('br')).forEach(function(br) { br.remove(); });
+
+                var metaNodes = [], afterStrong = false, metaStarted = false;
+                Array.from(li.childNodes).forEach(function(node) {
+                    if (node === titleEl) { afterStrong = true; return; }
+                    if (!afterStrong) return;
+                    if (!metaStarted) {
+                        if (node.nodeType === 3 && !node.textContent.trim()) return;
+                        if (node.nodeName === 'BR') return;
+                        metaStarted = true;
+                    }
+                    metaNodes.push(node.cloneNode(true));
+                });
+
+                var metaText = metaNodes.map(function(n) { return n.textContent || ''; }).join('');
+                var talkType = detectType(metaText);
+                li.setAttribute('data-talk-type', talkType);
+
+                var headerDiv = document.createElement('div');
+                headerDiv.className = 'pub-header';
+
+                var titleDiv = document.createElement('div');
+                titleDiv.className = 'pub-title';
+                titleDiv.appendChild(titleEl.cloneNode(true));
+                headerDiv.appendChild(titleDiv);
+
+                var badgeEl = document.createElement('span');
+                badgeEl.className = 'pub-badge pub-badge--' + talkType;
+                badgeEl.textContent = TYPE_LABELS[talkType];
+                headerDiv.appendChild(badgeEl);
+
+                var metaDiv = document.createElement('div');
+                metaDiv.className = 'pub-meta';
+                metaNodes.forEach(function(n) { metaDiv.appendChild(n); });
+
+                li.innerHTML = '';
+                li.appendChild(headerDiv);
+                li.appendChild(metaDiv);
+            });
+
+            // Sort entries by year descending
+            var items = Array.from(ol.querySelectorAll('li'));
+            items.sort(function(a, b) {
+                function yr(li) {
+                    var m = (li.textContent || '').match(/\b(20\d{2}|19\d{2})\b/);
+                    return m ? parseInt(m[0]) : 0;
+                }
+                return yr(b) - yr(a);
+            });
+            items.forEach(function(li) { ol.appendChild(li); });
+
+            // Fade-in on scroll
+            if ('IntersectionObserver' in window) {
+                var obs = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(e) {
+                        if (e.isIntersecting) { e.target.classList.add('pub-visible'); obs.unobserve(e.target); }
+                    });
+                }, { rootMargin: '0px 0px -20px 0px', threshold: 0.05 });
+                ol.querySelectorAll('li').forEach(function(li) { obs.observe(li); });
+            } else {
+                ol.querySelectorAll('li').forEach(function(li) { li.classList.add('pub-visible'); });
+            }
+        })();
+        </script>
         </article>
 		</section>
 </div>
