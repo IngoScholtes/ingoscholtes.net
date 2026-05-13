@@ -27,11 +27,11 @@
         resize();
 
         var N        = 55;
-        var MIN_SPD  = 0.003;    // radians / frame
-        var MAX_SPD  = 0.009;
+        var MIN_SPD  = 0.0001;    // radians / frame
+        var MAX_SPD  = 0.0005;
         var DRIFT    = 0.0003;
         var CONN_ANG = 0.50;     // angular distance threshold for edges (≈ 28°)
-        var ROT_SPD  = 0.0015;   // slow auto-rotation around y-axis (rad/frame)
+        var ROT_SPD  = 0.0005;   // slow auto-rotation around y-axis (rad/frame)
         var rotAngle = 0;
 
         // ── Uniform random point on S² ──────────────────────────────────────
