@@ -1921,6 +1921,16 @@
     },
     {
         "id":  193,
+        "title":  "Causality-Aware Temporal Networks",
+        "date":  "2026-08-04",
+        "city":  "Manchester",
+        "country":  "United Kingdom",
+        "lat":  53.4656853,
+        "lon":  -2.2352809,
+        "type":  "invited"
+    },
+    {
+        "id":  194,
         "title":  "What makes OSS Projects successful: Insights from Repository Mining, Network Science and Machine Learning",
         "date":  "2026-09-17",
         "city":  "Nuremberg",
@@ -1930,7 +1940,7 @@
         "type":  "contributed"
     },
     {
-        "id":  194,
+        "id":  195,
         "title":  "One Graph to Rule Them All: Using NLP and Graph Neural Networks to Analyse Tolkien\u0027s Legendarium",
         "date":  "2026-09-21",
         "city":  "Berlin",
@@ -1940,7 +1950,7 @@
         "type":  "keynote"
     },
         {
-        "id":  195,
+        "id":  196,
         "title":  "What makes teams successful? Insights from Social Network Analysis, Graph Learning, and Repository Mining",
         "date":  "2026-05-18",
         "city":  "Martigny",
