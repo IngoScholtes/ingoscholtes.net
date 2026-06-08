@@ -24,6 +24,44 @@
             .row:after { content: ""; display: table; clear: both; }
             .profile-links { margin-top: 16px; }
             .profile-links a { margin-right: 1.4em; white-space: nowrap; }
+            .affiliations {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 16px 20px;
+                margin-top: 28px;
+                padding-top: 18px;
+                border-top: 1px solid rgba(128,128,128,0.2);
+            }
+            .affiliations a {
+                opacity: 0.9;
+                transition: opacity 0.2s;
+                line-height: 0;
+                background: rgba(0,0,0,0.08);
+                border-radius: 6px;
+                padding: 6px 12px;
+            }
+            .affiliations a:hover { opacity: 1; }
+            .affiliations img { height: 52px; width: auto; }
+            [data-theme="dark"] .affiliations a { background: rgba(255,255,255,0.12); }
+            [data-theme="dark"] .affiliations img {
+                background: transparent;
+                border-radius: 0;
+                padding: 0;
+            }
+            .affil-badge {
+                display: inline-block;
+                line-height: normal;
+                padding: 5px 13px;
+                border: 1.5px solid rgba(128,128,128,0.35);
+                border-radius: 4px;
+                font-size: 0.8em;
+                font-weight: 700;
+                letter-spacing: 0.07em;
+            }
+            [data-theme="dark"] .affiliations { border-top-color: rgba(255,255,255,0.12); }
+            [data-theme="dark"] aside img { background: rgba(255,255,255,0.92); border-radius: 4px; padding: 4px 7px; }
         </style>
         <script>
             function UnCryptMailto(s) {
@@ -100,6 +138,21 @@
                 <a href="https://scholar.google.de/citations?user=pouriVsAAAAJ&hl=en"><i class="fab fa-google"></i>&nbsp;Google Scholar</a>
                 <a href="https://dblp.uni-trier.de/pid/s/IngoScholtes.html"><i class="fas fa-id-badge"></i>&nbsp;DBLP</a>
               </p>
+
+              <div class="affiliations">
+                <a href="https://www.uni-wuerzburg.de/en/home/" title="Julius-Maximilians-Universität Würzburg">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Universit%C3%A4t_W%C3%BCrzburg_Logo.svg/960px-Universit%C3%A4t_W%C3%BCrzburg_Logo.svg.png" alt="JMU Würzburg" />
+                </a>
+                <a href="https://www.uni-wuerzburg.de/caidas/home/" title="Center for Artificial Intelligence and Data Science">
+                  <img src="https://www.caidas.uni-wuerzburg.de/fileadmin/43150000/logos/CAIDAS_quer_4.png" alt="CAIDAS" />
+                </a>
+                <a href="https://ellis.eu/members" title="European Lab for Learning and Intelligent Systems">
+                  <img src="https://ellis.eu/img/containers/assets/logos/ellis_logo_footer.png/565e7a6f7b4acd4794b5dfc93d27ec1e/ellis_logo_footer.webp" alt="ELLIS" />
+                </a>
+              </div>
+              <div style="text-align: center; margin-top: 16px; opacity: 0.9;">
+                <img src="https://www.uni-wuerzburg.de/fileadmin/_processed_/1/b/csm_Committed-to-Excellence_c52a651e4e.png" alt="Committed to Excellence" style="height: 60px; width: auto;" />
+              </div>
             </article>
           </section>
           <aside id="sidebar" class="six columns offset-by-one"></aside>
