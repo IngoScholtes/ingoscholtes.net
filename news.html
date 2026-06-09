@@ -100,11 +100,6 @@
                     document.getElementById('nav_menu_main').innerHTML = html;
                     document.getElementById('nav_menu_small').innerHTML = html;
                     selectCurrentMenuItem();
-                    var dropLi = document.querySelector('.menu.dropdown > ul > li');
-                    if (dropLi) dropLi.addEventListener('click', function () {
-                        var sub = dropLi.querySelector('ul');
-                        if (sub) sub.style.display = sub.style.display === 'none' ? '' : 'none';
-                    });
                 });
             // Lift each date to the top of its card
             document.querySelectorAll('li.group').forEach(function (li) {
@@ -172,7 +167,7 @@
 </li>
 
 <li class="group">
-  <h3><a href="talks.html">Invited talk in Zürich</a></h3>
+  <h3><a href="talks.html">Invited talk at University of Zürich</a></h3>
   <p>Today I give an invited talk in Zürich, Switzerland, presenting our recent work on <a href="https://arxiv.org/abs/2505.24438">Temporal Graph Isomorphism and the Expressivity of Temporal Graph Neural Networks</a>.
   <span class="meta">March 26, 2026</span></p>
 </li>

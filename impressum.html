@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ingo Scholtes | Legal Notice</title>
@@ -29,11 +29,7 @@
                         document.getElementById('nav_menu_main').innerHTML = html;
                         document.getElementById('nav_menu_small').innerHTML = html;
                         selectCurrentMenuItem();
-                        var dropLi = document.querySelector('.menu.dropdown > ul > li');
-                        if (dropLi) dropLi.addEventListener('click', function () {
-                            var sub = dropLi.querySelector('ul');
-                            if (sub) sub.style.display = sub.style.display === 'none' ? '' : 'none';
-                        });
+
                     });
             });
         </script>

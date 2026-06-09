@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ingo Scholtes | CV</title>
@@ -11,16 +11,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <style>
             * { box-sizing: border-box; }
-            .columnimg {
-                float: left;
-                width: 13%;
-                display: table-cell;
-                vertical-align: middle;
-                padding: 5px;
-            }
-            .logo { display: table-cell; vertical-align: middle; }
-            .column { float: left; width: 85%; }
-            .row:after { content: ""; display: table; clear: both; }
+            .row { display: table; width: 100%; margin-bottom: 0.8em; }
+            .columnimg { display: table-cell; width: 13%; vertical-align: middle; padding: 5px; }
+            .columnimg img { max-width: 100%; height: auto; display: block; }
+            .column { display: table-cell; width: 87%; vertical-align: middle; }
             .profile-links { margin-top: 4px; margin-bottom: 16px; }
             .profile-links a { margin-right: 1.4em; white-space: nowrap; }
         </style>
@@ -45,11 +39,7 @@
                         document.getElementById('nav_menu_main').innerHTML = html;
                         document.getElementById('nav_menu_small').innerHTML = html;
                         selectCurrentMenuItem();
-                        var dropLi = document.querySelector('.menu.dropdown > ul > li');
-                        if (dropLi) dropLi.addEventListener('click', function () {
-                            var sub = dropLi.querySelector('ul');
-                            if (sub) sub.style.display = sub.style.display === 'none' ? '' : 'none';
-                        });
+
                     });
             });
         </script>
@@ -78,13 +68,11 @@
           <section class="twelve columns">
 
             <h2>Curriculum Vitae</h2>
-
-            <h4>Contact</h4>
             <p>
               Univ.-Prof. Dr. rer. nat. Ingo Scholtes<br />
               <a href="https://www.caidas.uni-wuerzburg.de/ml4nets/">CAIDAS-Chair of Computer Science &mdash; Machine Learning for Complex Networks</a><br />
-              <a href="https://www.uni-wuerzburg.de/">Julius-Maximilians-Universität Würzburg</a><br />
               <a href="https://www.uni-wuerzburg.de/caidas/home/">Center for Artificial Intelligence and Data Science (CAIDAS)</a><br />
+              <a href="https://www.uni-wuerzburg.de/">Julius-Maximilians-Universität Würzburg</a><br />
               Building 50, Office 03.030 &middot; Emil-Fischer-Strasse 50 &middot; D-97074 Würzburg &middot; Germany
             </p>
             <p class="profile-links">
