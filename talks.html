@@ -1246,7 +1246,7 @@ Talk at <a href="http://swm2015.de/">Software Engineering 2016 (SE)</a>, TU Wien
 
             function detectType(text) {
                 var t = text.toLowerCase();
-                if (t.indexOf('keynote') !== -1 || t.indexOf('plenary') !== -1) return 'keynote';
+                if (t.indexOf('keynote') !== -1) return 'keynote';
                 if (t.indexOf('invited')    !== -1 || t.indexOf('tutorial')    !== -1 ||
                     t.indexOf('lecture')    !== -1 || t.indexOf('opponent')    !== -1 ||
                     t.indexOf('colloquium') !== -1 || t.indexOf('seminar talk') !== -1) return 'invited';
