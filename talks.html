@@ -1,4 +1,4 @@
-<html>
+﻿<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Ingo Scholtes | Talks</title>
@@ -30,9 +30,6 @@
             $('#slider').nivoSlider();
             $("#nav_menu_main").load("content/menu.html");
             $("#nav_menu_small").load("content/menu.html");
-            $('.menu.dropdown ul li').click(function(){
-              $(this).find('ul').toggle();
-            });
           });
         </script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -175,7 +172,6 @@
         })();
         </script>
         <ol class="publications" reversed=true>
-        <h4>Forthcoming</h4>
 
         <li>
             <strong>One Graph to Rule Them All: Using NLP and Graph Neural Networks to Analyse Tolkien’s Legendarium</strong><br />
@@ -222,8 +218,6 @@
             Invited Lecture at <a href="https://www.genaide.eu/">GenAIDE Training Event</a> (Online Talk), Martigny, Switzerland, May 18, 2026 
         </li>
 
-        <h4>2026</h4>
-
         <li>
             <strong>Temporal Graph Isormorphism and the Expressivity of Temporal GNNs</strong><br />
             Invited Talk at <a href="https://dm3l.uzh.ch/home">Seminar of the Department of Mathematical Modeling and Machine Learning</a>, Zurich, Switzerland, March 26, 2026<br />
@@ -256,8 +250,6 @@
             <strong>Using Temporal Graph Isomorphism to Understand the Expressivity of Temporal Graph Neural Networks</strong><br />
             Invited Talk at <a href="https://www.bwl.uni-mannheim.de/en/information-systems/chairs/prof-dr-strohmaier/">Chair of Data Science in the Economic and Social Sciences</a>, University of Mannheim, January 21, 2026 <br />
         </li>
-
-        <h4>2025</h4>
         
         <li>
             <strong>Understanding the Expressivity of Causality-Aware Graph Neural Networks for Temporal Graphs</strong><br />
@@ -929,8 +921,7 @@ Talk at <a href="http://swm2015.de/">Software Engineering 2016 (SE)</a>, TU Wien
             <strong>The Social Dimension of Citations</strong><br />
             Invited Talk at COST Workshop <a href="https://www.sg.ethz.ch/activities-events/workshops/cost-td1210/">Quantifying scientific impact: networks, measures, insights?</a>, Zurich, Switzerland, February 12-13, 2015<br />
         </li>        
-                                                          
-		<h4>2014</h4>
+                                                        
 
         <li>
             <strong>Aggregate Networks Considered Harmful: Towards Higher-Order Models of Time-Varying Networks</strong><br />
@@ -1247,8 +1238,8 @@ Talk at <a href="http://swm2015.de/">Software Engineering 2016 (SE)</a>, TU Wien
             function detectType(text) {
                 var t = text.toLowerCase();
                 if (t.indexOf('keynote') !== -1) return 'keynote';
-                if (t.indexOf('invited')    !== -1 || t.indexOf('tutorial')    !== -1 ||
-                    t.indexOf('lecture')    !== -1 || t.indexOf('opponent')    !== -1 ||
+                if (t.indexOf('invited')    !== -1 || t.indexOf('tutorial')    !== -1 || 
+                    t.indexOf('opponent')    !== -1 ||
                     t.indexOf('colloquium') !== -1 || t.indexOf('seminar talk') !== -1) return 'invited';
                 return 'contributed';
             }
@@ -1328,7 +1319,7 @@ Talk at <a href="http://swm2015.de/">Software Engineering 2016 (SE)</a>, TU Wien
 </div>
 <footer class="container">
         <div class="sixteen columns">
-          <p>Copyright &copy; 2012-2026&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
+          <p>Copyright &copy; 2012-2026&nbsp;Ingo Scholtes&nbsp;All rights reserved. &nbsp;&middot;&nbsp; <a href="impressum.html">Legal Notice / Impressum</a></p>
         </div>
       </footer>
   </body>

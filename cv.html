@@ -1,0 +1,164 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ingo Scholtes | CV</title>
+        <meta name="description" content="Curriculum vitae of Univ.-Prof. Dr. Ingo Scholtes, Head of the Chair of Machine Learning for Complex Networks at Julius-Maximilians-Universität Würzburg." />
+        <link href="stylesheets/base.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/skeleton.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/darkmode.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <style>
+            * { box-sizing: border-box; }
+            .row { display: table; width: 100%; margin-bottom: 0.8em; }
+            .columnimg { display: table-cell; width: 13%; vertical-align: middle; padding: 5px; }
+            .columnimg img { max-width: 100%; height: auto; display: block; }
+            .column { display: table-cell; width: 87%; vertical-align: middle; }
+            .profile-links { margin-top: 4px; margin-bottom: 16px; }
+            .profile-links a { margin-right: 1.4em; white-space: nowrap; }
+        </style>
+        <script>
+            function UnCryptMailto(s) {
+                var n = 0, r = "";
+                for (var i = 0; i < s.length; i++) {
+                    n = s.charCodeAt(i);
+                    if (n >= 8364) { n = 128; }
+                    r += String.fromCharCode(n - 1);
+                }
+                return r;
+            }
+            function linkTo_UnCryptMailto(s) { location.href = UnCryptMailto(s); }
+        </script>
+        <script src="scripts/menu.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                fetch('content/menu.html')
+                    .then(function (r) { return r.text(); })
+                    .then(function (html) {
+                        document.getElementById('nav_menu_main').innerHTML = html;
+                        document.getElementById('nav_menu_small').innerHTML = html;
+                        selectCurrentMenuItem();
+
+                    });
+            });
+        </script>
+        <script src="scripts/graph-bg.js"></script>
+        <script src="scripts/darkmode.js"></script>
+    </head>
+    <body>
+        <header class="page">
+        <div class="container">
+          <div class="sixteen columns logo">
+            <h3><a href="/">Ingo Scholtes</a></h3>
+            <div class="menu full">
+                <ul id="nav_menu_main"></ul>
+            </div>
+            <div class="menu dropdown">
+              <ul>
+                  <li><a href="#">Menu</a>
+                    <ul id="nav_menu_small"></ul>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </header>
+        <div class="container" id="container">
+          <section class="twelve columns">
+
+            <h2>Curriculum Vitae</h2>
+            <p>
+              Univ.-Prof. Dr. rer. nat. Ingo Scholtes<br />
+              <a href="https://www.caidas.uni-wuerzburg.de/ml4nets/">CAIDAS-Chair of Computer Science &mdash; Machine Learning for Complex Networks</a><br />
+              <a href="https://www.uni-wuerzburg.de/caidas/home/">Center for Artificial Intelligence and Data Science (CAIDAS)</a><br />
+              <a href="https://www.uni-wuerzburg.de/">Julius-Maximilians-Universität Würzburg</a><br />
+              Building 50, Office 03.030 &middot; Emil-Fischer-Strasse 50 &middot; D-97074 Würzburg &middot; Germany
+            </p>
+            <p class="profile-links">
+              <a href="javascript:linkTo_UnCryptMailto('nbjmup;johp/tdipmuftAvoj.xvfs{cvsh/ef');"><i class="far fa-envelope"></i>&nbsp;Email</a>
+              <a href="tel:+4993131889290"><i class="fas fa-phone"></i>&nbsp;+49 931 31 89290</a>
+              <a href="https://scholar.google.de/citations?user=pouriVsAAAAJ&hl=en"><i class="fab fa-google"></i>&nbsp;Google Scholar</a>
+              <a href="https://dblp.uni-trier.de/pid/s/IngoScholtes.html"><i class="fas fa-id-badge"></i>&nbsp;DBLP</a>
+              <a href="https://twitter.com/ingo_S"><i class="fab fa-twitter"></i>&nbsp;@ingo_S</a>
+              <a href="https://www.instagram.com/ingoscholtes/"><i class="fab fa-instagram"></i>&nbsp;@ingoscholtes</a>
+            </p>
+
+            <h4>Current Position</h4>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/University_of_W%C3%BCrzburg_seal.svg" class="logo" /></div>
+              <div class="column">
+                <p><a href="https://www.uni-wuerzburg.de/en/home/">Julius-Maximilians-Universität Würzburg</a><br />
+                <a href="https://www.uni-wuerzburg.de/caidas/home/">Center for Artificial Intelligence and Data Science (CAIDAS)</a><br />
+                Full Professor (W3) for Machine Learning for Complex Networks, since 2021</p>
+              </div>
+            </div>
+
+            <h4>Past Positions</h4>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/en/5/5a/University_of_Zurich_seal.svg" class="logo" /></div>
+              <div class="column">
+                <p><a href="http://www.uzh.ch">University of Zürich</a><br />
+                <a href="http://www.ifi.uzh.ch/">Department of Informatics (IfI)</a><br />
+                SNSF Professor for <a href="https://www.ifi.uzh.ch/en/department/people/former-faculty/dag.html">Data Analytics</a>, 2018&ndash;2024</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/BUW_siegel-schwarz.png" class="logo" /></div>
+              <div class="column">
+                <p><a href="https://www.uni-wuppertal.de/en/">Bergische Universität Wuppertal</a><br />
+                <a href="https://cs.uni-wuppertal.de/en/computer-science/">Faculty of Mathematics and Natural Sciences</a><br />
+                Full Professor (W3) for Data Analytics, 2019&ndash;2021</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/ETH_Z%C3%BCrich_Logo_black.svg" class="logo" /></div>
+              <div class="column">
+                <p><a href="http://www.ethz.ch">ETH Zürich</a><br />
+                <a href="http://www.sg.ethz.ch">Chair of Systems Design</a><br />
+                Senior assistant and lecturer, 2017&ndash;2018</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_KIT.svg" class="logo" /></div>
+              <div class="column">
+                <p><a href="http://www.kit.edu/english/">Karlsruhe Institute of Technology (KIT)</a><br />
+                <a href="https://www.aifb.kit.edu/english/">AIFB Institute</a><br />
+                Vertretungsprofessor (W3), 2016</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/ETH_Z%C3%BCrich_Logo_black.svg" class="logo" /></div>
+              <div class="column">
+                <p><a href="http://www.ethz.ch">ETH Zürich</a><br />
+                <a href="http://www.sg.ethz.ch">Chair of Systems Design</a><br />
+                Postdoctoral researcher, 2011&ndash;2016</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/de/5/59/Universit%C3%A4t-Trier_Siegel.svg" class="logo" /></div>
+              <div class="column">
+                <p><a href="http://www.uni-trier.de">University of Trier</a><br />
+                <a href="http://informatik.uni-trier.de">Department of Computer Science</a><br />
+                Research Assistant (Dr. rer. nat. 2011), 2006&ndash;2011</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="columnimg"><img src="https://upload.wikimedia.org/wikipedia/de/8/8e/Cern_Logo_black.svg" /></div>
+              <div class="column">
+                <p><a href="http://www.cern.ch">CERN</a><br />
+                <a href="http://atlas.cern/discover/detector/trigger-daq">ATLAS Trigger and Data Acquisition Project</a><br />
+                Summer student and external software developer, 2004&ndash;2008</p>
+              </div>
+            </div>
+
+
+          </section>
+        </div>
+        <footer class="container">
+          <div class="sixteen columns">
+            <p>Copyright &copy; 2012-2026&nbsp;Ingo Scholtes&nbsp;All rights reserved. &nbsp;&middot;&nbsp; <a href="impressum.html">Legal Notice / Impressum</a></p>
+          </div>
+        </footer>
+    </body>
+</html>

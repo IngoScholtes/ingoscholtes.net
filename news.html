@@ -1,31 +1,119 @@
-<head>
+﻿<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ingo Scholtes | News</title>
     <meta name="description" content="Homepage of Univ.-Prof. Dr. Ingo Scholtes, Head of the Chair of Machine Learning for Complex Networks at Julius-Maximilians-Universität Würzburg." />
-    <link href="stylesheets/nivo-slider.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="stylesheets/slider-themes/default/default.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="stylesheets/base.css" rel="stylesheet" type="text/css" />
     <link href="stylesheets/skeleton.css" rel="stylesheet" type="text/css" />
     <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
     <link href="stylesheets/darkmode.css" rel="stylesheet" type="text/css" />
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script src="scripts/jquery.nivo.slider.pack.js" type="text/javascript"></script>
-    <script src="scripts/menu.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('#slider').nivoSlider();
-        $("#nav_menu_main").load("content/menu.html");
-        $("#nav_menu_small").load("content/menu.html");
-        // $("#blog").load("content/blog.html");
-        $('.menu.dropdown ul li').click(function(){
-          $(this).find('ul').toggle();
-        });
-      });
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <style>
+        /* ── Timeline ── */
+        ol.slats {
+            position: relative;
+            list-style: none;
+            padding: 0.4em 0 1em 54px;
+            margin: 0.5em 0 0;
+        }
+        ol.slats::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0; bottom: 0;
+            width: 2px;
+            background: rgba(128,128,128,0.22);
+        }
+        /* Year badge */
+        ol.slats > h2 {
+            position: relative;
+            display: inline-block;
+            margin: 1.8em 0 0.75em -50px;
+            padding: 3px 16px 3px 14px;
+            font-size: 0.8em;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            border-radius: 2em;
+            background: #666;
+            color: #fff;
+            z-index: 1;
+        }
+        /* Item card */
+        li.group {
+            position: relative;
+            margin-bottom: 0.8em;
+            padding: 0.6em 0.9em 0.5em;
+            border-radius: 5px;
+            background: rgba(128,128,128,0.05);
+            border-left: 2px solid rgba(128,128,128,0.14);
+            transition: background 0.18s, border-color 0.18s;
+        }
+        li.group:hover {
+            background: rgba(128,128,128,0.11);
+            border-left-color: rgba(128,128,128,0.4);
+        }
+        /* Dot on the line */
+        li.group::before {
+            content: '';
+            position: absolute;
+            left: -44px; top: 13px;
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            background: #aaa;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1px #aaa;
+            z-index: 1;
+        }
+        /* Connector */
+        li.group::after {
+            content: '';
+            position: absolute;
+            left: -34px; top: 17px;
+            width: 33px; height: 1px;
+            background: rgba(128,128,128,0.28);
+        }
+        /* Date label (injected by JS) */
+        .tl-date {
+            font-size: 0.71em;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: #888;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+        li.group h3 { margin: 0 0 0.2em; }
+        li.group p:last-child { margin-bottom: 0; }
+        /* Dark mode */
+        [data-theme="dark"] ol.slats::before { background: rgba(200,200,200,0.13); }
+        [data-theme="dark"] li.group { background: rgba(255,255,255,0.04); border-left-color: rgba(255,255,255,0.09); }
+        [data-theme="dark"] li.group:hover { background: rgba(255,255,255,0.08); border-left-color: rgba(255,255,255,0.25); }
+        [data-theme="dark"] li.group::before { background: #aaa; border-color: #111; box-shadow: 0 0 0 1px #aaa; }
+        [data-theme="dark"] li.group::after { background: rgba(255,255,255,0.18); }
+        [data-theme="dark"] ol.slats > h2 { background: #555; }
+        [data-theme="dark"] .tl-date { color: #aaa; }
+    </style>
+    <script src="scripts/menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('content/menu.html')
+                .then(function (r) { return r.text(); })
+                .then(function (html) {
+                    document.getElementById('nav_menu_main').innerHTML = html;
+                    document.getElementById('nav_menu_small').innerHTML = html;
+                    selectCurrentMenuItem();
+                });
+            // Lift each date to the top of its card
+            document.querySelectorAll('li.group').forEach(function (li) {
+                var meta = li.querySelector('.meta');
+                if (meta) {
+                    var d = document.createElement('div');
+                    d.className = 'tl-date';
+                    d.textContent = meta.textContent.trim();
+                    li.insertBefore(d, li.firstChild);
+                    meta.style.display = 'none';
+                }
+            });
+        });
+    </script>
     <script src="scripts/graph-bg.js"></script>
     <script src="scripts/darkmode.js"></script>
 </head>
@@ -52,6 +140,8 @@
             <h2>News</h2>
             <ol class="slats">
 
+<h2>2026</h2>
+
 <li class="group">
   <h3><a href="talks.html">Invited Talk at HAICON26</a></h3>
   <p>This week, I will give an invited talk on <a href="talks.html">Deep Graph Learning for Temporal Data</a> at the <a href="https://haicon.cc/home/invited-speakers/">HAICON26</a> conference organized by Helmholtz AI in Munich, Germany.
@@ -77,7 +167,7 @@
 </li>
 
 <li class="group">
-  <h3><a href="talks.html">Invited talk in Zürich</a></h3>
+  <h3><a href="talks.html">Invited talk at University of Zürich</a></h3>
   <p>Today I give an invited talk in Zürich, Switzerland, presenting our recent work on <a href="https://arxiv.org/abs/2505.24438">Temporal Graph Isomorphism and the Expressivity of Temporal Graph Neural Networks</a>.
   <span class="meta">March 26, 2026</span></p>
 </li>
@@ -1796,7 +1886,7 @@ in Batch-based Temporal Graph Learning</a> has now been published in the journal
 </div>
         <footer class="container">
         <div class="sixteen columns">
-        <p>Copyright &copy; 2012-2026&nbsp;Ingo Scholtes&nbsp;All rights reserved.</p>
+        <p>Copyright &copy; 2012-2026&nbsp;Ingo Scholtes&nbsp;All rights reserved. &nbsp;&middot;&nbsp; <a href="impressum.html">Legal Notice / Impressum</a></p>
         </div>
         </footer>
     </body>

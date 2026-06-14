@@ -1,17 +1,17 @@
-jQuery(document).ready(function($) {
-  selectCurrentMenuItem();
-});
-
-
-// selects the current menu item by adding the "selected" class name
-// to the <a> parent node when <a>'s href matches the current URL
 function selectCurrentMenuItem() {
-  //strips protocol and host name from browser href
-  var windowHref = window.location.href.replace(/^.*?\/\/[^\/]*/, '');
-  
-  $(".menu a").each(function() {
-    if (windowHref == $(this).attr('href')) {
-      $(this).parent().addClass('selected');
-    }
-  });
+    var windowHref = window.location.href.replace(/^.*?\/\/[^\/]*/, '');
+    document.querySelectorAll('.menu a').forEach(function (a) {
+        if (windowHref === a.getAttribute('href')) {
+            a.parentNode.classList.add('selected');
+        }
+    });
 }
+
+// Event delegation — works regardless of when the menu HTML is injected.
+// Toggles from 'block' not '' so the CSS-hidden initial state is handled correctly.
+document.addEventListener('click', function (e) {
+    var li = e.target.closest('.menu.dropdown > ul > li');
+    if (!li) return;
+    var sub = li.querySelector('ul');
+    if (sub) sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+});

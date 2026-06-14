@@ -1,0 +1,98 @@
+﻿<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ingo Scholtes | Legal Notice</title>
+        <meta name="description" content="Legal notice and imprint for ingoscholtes.net" />
+        <link href="stylesheets/base.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/skeleton.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/layout.css" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/darkmode.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <script>
+            function UnCryptMailto(s) {
+                var n = 0, r = "";
+                for (var i = 0; i < s.length; i++) {
+                    n = s.charCodeAt(i);
+                    if (n >= 8364) { n = 128; }
+                    r += String.fromCharCode(n - 1);
+                }
+                return r;
+            }
+            function linkTo_UnCryptMailto(s) { location.href = UnCryptMailto(s); }
+        </script>
+        <script src="scripts/menu.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                fetch('content/menu.html')
+                    .then(function (r) { return r.text(); })
+                    .then(function (html) {
+                        document.getElementById('nav_menu_main').innerHTML = html;
+                        document.getElementById('nav_menu_small').innerHTML = html;
+                        selectCurrentMenuItem();
+
+                    });
+            });
+        </script>
+        <script src="scripts/graph-bg.js"></script>
+        <script src="scripts/darkmode.js"></script>
+    </head>
+    <body>
+        <header class="page">
+        <div class="container">
+          <div class="sixteen columns logo">
+            <h3><a href="/">Ingo Scholtes</a></h3>
+            <div class="menu full">
+                <ul id="nav_menu_main"></ul>
+            </div>
+            <div class="menu dropdown">
+              <ul>
+                  <li><a href="#">Menu</a>
+                    <ul id="nav_menu_small"></ul>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        </header>
+        <div class="container" id="container">
+          <section class="twelve columns">
+
+            <h2>Legal Notice / Impressum</h2>
+
+            <h4>Angaben gem&auml;&szlig; &sect; 5 TMG</h4>
+            <p>
+              Univ.-Prof. Dr. rer. nat. Ingo Scholtes<br />
+              CAIDAS-Lehrstuhl f&uuml;r Informatik &mdash; Machine Learning for Complex Networks<br />
+              Julius-Maximilians-Universit&auml;t W&uuml;rzburg<br />
+              Geb&auml;ude 50, B&uuml;ro 03.030<br />
+              Emil-Fischer-Strasse 50<br />
+              D-97074 W&uuml;rzburg<br />
+              Germany
+            </p>
+
+            <h4>Kontakt / Contact</h4>
+            <p>
+              Telefon: <a href="javascript:linkTo_UnCryptMailto('ufm;,5::424299:3:1');">+49 931 31 89290</a><br />
+              E-Mail: <a href="javascript:linkTo_UnCryptMailto('nbjmup;johp/tdipmuftAvoj.xvfs{cvsh/ef');">ingo.scholtes&#64;uni-wuerzburg.de</a>
+            </p>
+
+            <h4>Verantwortlich f&uuml;r den Inhalt gem&auml;&szlig; &sect; 18 Abs. 2 MStV</h4>
+            <p>Ingo Scholtes, Anschrift wie oben.</p>
+
+            <h4>Haftungsausschluss / Disclaimer</h4>
+            <p><strong>Haftung f&uuml;r Inhalte:</strong> Die Inhalte dieser Website wurden mit gr&ouml;&szlig;tm&ouml;glicher Sorgfalt erstellt. F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und Aktualit&auml;t der Inhalte kann jedoch keine Haftung &uuml;bernommen werden. Als Diensteanbieter bin ich gem&auml;&szlig; &sect; 7 Abs. 1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+            <p><strong>Haftung f&uuml;r Links:</strong> Diese Website enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. F&uuml;r die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend entfernt.</p>
+            <p><strong>Urheberrecht:</strong> Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+
+            <h4>Hinweis zur Universit&auml;t</h4>
+            <p>Dies ist die private Webseite von Ingo Scholtes. F&uuml;r das Impressum der Julius-Maximilians-Universit&auml;t W&uuml;rzburg siehe <a href="https://www.uni-wuerzburg.de/impressum/">www.uni-wuerzburg.de/impressum/</a>.</p>
+
+          </section>
+        </div>
+        <footer class="container">
+          <div class="sixteen columns">
+            <p>Copyright &copy; 2012-2026&nbsp;Ingo Scholtes&nbsp;All rights reserved. &nbsp;&middot;&nbsp; <a href="impressum.html">Legal Notice / Impressum</a></p>
+          </div>
+        </footer>
+    </body>
+</html>
