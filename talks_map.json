@@ -1958,5 +1958,15 @@
         "lat":  46.34275,
         "lon":  7.82011,
         "type":  "invited"
+    },
+    {
+        "id":  197,
+        "title":  "Understanding AI Swarms: A Network Perspective",
+        "date":  "2026-10-06",
+        "city":  "Vienna",
+        "country":  "Austria",
+        "lat":  48.19904,
+        "lon":  16.36997,
+        "type":  "invited"
     }
 ]
