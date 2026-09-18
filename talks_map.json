@@ -1931,12 +1931,12 @@
     },
     {
         "id":  194,
-        "title":  "What makes OSS Projects successful: Insights from Repository Mining, Network Science and Machine Learning",
+        "title":  "Was macht Open Source Communities resilient? Monitoring sozio-technischer Risiken in OSS Repositories",
         "date":  "2026-09-17",
-        "city":  "Nuremberg",
+        "city":  "Erfurt",
         "country":  "Germany",
-        "lat":  49.45434,
-        "lon":  11.07349,
+        "lat":  50.9853575,
+        "lon":  10.9327709,
         "type":  "contributed"
     },
     {
@@ -1951,7 +1951,7 @@
     },
         {
         "id":  196,
-        "title":  "What makes teams successful? Insights from Social Network Analysis, Graph Learning, and Repository Mining",
+        "title":  "Deep Learning and Graph Neural Networks: A Basic Introduction",
         "date":  "2026-05-18",
         "city":  "Martigny",
         "country":  "Switzerland",
